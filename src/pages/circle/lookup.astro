@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+---
+
+<Layout title="Check Your Balance | gugugifts Circle" description="Look up your gugugifts Circle loyalty points balance and rewards.">
+  <Navbar />
+
+  <main id="main-content" class="pt-28 pb-20">
+    <section class="max-w-md mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">The Circle</p>
+        <h1 class="font-playfair text-3xl md:text-4xl font-medium mb-4">Check Your Balance</h1>
+        <div class="divider-gold mx-auto mb-4"></div>
+        <p class="text-bronze-light leading-relaxed">Enter your phone number to see your points and rewards.</p>
+      </div>
+
+      <form id="lookup-form" data-api={apiUrl} class="mb-8">
+        <div class="flex gap-3">
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+1 (555) 123-4567"
+            required
+            class="flex-1 px-4 py-3 rounded-lg border border-cream-dark bg-white text-bronze focus:outline-none focus:border-gold transition-colors"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium whitespace-nowrap"
+          >
+            Look Up
+          </button>
+        </div>
+        <p id="form-error" class="mt-3 text-center text-sm text-rose hidden"></p>
+      </form>
+
+      <div id="result" class="hidden">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <!-- Balance card -->
+          <div class="p-8 text-center border-b border-cream-dark">
+            <p class="text-xs uppercase tracking-[0.15em] text-warmgray mb-1" id="tier-label"></p>
+            <p class="font-playfair text-4xl text-gold mb-1" id="balance-value"></p>
+            <p class="text-sm text-bronze-light">points</p>
+          </div>
+
+          <!-- Details -->
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between text-sm">
+              <span class="text-bronze-light">Member since</span>
+              <span id="member-since" class="font-medium"></span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-bronze-light">Annual spend</span>
+              <span id="annual-spend" class="font-medium"></span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-bronze-light">Next reward at</span>
+              <span id="next-reward" class="font-medium"></span>
+            </div>
+            <div id="rewards-section" class="hidden pt-4 border-t border-cream-dark">
+              <p class="text-xs uppercase tracking-widest text-gold mb-3 font-medium">Available Rewards</p>
+              <div id="rewards-list" class="space-y-2"></div>
+            </div>
+            <div class="pt-4 border-t border-cream-dark">
+              <p class="text-xs uppercase tracking-widest text-bronze-light mb-2">Your Referral Code</p>
+              <div class="flex items-center gap-3">
+                <code id="referral-code" class="flex-1 bg-cream-dark px-4 py-2 rounded text-center font-medium tracking-wider"></code>
+                <button id="copy-btn" class="px-4 py-2 text-xs uppercase tracking-widest text-gold border border-gold rounded hover:bg-gold hover:text-white transition-colors">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.getElementById('lookup-form') as HTMLFormElement;
+  const errorEl = document.getElementById('form-error')!;
+  const resultEl = document.getElementById('result')!;
+
+  function formatPhone(raw: string): string {
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length === 10) return `+1${digits}`;
+    if (digits.length === 11 && digits.startsWith('1')) return `+${digits}`;
+    return raw.startsWith('+') ? raw : `+${digits}`;
+  }
+
+  const tierLabels: Record<string, string> = {
+    neighbor: 'Neighbor',
+    regular: 'Regular',
+    local_legend: 'Local Legend',
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.classList.add('hidden');
+    resultEl.classList.add('hidden');
+
+    const phoneInput = (document.getElementById('phone') as HTMLInputElement).value.trim();
+    const phone = formatPhone(phoneInput);
+
+    const api = form.dataset.api || '';
+
+    try {
+      const res = await fetch(`${api}/api/loyalty/customer?phone=${encodeURIComponent(phone)}`);
+      const data = await res.json();
+
+      if (!res.ok) {
+        errorEl.textContent = data.error || 'Customer not found.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+
+      const c = data.customer;
+      const balance = data.balance;
+
+      document.getElementById('tier-label')!.textContent = tierLabels[c.tier] || c.tier;
+      document.getElementById('balance-value')!.textContent = balance.toLocaleString();
+      document.getElementById('member-since')!.textContent = new Date(c.created_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      document.getElementById('annual-spend')!.textContent = `$${parseFloat(c.annual_spend).toFixed(2)}`;
+
+      const remainder = balance % 500;
+      const ptsToNext = remainder === 0 && balance > 0 ? 0 : 500 - remainder;
+      document.getElementById('next-reward')!.textContent = ptsToNext === 0 ? 'You have a reward ready!' : `${ptsToNext} more pts`;
+
+      document.getElementById('referral-code')!.textContent = c.referral_code;
+
+      const rewardsSection = document.getElementById('rewards-section')!;
+      const rewardsList = document.getElementById('rewards-list')!;
+      if (data.available_rewards && data.available_rewards.length > 0) {
+        rewardsList.innerHTML = data.available_rewards.map((r: any) =>
+          `<div class="flex justify-between items-center bg-cream rounded-lg px-4 py-3">
+            <span class="text-sm font-medium">$${parseFloat(r.discount_amount).toFixed(2)} off</span>
+            <span class="text-xs text-bronze-light">${new Date(r.created_at).toLocaleDateString()}</span>
+          </div>`
+        ).join('');
+        rewardsSection.classList.remove('hidden');
+      } else {
+        rewardsSection.classList.add('hidden');
+      }
+
+      resultEl.classList.remove('hidden');
+    } catch {
+      errorEl.textContent = 'Network error. Please try again.';
+      errorEl.classList.remove('hidden');
+    }
+  });
+
+  document.getElementById('copy-btn')?.addEventListener('click', () => {
+    const code = document.getElementById('referral-code')!.textContent || '';
+    navigator.clipboard.writeText(code).then(() => {
+      const btn = document.getElementById('copy-btn')!;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    });
+  });
+</script>

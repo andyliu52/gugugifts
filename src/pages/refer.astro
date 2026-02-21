@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+---
+
+<Layout title="You've Been Invited! | gugugifts" description="Your friend is sharing the love. Join the gugugifts Circle and you'll both earn 250 bonus points.">
+  <Navbar />
+
+  <main id="main-content" class="pt-28 pb-20">
+    <section class="max-w-md mx-auto px-6 text-center">
+      <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium reveal">Referral Invite</p>
+      <h1 class="font-playfair text-3xl md:text-4xl font-medium mb-4 reveal reveal-delay-1">Your friend thinks you'll love gugugifts</h1>
+      <div class="divider-gold mx-auto mb-6 reveal reveal-delay-2"></div>
+      <p class="text-bronze-light leading-relaxed mb-8 reveal reveal-delay-3">
+        When you make your first purchase of $20 or more, you'll <strong class="text-bronze">both</strong> earn
+        <strong class="text-gold">250 bonus points</strong> (that's $5 toward your next gift).
+      </p>
+
+      <div class="bg-white rounded-xl p-8 shadow-sm mb-8 reveal reveal-delay-4">
+        <p class="text-xs uppercase tracking-widest text-warmgray mb-3">Referral Code</p>
+        <p class="text-2xl font-medium tracking-wider text-gold mb-4" id="display-code"></p>
+        <p class="text-bronze-light text-sm leading-relaxed mb-6">
+          Just mention this code or give your phone number when you visit us at
+          <strong class="text-bronze">301 Tanger Dr, Suite 112, Terrell TX</strong>.
+        </p>
+
+        <div class="space-y-4">
+          <p class="text-xs uppercase tracking-widest text-warmgray">Or enroll now with your phone number</p>
+          <form id="referral-form" data-api={apiUrl} class="flex flex-col gap-3">
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+1 (555) 123-4567"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors"
+            />
+            <button
+              type="submit"
+              class="w-full py-3 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium"
+            >
+              Join the Circle
+            </button>
+          </form>
+          <p id="form-message" class="text-sm hidden"></p>
+        </div>
+      </div>
+
+      <a href="/circle" class="text-gold text-sm uppercase tracking-widest hover:text-gold-light transition-colors reveal reveal-delay-5">
+        Learn more about the Circle &rarr;
+      </a>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = (params.get('code') || '').toUpperCase();
+
+  const displayEl = document.getElementById('display-code')!;
+  displayEl.textContent = code || '—';
+
+  const form = document.getElementById('referral-form') as HTMLFormElement;
+  const msg = document.getElementById('form-message')!;
+
+  function formatPhone(raw: string): string {
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length === 10) return `+1${digits}`;
+    if (digits.length === 11 && digits.startsWith('1')) return `+${digits}`;
+    return raw.startsWith('+') ? raw : `+${digits}`;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.classList.add('hidden');
+
+    if (!code) {
+      msg.textContent = 'No referral code found in the URL.';
+      msg.className = 'text-sm text-center text-rose';
+      msg.classList.remove('hidden');
+      return;
+    }
+
+    const api = form.dataset.api || '';
+    const phoneRaw = (document.getElementById('phone') as HTMLInputElement).value.trim();
+    const phone = formatPhone(phoneRaw);
+
+    try {
+      const enrollRes = await fetch(`${api}/api/loyalty/enroll`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone }),
+      });
+      const enrollData = await enrollRes.json();
+
+      if (!enrollRes.ok && !enrollData.ok) {
+        msg.textContent = enrollData.error || 'Something went wrong.';
+        msg.className = 'text-sm text-center text-rose';
+        msg.classList.remove('hidden');
+        return;
+      }
+
+      await fetch(`${api}/api/loyalty/referral/apply`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ referral_code: code, referred_phone: phone }),
+      });
+
+      form.innerHTML = `
+        <div class="text-center py-4">
+          <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <p class="font-playfair text-xl mb-2">Welcome to the Circle!</p>
+          <p class="text-bronze-light text-sm">Check your phone for a welcome text with your profile link.</p>
+          <p class="text-bronze-light text-sm mt-1">Make a purchase of $20+ and you'll both earn 250 bonus points.</p>
+        </div>
+      `;
+    } catch {
+      msg.textContent = 'Network error. Please try again.';
+      msg.className = 'text-sm text-center text-rose';
+      msg.classList.remove('hidden');
+    }
+  });
+</script>
