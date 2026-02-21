@@ -1,0 +1,61 @@
+---
+
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 translate-y-full transition-transform duration-500 ease-out"
+  role="dialog"
+  aria-label="Cookie consent"
+>
+  <div class="max-w-4xl mx-auto px-6 pb-6">
+    <div class="bg-bronze text-cream/90 rounded-2xl shadow-2xl shadow-bronze/30 px-6 py-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 border border-cream/5">
+      <div class="flex-1 text-sm leading-relaxed">
+        We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you consent to our use of cookies.
+        <a href="#" class="text-gold hover:text-gold-light underline underline-offset-2 transition-colors ml-1">Learn more</a>
+      </div>
+      <div class="flex gap-3 flex-shrink-0">
+        <button
+          id="cookie-decline"
+          class="px-5 py-2.5 text-xs uppercase tracking-widest font-medium rounded-full border border-cream/20 text-cream/70 hover:text-cream hover:border-cream/40 transition-all duration-200"
+        >
+          Decline
+        </button>
+        <button
+          id="cookie-accept"
+          class="px-5 py-2.5 text-xs uppercase tracking-widest font-medium rounded-full bg-gold text-white hover:bg-gold-light transition-colors duration-200"
+        >
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner')!;
+  const acceptBtn = document.getElementById('cookie-accept')!;
+  const declineBtn = document.getElementById('cookie-decline')!;
+
+  function hideBanner() {
+    banner.classList.add('translate-y-full');
+    banner.classList.remove('translate-y-0');
+  }
+
+  function handleConsent(accepted: boolean) {
+    localStorage.setItem('cookie-consent', accepted ? 'accepted' : 'declined');
+    hideBanner();
+  }
+
+  if (!localStorage.getItem('cookie-consent')) {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        banner.classList.remove('translate-y-full');
+        banner.classList.add('translate-y-0');
+      }, 1500);
+    });
+  }
+
+  acceptBtn.addEventListener('click', () => handleConsent(true));
+  declineBtn.addEventListener('click', () => handleConsent(false));
+</script>
