@@ -1,5 +1,5 @@
 ---
-
+const apiUrl = import.meta.env.PUBLIC_API_URL || "";
 ---
 
 <section class="py-24 md:py-32 px-6">
@@ -11,21 +11,23 @@
       Sign up for updates on our grand opening, exclusive offers, new arrivals, and all things Gugu&nbsp;Gifts.
     </p>
 
-    <!-- Email form (front-end only) -->
-    <form class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-16" onsubmit="event.preventDefault();">
+    <form id="newsletter-form" data-api={apiUrl} class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
       <input
+        id="newsletter-email"
         type="email"
         placeholder="Your email address"
         class="flex-1 px-5 py-3.5 bg-cream-dark border border-gold/20 rounded-full text-sm text-bronze placeholder:text-warmgray focus:outline-none focus:border-gold/50 focus:ring-2 focus:ring-gold/10 transition-all"
         required
       />
       <button
+        id="newsletter-btn"
         type="submit"
         class="px-8 py-3.5 bg-bronze text-cream text-sm uppercase tracking-widest font-medium rounded-full hover:bg-bronze-light transition-colors duration-200 whitespace-nowrap"
       >
         Notify Me
       </button>
     </form>
+    <p id="newsletter-msg" class="text-sm mb-12 min-h-[1.5em]"></p>
 
     <!-- Social media -->
     <div class="reveal reveal-delay-4">
@@ -53,3 +55,47 @@
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById("newsletter-form") as HTMLFormElement;
+  const emailInput = document.getElementById("newsletter-email") as HTMLInputElement;
+  const btn = document.getElementById("newsletter-btn") as HTMLButtonElement;
+  const msg = document.getElementById("newsletter-msg") as HTMLParagraphElement;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    msg.textContent = "";
+    msg.className = "text-sm mb-12 min-h-[1.5em]";
+
+    try {
+      const api = form.dataset.api || "";
+      const res = await fetch(`${api}/api/subscribe`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        msg.textContent = "Welcome! Check your inbox for a confirmation.";
+        msg.classList.add("text-gold");
+        emailInput.value = "";
+      } else {
+        msg.textContent = data.error || "Something went wrong.";
+        msg.classList.add("text-red-500");
+      }
+    } catch {
+      msg.textContent = "Network error. Please try again.";
+      msg.classList.add("text-red-500");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Notify Me";
+    }
+  });
+</script>
