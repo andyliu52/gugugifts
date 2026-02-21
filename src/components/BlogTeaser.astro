@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<section class="py-24 md:py-32 px-6 bg-cream-dark/50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="reveal text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">From the Journal</p>
+      <h2 class="reveal reveal-delay-1 font-playfair text-4xl md:text-5xl mb-6">Latest Stories</h2>
+      <div class="reveal reveal-delay-2 divider-gold mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {posts.map((post, i) => {
+        const formattedDate = post.data.date.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        });
+        return (
+          <a
+            href={`/blog/${post.id}`}
+            class={`reveal reveal-delay-${i + 1} group block`}
+          >
+            <article class="bg-cream border border-gold/10 rounded-2xl p-7 h-full flex flex-col transition-all duration-300 hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5 hover:-translate-y-1">
+              <div class="flex flex-wrap gap-2 mb-3">
+                {post.data.tags.slice(0, 2).map((tag: string) => (
+                  <span class="text-xs uppercase tracking-widest text-gold/60">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 class="font-playfair text-lg md:text-xl mb-3 leading-snug group-hover:text-gold transition-colors duration-300">
+                {post.data.title}
+              </h3>
+              <p class="text-sm text-warmgray leading-relaxed mb-4 flex-1 line-clamp-3">
+                {post.data.description}
+              </p>
+              <time class="text-xs text-warmgray/70" datetime={post.data.date.toISOString()}>
+                {formattedDate}
+              </time>
+            </article>
+          </a>
+        );
+      })}
+    </div>
+
+    <div class="reveal text-center mt-10">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 px-8 py-3.5 border border-gold/30 rounded-full text-sm uppercase tracking-widest font-medium text-bronze hover:bg-bronze hover:text-cream hover:border-bronze transition-all duration-200"
+      >
+        View All Posts
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

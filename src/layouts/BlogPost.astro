@@ -1,0 +1,162 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  author: string;
+  tags: string[];
+}
+
+const { title, description, date, author, tags } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const isoDate = date.toISOString();
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": isoDate,
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": "https://www.gugugifts.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gugu Gifts",
+    "url": "https://www.gugugifts.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL.toString()
+  },
+  "keywords": tags.join(', ')
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gugugifts.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.gugugifts.com/blog" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalURL.toString() }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title} | Gugu Gifts Blog</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Gugu Gifts" />
+    <meta property="article:published_time" content={isoDate} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Gugu Gifts Blog" href="/rss.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="bg-cream text-bronze font-jost min-h-screen">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-sm transition-all duration-300">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+        <a href="/" class="flex items-baseline gap-0 text-2xl tracking-wide">
+          <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
+        </a>
+        <div class="flex items-center gap-8">
+          <a href="/" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200 hidden sm:inline">Home</a>
+          <a href="/blog" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200">Blog</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-32 pb-20 px-6">
+      <article class="max-w-3xl mx-auto">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-8 text-sm text-warmgray">
+          <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-gold transition-colors">Home</a></li>
+            <li class="text-gold/40">/</li>
+            <li><a href="/blog" class="hover:text-gold transition-colors">Blog</a></li>
+            <li class="text-gold/40">/</li>
+            <li class="text-bronze-light truncate max-w-[200px] sm:max-w-none">{title}</li>
+          </ol>
+        </nav>
+
+        <!-- Header -->
+        <header class="mb-12">
+          <div class="flex flex-wrap gap-2 mb-4">
+            {tags.slice(0, 3).map((tag) => (
+              <span class="text-xs uppercase tracking-widest text-gold border border-gold/30 rounded-full px-3 py-1">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <h1 class="font-playfair text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">{title}</h1>
+          <div class="flex items-center gap-3 text-sm text-warmgray">
+            <span>{author}</span>
+            <span class="text-gold/40">·</span>
+            <time datetime={isoDate}>{formattedDate}</time>
+          </div>
+        </header>
+
+        <div class="divider-gold mb-12"></div>
+
+        <!-- Post content -->
+        <div class="prose">
+          <slot />
+        </div>
+
+        <!-- Back link -->
+        <div class="mt-16 pt-8 border-t border-gold/15">
+          <a href="/blog" class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-warmgray hover:text-gold transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m0 0l7 7m-7-7l7-7" />
+            </svg>
+            All Posts
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Simple footer -->
+    <footer class="bg-bronze text-cream/60 py-8 px-6">
+      <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <a href="/" class="text-cream text-lg tracking-wide">
+          <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
+        </a>
+        <p>&copy; {new Date().getFullYear()} Gugu Gifts. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
