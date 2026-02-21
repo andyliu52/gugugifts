@@ -1,0 +1,39 @@
+---
+const brands = [
+  { name: 'Voluspa', tagline: 'Luxury candles & fragrance' },
+  { name: 'Julie Vos', tagline: 'Designer jewelry' },
+  { name: 'Greenleaf', tagline: 'Home fragrance & décor' },
+  { name: 'Kaweco', tagline: 'Fine writing instruments' },
+  { name: 'Splendid Iris', tagline: 'Artisan candles & gifts' },
+  { name: 'Swig', tagline: 'Insulated drinkware' },
+  { name: 'Lucky Feather', tagline: 'Meaningful jewelry' },
+  { name: 'Local Artisans', tagline: 'Honey, soaps & crafts' },
+];
+---
+
+<section id="brands" class="py-24 md:py-32 px-6 bg-cream-dark/50">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="reveal text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">Thoughtfully Curated</p>
+    <h2 class="reveal reveal-delay-1 font-playfair text-4xl md:text-5xl mb-6">Brands We Carry</h2>
+    <div class="reveal reveal-delay-2 divider-gold mx-auto mb-16"></div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      {brands.map((brand, i) => (
+        <div class={`reveal reveal-delay-${(i % 4) + 1} group`}>
+          <div class="bg-cream border border-gold/15 rounded-xl p-6 md:p-8 h-full flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/5 hover:-translate-y-1">
+            <h3 class="font-playfair text-lg md:text-xl text-bronze group-hover:text-gold transition-colors duration-300">
+              {brand.name}
+            </h3>
+            <p class="text-xs uppercase tracking-widest text-warmgray">
+              {brand.tagline}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="reveal mt-12 text-sm text-warmgray italic">
+      …and many more carefully selected brands arriving soon
+    </p>
+  </div>
+</section>

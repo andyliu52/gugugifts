@@ -1,0 +1,103 @@
+---
+const links = [
+  { href: '#about', label: 'About' },
+  { href: '#brands', label: 'Brands' },
+  { href: '#shop', label: 'Shop' },
+  { href: '#visit', label: 'Visit Us' },
+];
+---
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="#" class="flex items-baseline gap-0 text-2xl tracking-wide">
+      <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8">
+      {links.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
+      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
+      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-cream/98 z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+    <button
+      id="menu-close"
+      class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center"
+      aria-label="Close menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    {links.map(({ href, label }) => (
+      <a
+        href={href}
+        class="mobile-link text-2xl uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById('navbar')!;
+  const toggle = document.getElementById('menu-toggle')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const closeBtn = document.getElementById('menu-close')!;
+  const mobileLinks = menu.querySelectorAll('.mobile-link');
+
+  function openMenu() {
+    menu.classList.remove('opacity-0', 'pointer-events-none');
+    menu.classList.add('opacity-100', 'pointer-events-auto');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu.classList.add('opacity-0', 'pointer-events-none');
+    menu.classList.remove('opacity-100', 'pointer-events-auto');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 80) {
+      navbar.classList.add('bg-cream/95', 'backdrop-blur-md', 'shadow-sm');
+    } else {
+      navbar.classList.remove('bg-cream/95', 'backdrop-blur-md', 'shadow-sm');
+    }
+
+    lastScroll = scrollY;
+  });
+</script>

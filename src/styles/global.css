@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F2;
+  --color-cream-dark: #F0EBE3;
+  --color-bronze: #54504A;
+  --color-bronze-light: #6B6560;
+  --color-gold: #C9A96E;
+  --color-gold-light: #D4B87F;
+  --color-sage: #8B9E82;
+  --color-sage-light: #A3B49C;
+  --color-rose: #C4A0A0;
+  --color-rose-light: #D4B8B8;
+  --color-warmgray: #A69E95;
+
+  --font-jost: 'Jost', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', system-ui, -apple-system, sans-serif;
+  color: var(--color-bronze);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: white;
+}
+
+/* Scroll-triggered animation base states */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-7 { transition-delay: 0.7s; }
+
+/* Decorative botanical pattern */
+.pattern-botanical {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 Q35 15 30 25 Q25 15 30 5Z' fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.15'/%3E%3Cpath d='M30 35 Q35 45 30 55 Q25 45 30 35Z' fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.15'/%3E%3Cpath d='M5 30 Q15 35 25 30 Q15 25 5 30Z' fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.15'/%3E%3Cpath d='M35 30 Q45 35 55 30 Q45 25 35 30Z' fill='none' stroke='%23C9A96E' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+}
+
+/* Decorative divider */
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}

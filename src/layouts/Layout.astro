@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Gugu Gifts | Curated Gift Shop in Terrell, TX',
+  description = 'Gugu Gifts is a curated mid-luxe gift shop in Terrell, Texas featuring Voluspa, Julie Vos, Greenleaf, Kaweco, Swig, Lucky Feather, local honey, artisan soaps, and unique home décor. Grand opening coming soon.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Gugu Gifts",
+  "description": description,
+  "url": "https://www.gugugifts.com",
+  "telephone": "(617) 971-7079",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "301 Tanger Dr, Suite 112",
+    "addressLocality": "Terrell",
+    "addressRegion": "TX",
+    "postalCode": "75126",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.7191,
+    "longitude": -96.2753
+  },
+  "brand": [
+    { "@type": "Brand", "name": "Greenleaf" },
+    { "@type": "Brand", "name": "Voluspa" },
+    { "@type": "Brand", "name": "Splendid Iris" },
+    { "@type": "Brand", "name": "Kaweco" },
+    { "@type": "Brand", "name": "Julie Vos" },
+    { "@type": "Brand", "name": "Swig" },
+    { "@type": "Brand", "name": "Lucky Feather" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Gift Shop Products",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Home Fragrance" },
+      { "@type": "OfferCatalog", "name": "Jewelry & Accessories" },
+      { "@type": "OfferCatalog", "name": "Fine Stationery" },
+      { "@type": "OfferCatalog", "name": "Home Décor" },
+      { "@type": "OfferCatalog", "name": "Local Honey & Artisan Goods" },
+      { "@type": "OfferCatalog", "name": "Curated Gift Sets" }
+    ]
+  },
+  "image": "https://www.gugugifts.com/og-image.png",
+  "priceRange": "$$"
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="gift shop Terrell TX, curated gifts, Voluspa candles, Julie Vos jewelry, Greenleaf, Kaweco pens, Swig, Lucky Feather, local honey Texas, artisan gifts, home décor, mid-luxe gifts, Tanger Outlets Terrell" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Gugu Gifts" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="bg-cream text-bronze font-jost min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">
+      Skip to main content
+    </a>
+    <slot />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

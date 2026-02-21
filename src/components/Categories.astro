@@ -1,0 +1,60 @@
+---
+const categories = [
+  {
+    name: 'Home Fragrance',
+    description: 'Luxury candles, diffusers, and room sprays',
+    gradient: 'from-gold/15 to-rose/10',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M24 6c-2 4-6 8-6 14a6 6 0 0012 0c0-6-4-10-6-14z"/><rect x="20" y="24" width="8" height="16" rx="2"/><line x1="18" y1="40" x2="30" y2="40"/></svg>`,
+  },
+  {
+    name: 'Jewelry & Accessories',
+    description: 'Designer and artisan pieces for every occasion',
+    gradient: 'from-rose/15 to-gold/10',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><circle cx="24" cy="28" r="10"/><path d="M18 18l6-10 6 10"/><path d="M14 18h20"/></svg>`,
+  },
+  {
+    name: 'Fine Stationery',
+    description: 'Premium pens, journals, and paper goods',
+    gradient: 'from-sage/15 to-gold/10',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M10 38l4-16L34 8l4 4-14 20z"/><path d="M14 22l12 12"/><line x1="8" y1="40" x2="16" y2="36"/></svg>`,
+  },
+  {
+    name: 'Home Décor',
+    description: 'Elegant vases, throws, and accent pieces',
+    gradient: 'from-gold/10 to-sage/15',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M16 40c0-12 -2-20 8-28 10 8 8 16 8 28z"/><line x1="14" y1="40" x2="34" y2="40"/><path d="M24 12v28"/></svg>`,
+  },
+  {
+    name: 'Local Honey & Artisan Goods',
+    description: 'Farm-fresh honey, handmade soaps, and local crafts',
+    gradient: 'from-gold/20 to-cream-dark',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M24 6l8 4.6v9.2L24 24.4l-8-4.6v-9.2z"/><path d="M24 24.4l8 4.6v9.2L24 42.8l-8-4.6v-9.2z"/><path d="M32 19.8l8 4.6v9.2l-8 4.6"/><path d="M16 19.8l-8 4.6v9.2l8 4.6"/></svg>`,
+  },
+  {
+    name: 'Curated Gift Sets',
+    description: 'Beautifully assembled sets for every recipient',
+    gradient: 'from-rose/10 to-sage/10',
+    icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><rect x="8" y="20" width="32" height="20" rx="3"/><rect x="12" y="12" width="24" height="8" rx="2"/><line x1="24" y1="12" x2="24" y2="40"/><path d="M24 12c-4-6-12-6-12 0"/><path d="M24 12c4-6 12-6 12 0"/></svg>`,
+  },
+];
+---
+
+<section id="shop" class="py-24 md:py-32 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="reveal text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">What We Offer</p>
+    <h2 class="reveal reveal-delay-1 font-playfair text-4xl md:text-5xl mb-6">Shop by Category</h2>
+    <div class="reveal reveal-delay-2 divider-gold mx-auto mb-16"></div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {categories.map((cat, i) => (
+        <div class={`reveal reveal-delay-${(i % 3) + 1} group cursor-pointer`}>
+          <div class={`bg-gradient-to-br ${cat.gradient} rounded-2xl p-8 md:p-10 h-full flex flex-col items-center justify-center gap-4 border border-gold/10 transition-all duration-300 hover:border-gold/30 hover:shadow-xl hover:shadow-gold/5 hover:-translate-y-1`}>
+            <div class="text-bronze-light group-hover:text-gold transition-colors duration-300" set:html={cat.icon} />
+            <h3 class="font-playfair text-xl md:text-2xl">{cat.name}</h3>
+            <p class="text-sm text-warmgray">{cat.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
