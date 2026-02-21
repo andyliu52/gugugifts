@@ -6,13 +6,13 @@ import Footer from '../../components/Footer.astro';
 const apiUrl = import.meta.env.PUBLIC_API_URL || '';
 ---
 
-<Layout title="Check Your Balance | gugugifts Circle" description="Look up your gugugifts Circle loyalty points balance and rewards.">
+<Layout title="Check Your Balance | The Gugu Gang" description="Look up your gugu gang loyalty points balance and rewards.">
   <Navbar />
 
   <main id="main-content" class="pt-28 pb-20">
     <section class="max-w-md mx-auto px-6">
       <div class="text-center mb-10">
-        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">The Circle</p>
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">the gugu gang</p>
         <h1 class="font-playfair text-3xl md:text-4xl font-medium mb-4">Check Your Balance</h1>
         <div class="divider-gold mx-auto mb-4"></div>
         <p class="text-bronze-light leading-relaxed">Enter your phone number to see your points and rewards.</p>
@@ -60,8 +60,32 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
               <span class="text-bronze-light">Next reward at</span>
               <span id="next-reward" class="font-medium"></span>
             </div>
+
+            <!-- Redeem button -->
+            <div id="redeem-section" class="hidden pt-4 border-t border-cream-dark text-center">
+              <p class="text-sm text-bronze-light mb-3">You have enough points for a <strong class="text-gold">$5 gift card</strong>!</p>
+              <button
+                id="redeem-btn"
+                class="w-full px-6 py-3 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium"
+              >
+                Redeem 500 pts for $5 Gift Card
+              </button>
+              <p id="redeem-error" class="mt-2 text-sm text-rose hidden"></p>
+            </div>
+
+            <!-- Gift card just redeemed -->
+            <div id="new-gift-card" class="hidden pt-4 border-t border-cream-dark text-center">
+              <p class="text-xs uppercase tracking-[0.15em] text-gold mb-2 font-medium">Your New Gift Card</p>
+              <div class="bg-cream rounded-xl border-2 border-gold/30 p-5">
+                <p id="new-gc-number" class="font-mono text-lg tracking-wider font-semibold text-bronze"></p>
+                <p class="text-sm text-gold font-medium mt-1">$5.00 balance</p>
+              </div>
+              <p class="text-xs text-bronze-light mt-3">We also texted this to your phone. Tell the cashier you have a gift card at checkout.</p>
+            </div>
+
+            <!-- Existing rewards -->
             <div id="rewards-section" class="hidden pt-4 border-t border-cream-dark">
-              <p class="text-xs uppercase tracking-widest text-gold mb-3 font-medium">Available Rewards</p>
+              <p class="text-xs uppercase tracking-widest text-gold mb-3 font-medium">Your Gift Cards</p>
               <div id="rewards-list" class="space-y-2"></div>
             </div>
             <div class="pt-4 border-t border-cream-dark">
@@ -70,6 +94,11 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
                 <code id="referral-code" class="flex-1 bg-cream-dark px-4 py-2 rounded text-center font-medium tracking-wider"></code>
                 <button id="copy-btn" class="px-4 py-2 text-xs uppercase tracking-widest text-gold border border-gold rounded hover:bg-gold hover:text-white transition-colors">Copy</button>
               </div>
+            </div>
+            <div class="pt-4 border-t border-cream-dark text-center">
+              <a href="/circle/settings" class="text-xs uppercase tracking-widest text-bronze-light hover:text-gold transition-colors">
+                Account Settings &rarr;
+              </a>
             </div>
           </div>
         </div>
@@ -135,21 +164,113 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
       const rewardsSection = document.getElementById('rewards-section')!;
       const rewardsList = document.getElementById('rewards-list')!;
       if (data.available_rewards && data.available_rewards.length > 0) {
-        rewardsList.innerHTML = data.available_rewards.map((r: any) =>
-          `<div class="flex justify-between items-center bg-cream rounded-lg px-4 py-3">
-            <span class="text-sm font-medium">$${parseFloat(r.discount_amount).toFixed(2)} off</span>
-            <span class="text-xs text-bronze-light">${new Date(r.created_at).toLocaleDateString()}</span>
-          </div>`
-        ).join('');
+        rewardsList.innerHTML = data.available_rewards.map((r: any) => {
+          const gan = r.gift_card_gan;
+          const ganDisplay = gan ? gan.replace(/(.{4})/g, '$1-').replace(/-$/, '') : '';
+          return `<div class="bg-cream rounded-lg px-4 py-3">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium">$${parseFloat(r.discount_amount).toFixed(2)} gift card</span>
+              <span class="text-xs text-bronze-light">${new Date(r.created_at).toLocaleDateString()}</span>
+            </div>
+            ${ganDisplay ? `<p class="font-mono text-sm tracking-wider mt-1 text-bronze">${ganDisplay}</p>` : ''}
+          </div>`;
+        }).join('');
         rewardsSection.classList.remove('hidden');
       } else {
         rewardsSection.classList.add('hidden');
       }
 
+      // Redeem button visibility
+      const redeemSection = document.getElementById('redeem-section')!;
+      if (balance >= 500) {
+        redeemSection.classList.remove('hidden');
+        redeemSection.dataset.customerId = c.id;
+      } else {
+        redeemSection.classList.add('hidden');
+      }
+
+      document.getElementById('new-gift-card')!.classList.add('hidden');
+
       resultEl.classList.remove('hidden');
     } catch {
       errorEl.textContent = 'Network error. Please try again.';
       errorEl.classList.remove('hidden');
+    }
+  });
+
+  // Redeem button handler
+  document.getElementById('redeem-btn')?.addEventListener('click', async () => {
+    const redeemSection = document.getElementById('redeem-section')!;
+    const customerId = redeemSection.dataset.customerId;
+    const btn = document.getElementById('redeem-btn') as HTMLButtonElement;
+    const redeemError = document.getElementById('redeem-error')!;
+    const api = form.dataset.api || '';
+
+    btn.disabled = true;
+    btn.textContent = 'Processing…';
+    redeemError.classList.add('hidden');
+
+    try {
+      const res = await fetch(`${api}/api/loyalty/redeem`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ customer_id: customerId }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        redeemError.textContent = data.error || 'Redemption failed.';
+        redeemError.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Redeem 500 pts for $5 Gift Card';
+        return;
+      }
+
+      document.getElementById('balance-value')!.textContent = data.balance.toLocaleString();
+
+      const newGcSection = document.getElementById('new-gift-card')!;
+      document.getElementById('new-gc-number')!.textContent = data.gift_card_gan;
+      newGcSection.classList.remove('hidden');
+
+      if (data.balance < 500) {
+        redeemSection.classList.add('hidden');
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Redeem 500 pts for $5 Gift Card';
+      }
+
+      const remainder = data.balance % 500;
+      const ptsToNext = remainder === 0 && data.balance > 0 ? 0 : 500 - remainder;
+      document.getElementById('next-reward')!.textContent = ptsToNext === 0 ? 'You have a reward ready!' : `${ptsToNext} more pts`;
+
+      // Re-fetch to update rewards list
+      const phoneInput = (document.getElementById('phone') as HTMLInputElement).value.trim();
+      const phone = formatPhone(phoneInput);
+      const refreshRes = await fetch(`${api}/api/loyalty/customer?phone=${encodeURIComponent(phone)}`);
+      if (refreshRes.ok) {
+        const refreshData = await refreshRes.json();
+        const rewardsList = document.getElementById('rewards-list')!;
+        const rewardsSection = document.getElementById('rewards-section')!;
+        if (refreshData.available_rewards && refreshData.available_rewards.length > 0) {
+          rewardsList.innerHTML = refreshData.available_rewards.map((r: any) => {
+            const gan = r.gift_card_gan;
+            const ganDisplay = gan ? gan.replace(/(.{4})/g, '$1-').replace(/-$/, '') : '';
+            return `<div class="bg-cream rounded-lg px-4 py-3">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">$${parseFloat(r.discount_amount).toFixed(2)} gift card</span>
+                <span class="text-xs text-bronze-light">${new Date(r.created_at).toLocaleDateString()}</span>
+              </div>
+              ${ganDisplay ? `<p class="font-mono text-sm tracking-wider mt-1 text-bronze">${ganDisplay}</p>` : ''}
+            </div>`;
+          }).join('');
+          rewardsSection.classList.remove('hidden');
+        }
+      }
+    } catch {
+      redeemError.textContent = 'Network error. Please try again.';
+      redeemError.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Redeem 500 pts for $5 Gift Card';
     }
   });
 

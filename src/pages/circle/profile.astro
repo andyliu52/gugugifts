@@ -6,13 +6,13 @@ import Footer from '../../components/Footer.astro';
 const apiUrl = import.meta.env.PUBLIC_API_URL || '';
 ---
 
-<Layout title="Complete Your Profile | gugugifts Circle" description="Complete your gugugifts Circle profile to earn bonus points.">
+<Layout title="Complete Your Profile | The Gugu Gang" description="Complete your gugu gang profile to earn bonus points.">
   <Navbar />
 
   <main id="main-content" class="pt-28 pb-20">
     <section class="max-w-md mx-auto px-6">
       <div class="text-center mb-10">
-        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">The Circle</p>
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">the gugu gang</p>
         <h1 class="font-playfair text-3xl md:text-4xl font-medium mb-4">Complete Your Profile</h1>
         <div class="divider-gold mx-auto mb-4"></div>
         <p class="text-bronze-light leading-relaxed">
@@ -137,7 +137,7 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
           <h2 class="font-playfair text-2xl mb-2">You're all set!</h2>
           <p class="text-bronze-light mb-2">You earned <strong class="text-gold">${data.bonus_awarded} bonus points</strong>.</p>
           <p class="text-bronze-light">Your balance is now <strong class="text-bronze">${data.balance} points</strong>.</p>
-          <a href="/circle" class="inline-block mt-6 text-gold text-sm uppercase tracking-widest hover:text-gold-light transition-colors">Learn more about the Circle &rarr;</a>
+          <a href="/circle" class="inline-block mt-6 text-gold text-sm uppercase tracking-widest hover:text-gold-light transition-colors">Learn more about the gugu gang &rarr;</a>
         </div>
       `;
     } catch {
