@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+---
+
+<Layout title="Admin | gugugifts" description="Staff admin panel.">
+  <main class="min-h-screen flex items-center justify-center px-4 py-12">
+
+    <!-- Login gate -->
+    <div id="login-gate" class="w-full max-w-sm">
+      <div class="text-center mb-8">
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-3 font-medium">Staff Only</p>
+        <h1 class="font-playfair text-3xl font-medium mb-2">Admin</h1>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <form id="login-form" class="space-y-4">
+        <input
+          type="password"
+          id="password-input"
+          placeholder="Enter admin password"
+          required
+          autocomplete="current-password"
+          class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-white text-bronze focus:outline-none focus:border-gold transition-colors"
+        />
+        <button
+          type="submit"
+          class="w-full py-3 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium"
+        >
+          Sign In
+        </button>
+        <p id="login-error" class="text-sm text-center text-rose hidden"></p>
+      </form>
+    </div>
+
+    <!-- Admin panel (hidden until auth) -->
+    <div id="admin-panel" class="w-full max-w-lg hidden">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h1 class="font-playfair text-2xl font-medium">Admin Panel</h1>
+          <p class="text-xs uppercase tracking-[0.15em] text-warmgray mt-1">gugu gang management</p>
+        </div>
+        <button id="logout-btn" class="text-xs uppercase tracking-widest text-bronze-light hover:text-gold transition-colors">
+          Log out
+        </button>
+      </div>
+
+      <!-- Customer lookup -->
+      <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+        <p class="text-xs uppercase tracking-widest text-gold mb-4 font-medium">Customer Lookup</p>
+        <form id="lookup-form" class="flex gap-3">
+          <input
+            type="tel"
+            id="phone-input"
+            placeholder="+1 (555) 123-4567"
+            required
+            class="flex-1 px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium whitespace-nowrap"
+          >
+            Search
+          </button>
+        </form>
+        <p id="lookup-error" class="mt-3 text-sm text-center text-rose hidden"></p>
+      </div>
+
+      <!-- Customer info (hidden until lookup) -->
+      <div id="customer-info" class="hidden space-y-6">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <div class="p-6 border-b border-cream-dark">
+            <div class="flex items-center justify-between mb-1">
+              <h2 id="cust-name" class="font-playfair text-xl font-medium"></h2>
+              <span id="cust-tier" class="text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-gold/10 text-gold font-medium"></span>
+            </div>
+            <p id="cust-phone" class="text-sm text-bronze-light"></p>
+          </div>
+          <div class="p-6 grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p class="font-playfair text-2xl text-gold" id="cust-balance"></p>
+              <p class="text-xs uppercase tracking-widest text-warmgray mt-1">Points</p>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl" id="cust-spend"></p>
+              <p class="text-xs uppercase tracking-widest text-warmgray mt-1">Annual Spend</p>
+            </div>
+            <div>
+              <p class="font-playfair text-2xl" id="cust-since"></p>
+              <p class="text-xs uppercase tracking-widest text-warmgray mt-1">Member Since</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award bonuses -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <p class="text-xs uppercase tracking-widest text-gold mb-4 font-medium">Award One-Time Bonus</p>
+          <div class="space-y-3" id="bonus-buttons">
+            <button data-source="google_review" data-points="150" class="bonus-btn w-full flex items-center justify-between px-4 py-3 rounded-lg border border-cream-dark hover:border-gold transition-colors group">
+              <div class="flex items-center gap-3">
+                <span class="bonus-icon w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </span>
+                <span class="text-sm font-medium">Google Review</span>
+              </div>
+              <span class="bonus-pts text-sm text-gold font-medium">+150 pts</span>
+            </button>
+
+            <button data-source="instagram_follow" data-points="50" class="bonus-btn w-full flex items-center justify-between px-4 py-3 rounded-lg border border-cream-dark hover:border-gold transition-colors group">
+              <div class="flex items-center gap-3">
+                <span class="bonus-icon w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </span>
+                <span class="text-sm font-medium">Instagram Follow</span>
+              </div>
+              <span class="bonus-pts text-sm text-gold font-medium">+50 pts</span>
+            </button>
+
+            <button data-source="facebook_follow" data-points="50" class="bonus-btn w-full flex items-center justify-between px-4 py-3 rounded-lg border border-cream-dark hover:border-gold transition-colors group">
+              <div class="flex items-center gap-3">
+                <span class="bonus-icon w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </span>
+                <span class="text-sm font-medium">Facebook Follow</span>
+              </div>
+              <span class="bonus-pts text-sm text-gold font-medium">+50 pts</span>
+            </button>
+          </div>
+          <p id="bonus-message" class="mt-3 text-sm text-center hidden"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script define:vars={{ apiUrl }}>
+  const API = apiUrl;
+
+  const tierLabels = {
+    neighbor: 'Neighbor',
+    regular: 'Regular',
+    local_legend: 'Local Legend',
+  };
+
+  function getKey() {
+    return sessionStorage.getItem('admin_key') || '';
+  }
+
+  function setKey(k) {
+    sessionStorage.setItem('admin_key', k);
+  }
+
+  function clearKey() {
+    sessionStorage.removeItem('admin_key');
+  }
+
+  function headers() {
+    return { 'Content-Type': 'application/json', 'X-Admin-Key': getKey() };
+  }
+
+  function formatPhone(raw) {
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length === 10) return `+1${digits}`;
+    if (digits.length === 11 && digits.startsWith('1')) return `+${digits}`;
+    return raw.startsWith('+') ? raw : `+${digits}`;
+  }
+
+  let currentCustomerId = null;
+
+  // Check if already authed
+  if (getKey()) {
+    tryResume();
+  }
+
+  async function tryResume() {
+    try {
+      const res = await fetch(`${API}/api/admin/auth`, { method: 'POST', headers: headers() });
+      if (res.ok) {
+        showPanel();
+      } else {
+        clearKey();
+      }
+    } catch {
+      clearKey();
+    }
+  }
+
+  function showPanel() {
+    document.getElementById('login-gate').classList.add('hidden');
+    document.getElementById('admin-panel').classList.remove('hidden');
+  }
+
+  function showLogin() {
+    document.getElementById('admin-panel').classList.add('hidden');
+    document.getElementById('customer-info').classList.add('hidden');
+    document.getElementById('login-gate').classList.remove('hidden');
+    document.getElementById('password-input').value = '';
+    document.getElementById('login-error').classList.add('hidden');
+    clearKey();
+    currentCustomerId = null;
+  }
+
+  // Login
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const pw = document.getElementById('password-input').value;
+    const errEl = document.getElementById('login-error');
+    errEl.classList.add('hidden');
+
+    try {
+      const res = await fetch(`${API}/api/admin/auth`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Admin-Key': pw },
+      });
+      if (res.ok) {
+        setKey(pw);
+        showPanel();
+      } else {
+        errEl.textContent = 'Invalid password.';
+        errEl.classList.remove('hidden');
+      }
+    } catch {
+      errEl.textContent = 'Network error.';
+      errEl.classList.remove('hidden');
+    }
+  });
+
+  // Logout
+  document.getElementById('logout-btn').addEventListener('click', showLogin);
+
+  // Lookup
+  document.getElementById('lookup-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const errEl = document.getElementById('lookup-error');
+    errEl.classList.add('hidden');
+    document.getElementById('customer-info').classList.add('hidden');
+    document.getElementById('bonus-message').classList.add('hidden');
+    currentCustomerId = null;
+
+    const phone = formatPhone(document.getElementById('phone-input').value.trim());
+
+    try {
+      const res = await fetch(`${API}/api/admin/customer?phone=${encodeURIComponent(phone)}`, { headers: headers() });
+      const data = await res.json();
+
+      if (!res.ok) {
+        errEl.textContent = data.error || 'Customer not found.';
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      const c = data.customer;
+      currentCustomerId = c.id;
+
+      const name = [c.first_name, c.last_name].filter(Boolean).join(' ') || 'No name on file';
+      document.getElementById('cust-name').textContent = name;
+      document.getElementById('cust-tier').textContent = tierLabels[c.tier] || c.tier;
+      document.getElementById('cust-phone').textContent = c.phone;
+      document.getElementById('cust-balance').textContent = data.balance.toLocaleString();
+      document.getElementById('cust-spend').textContent = `$${parseFloat(c.annual_spend).toFixed(0)}`;
+      document.getElementById('cust-since').textContent = new Date(c.created_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+      updateBonusButtons(data.awarded_bonuses || []);
+      document.getElementById('customer-info').classList.remove('hidden');
+    } catch {
+      errEl.textContent = 'Network error.';
+      errEl.classList.remove('hidden');
+    }
+  });
+
+  function updateBonusButtons(awardedSources) {
+    document.querySelectorAll('.bonus-btn').forEach((btn) => {
+      const source = btn.dataset.source;
+      const awarded = awardedSources.includes(source);
+      btn.disabled = awarded;
+
+      if (awarded) {
+        btn.classList.add('opacity-60', 'cursor-not-allowed');
+        btn.classList.remove('hover:border-gold');
+        btn.querySelector('.bonus-icon').innerHTML = `<svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>`;
+        btn.querySelector('.bonus-pts').textContent = 'Awarded';
+        btn.querySelector('.bonus-pts').classList.remove('text-gold');
+        btn.querySelector('.bonus-pts').classList.add('text-green-600');
+      } else {
+        btn.classList.remove('opacity-60', 'cursor-not-allowed');
+        btn.classList.add('hover:border-gold');
+        btn.querySelector('.bonus-icon').innerHTML = getOriginalIcon(source);
+        btn.querySelector('.bonus-pts').textContent = `+${btn.dataset.points} pts`;
+        btn.querySelector('.bonus-pts').classList.add('text-gold');
+        btn.querySelector('.bonus-pts').classList.remove('text-green-600');
+      }
+    });
+  }
+
+  function getOriginalIcon(source) {
+    const icons = {
+      google_review: `<svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+      instagram_follow: `<svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`,
+      facebook_follow: `<svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`,
+    };
+    return icons[source] || '';
+  }
+
+  // Award bonus buttons
+  document.getElementById('bonus-buttons').addEventListener('click', async (e) => {
+    const btn = e.target.closest('.bonus-btn');
+    if (!btn || btn.disabled || !currentCustomerId) return;
+
+    const source = btn.dataset.source;
+    const msgEl = document.getElementById('bonus-message');
+    msgEl.classList.add('hidden');
+
+    btn.disabled = true;
+    const originalText = btn.querySelector('.bonus-pts').textContent;
+    btn.querySelector('.bonus-pts').textContent = 'Awarding...';
+
+    try {
+      const res = await fetch(`${API}/api/admin/award-bonus`, {
+        method: 'POST',
+        headers: headers(),
+        body: JSON.stringify({ customer_id: currentCustomerId, source }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        msgEl.textContent = data.error || 'Failed to award bonus.';
+        msgEl.className = 'mt-3 text-sm text-center text-rose';
+        msgEl.classList.remove('hidden');
+        btn.disabled = false;
+        btn.querySelector('.bonus-pts').textContent = originalText;
+        return;
+      }
+
+      document.getElementById('cust-balance').textContent = data.balance.toLocaleString();
+
+      btn.classList.add('opacity-60', 'cursor-not-allowed');
+      btn.classList.remove('hover:border-gold');
+      btn.querySelector('.bonus-icon').innerHTML = `<svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>`;
+      btn.querySelector('.bonus-pts').textContent = 'Awarded';
+      btn.querySelector('.bonus-pts').classList.remove('text-gold');
+      btn.querySelector('.bonus-pts').classList.add('text-green-600');
+
+      msgEl.textContent = `+${data.points_awarded} pts awarded!`;
+      msgEl.className = 'mt-3 text-sm text-center text-green-600 font-medium';
+      msgEl.classList.remove('hidden');
+      setTimeout(() => msgEl.classList.add('hidden'), 3000);
+    } catch {
+      msgEl.textContent = 'Network error.';
+      msgEl.className = 'mt-3 text-sm text-center text-rose';
+      msgEl.classList.remove('hidden');
+      btn.disabled = false;
+      btn.querySelector('.bonus-pts').textContent = originalText;
+    }
+  });
+</script>
