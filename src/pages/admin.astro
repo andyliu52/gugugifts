@@ -34,8 +34,8 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
     </div>
 
     <!-- Admin panel (hidden until auth) -->
-    <div id="admin-panel" class="w-full max-w-lg hidden">
-      <div class="flex items-center justify-between mb-8">
+    <div id="admin-panel" class="w-full max-w-4xl hidden">
+      <div class="flex items-center justify-between mb-6">
         <div>
           <h1 class="font-playfair text-2xl font-medium">Admin Panel</h1>
           <p class="text-xs uppercase tracking-[0.15em] text-warmgray mt-1">gugu gang management</p>
@@ -44,6 +44,19 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
           Log out
         </button>
       </div>
+
+      <!-- Tabs -->
+      <div class="flex gap-1 mb-8 border-b border-cream-dark">
+        <button data-tab="loyalty" class="admin-tab px-5 py-2.5 text-sm uppercase tracking-widest font-medium border-b-2 border-gold text-gold transition-colors">
+          Loyalty
+        </button>
+        <button data-tab="applications" class="admin-tab px-5 py-2.5 text-sm uppercase tracking-widest font-medium border-b-2 border-transparent text-bronze-light hover:text-gold transition-colors">
+          Applications
+        </button>
+      </div>
+
+      <!-- Loyalty tab -->
+      <div id="tab-loyalty" class="max-w-lg">
 
       <!-- Customer lookup -->
       <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
@@ -129,6 +142,32 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
           <p id="bonus-message" class="mt-3 text-sm text-center hidden"></p>
         </div>
       </div>
+      </div><!-- end tab-loyalty -->
+
+      <!-- Applications tab -->
+      <div id="tab-applications" class="hidden">
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+          <div class="flex items-center justify-between mb-4">
+            <p class="text-xs uppercase tracking-widest text-gold font-medium">Job Applications</p>
+            <button id="refresh-apps" class="text-xs uppercase tracking-widest text-bronze-light hover:text-gold transition-colors">
+              Refresh
+            </button>
+          </div>
+          <div id="apps-loading" class="text-center py-8 text-bronze-light text-sm">Loading...</div>
+          <div id="apps-empty" class="hidden text-center py-8 text-bronze-light text-sm">No applications yet.</div>
+          <div id="apps-list" class="hidden space-y-3"></div>
+        </div>
+
+        <!-- Application detail (hidden until click) -->
+        <div id="app-detail" class="hidden bg-white rounded-xl shadow-sm overflow-hidden">
+          <div class="p-6 border-b border-cream-dark flex items-center justify-between">
+            <h2 id="app-detail-name" class="font-playfair text-xl font-medium"></h2>
+            <button id="app-detail-close" class="text-xs uppercase tracking-widest text-bronze-light hover:text-gold transition-colors">Close</button>
+          </div>
+          <div class="p-6 space-y-5" id="app-detail-body"></div>
+        </div>
+      </div><!-- end tab-applications -->
+
     </div>
   </main>
 </Layout>
@@ -351,5 +390,175 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
       btn.disabled = false;
       btn.querySelector('.bonus-pts').textContent = originalText;
     }
+  });
+
+  // ---- Tabs ----
+  let appsLoaded = false;
+
+  document.querySelectorAll('.admin-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.admin-tab').forEach(t => {
+        t.classList.remove('border-gold', 'text-gold');
+        t.classList.add('border-transparent', 'text-bronze-light');
+      });
+      tab.classList.add('border-gold', 'text-gold');
+      tab.classList.remove('border-transparent', 'text-bronze-light');
+
+      document.getElementById('tab-loyalty').classList.toggle('hidden', target !== 'loyalty');
+      document.getElementById('tab-applications').classList.toggle('hidden', target !== 'applications');
+
+      if (target === 'applications' && !appsLoaded) {
+        loadApplications();
+      }
+    });
+  });
+
+  // ---- Applications ----
+  let applicationsData = [];
+
+  async function loadApplications() {
+    const loadingEl = document.getElementById('apps-loading');
+    const emptyEl = document.getElementById('apps-empty');
+    const listEl = document.getElementById('apps-list');
+
+    loadingEl.classList.remove('hidden');
+    emptyEl.classList.add('hidden');
+    listEl.classList.add('hidden');
+    document.getElementById('app-detail').classList.add('hidden');
+
+    try {
+      const res = await fetch(`${API}/api/admin/applications`, { headers: headers() });
+      const data = await res.json();
+
+      if (!res.ok) {
+        loadingEl.textContent = data.error || 'Failed to load.';
+        return;
+      }
+
+      applicationsData = data.applications || [];
+      appsLoaded = true;
+      loadingEl.classList.add('hidden');
+
+      if (applicationsData.length === 0) {
+        emptyEl.classList.remove('hidden');
+        return;
+      }
+
+      listEl.innerHTML = '';
+      applicationsData.forEach((app, idx) => {
+        const date = new Date(app.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const card = document.createElement('button');
+        card.className = 'w-full text-left px-5 py-4 rounded-lg border border-cream-dark hover:border-gold transition-colors flex items-center justify-between gap-4';
+        card.innerHTML = `
+          <div class="min-w-0">
+            <p class="font-medium text-bronze truncate">${app.first_name} ${app.last_name}</p>
+            <p class="text-sm text-bronze-light truncate">${app.position} &middot; ${app.email}</p>
+          </div>
+          <span class="text-xs text-warmgray whitespace-nowrap">${date}</span>
+        `;
+        card.addEventListener('click', () => showAppDetail(idx));
+        listEl.appendChild(card);
+      });
+      listEl.classList.remove('hidden');
+    } catch {
+      loadingEl.textContent = 'Network error.';
+    }
+  }
+
+  function showAppDetail(idx) {
+    const app = applicationsData[idx];
+    if (!app) return;
+
+    document.getElementById('app-detail-name').textContent = `${app.first_name} ${app.last_name}`;
+
+    const body = document.getElementById('app-detail-body');
+    const yn = v => v ? 'Yes' : 'No';
+    const na = v => v || '—';
+
+    const address = [app.address_street, app.address_city, app.address_state, app.address_zip].filter(Boolean).join(', ') || '—';
+
+    const sections = [
+      {
+        title: 'Personal Information',
+        rows: [
+          ['Email', `<a href="mailto:${app.email}" class="text-gold hover:underline">${app.email}</a>`],
+          ['Phone', app.phone],
+          ['Address', address],
+          ['Date of Birth', na(app.date_of_birth)],
+        ],
+      },
+      {
+        title: 'Position & Availability',
+        rows: [
+          ['Position', app.position],
+          ['Desired Start', na(app.desired_start)],
+          ['Availability', na(app.availability)],
+        ],
+      },
+      {
+        title: 'Work Authorization',
+        rows: [
+          ['Authorized to Work in US', yn(app.authorized_to_work)],
+          ['Felony Conviction', yn(app.felony_conviction)],
+          ...(app.felony_conviction ? [['Explanation', na(app.felony_explanation)]] : []),
+        ],
+      },
+      {
+        title: 'Employment History',
+        rows: [
+          ['Employer', na(app.previous_employer)],
+          ['Title', na(app.previous_title)],
+          ['Duration', na(app.previous_duration)],
+          ['Reason for Leaving', na(app.previous_reason_left)],
+        ],
+      },
+      {
+        title: 'Education',
+        rows: [['Education', na(app.education)]],
+      },
+      {
+        title: 'References',
+        rows: [
+          ['Reference 1', [app.reference1_name, app.reference1_phone, app.reference1_relation].filter(Boolean).join(' &middot; ') || '—'],
+          ['Reference 2', [app.reference2_name, app.reference2_phone, app.reference2_relation].filter(Boolean).join(' &middot; ') || '—'],
+        ],
+      },
+      {
+        title: 'Other',
+        rows: [
+          ['How Heard', na(app.how_heard)],
+          ['Submitted', new Date(app.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })],
+        ],
+      },
+    ];
+
+    body.innerHTML = sections.map(s => `
+      <div>
+        <p class="text-xs uppercase tracking-widest text-gold mb-3 font-medium">${s.title}</p>
+        <div class="bg-cream-dark/30 rounded-lg p-4">
+          <table class="w-full text-sm">
+            ${s.rows.map(([label, val]) => `
+              <tr>
+                <td class="py-1 pr-4 text-bronze-light font-medium whitespace-nowrap align-top" style="width:40%">${label}</td>
+                <td class="py-1 text-bronze">${val}</td>
+              </tr>
+            `).join('')}
+          </table>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('app-detail').classList.remove('hidden');
+    document.getElementById('app-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.getElementById('app-detail-close').addEventListener('click', () => {
+    document.getElementById('app-detail').classList.add('hidden');
+  });
+
+  document.getElementById('refresh-apps').addEventListener('click', () => {
+    appsLoaded = false;
+    loadApplications();
   });
 </script>
