@@ -34,6 +34,6 @@ When you buy from a local maker, your dollar goes further in the community. It s
 
 ## Come See for Yourself
 
-We're opening soon at **301 Tanger Dr, Suite 112, Terrell, TX 75126**, and we'd love for you to experience our collection of local goods in person. There's nothing quite like picking up a jar of honey, reading the label, and knowing it came from just down the road.
+We're opening soon at **301 Tanger Dr, Suite 112, Terrell, TX 75160**, and we'd love for you to experience our collection of local goods in person. There's nothing quite like picking up a jar of honey, reading the label, and knowing it came from just down the road.
 
 *Questions or interested in having your artisan goods featured? Email us at [gugu@gugugifts.com](mailto:gugu@gugugifts.com).*

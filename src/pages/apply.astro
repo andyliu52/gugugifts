@@ -1,0 +1,504 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+---
+
+<Layout
+  title="Apply — Join Our Team | Gugu Gifts"
+  description="Apply to join the Gugu Gifts team in Terrell, Texas. We're looking for friendly, enthusiastic team members who love helping people find the perfect gift."
+>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="/" class="flex items-baseline gap-0 text-2xl tracking-wide">
+        <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
+      </a>
+      <div class="flex items-center gap-8">
+        <a href="/" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200 hidden sm:inline">Home</a>
+        <a href="/blog" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200 hidden sm:inline">Blog</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="pt-32 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">Careers</p>
+        <h1 class="font-playfair text-4xl md:text-5xl mb-6">Join Our Team</h1>
+        <div class="divider-gold mx-auto mb-6"></div>
+        <p class="text-bronze-light max-w-xl mx-auto leading-relaxed mb-2">
+          <strong class="text-bronze">Gugu Gifts LLC</strong><br />
+          301 Tanger Dr, Suite 112 &middot; Terrell, TX 75160
+        </p>
+        <p class="text-bronze-light max-w-xl mx-auto leading-relaxed">
+          We're always looking for friendly, enthusiastic team members who love helping people
+          find the perfect gift. If that sounds like you, we'd love to hear from you!
+        </p>
+      </div>
+
+      <!-- Application Form -->
+      <form id="application-form" data-api={apiUrl} class="space-y-10" novalidate>
+
+        <!-- 1. Personal Information -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Personal Information</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="first_name" class="block text-sm font-medium text-bronze mb-1">First Name <span class="text-red-500">*</span></label>
+                <input type="text" id="first_name" name="first_name" required
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="last_name" class="block text-sm font-medium text-bronze mb-1">Last Name <span class="text-red-500">*</span></label>
+                <input type="text" id="last_name" name="last_name" required
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-sm font-medium text-bronze mb-1">Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-bronze mb-1">Phone <span class="text-red-500">*</span></label>
+                <input type="tel" id="phone" name="phone" required
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label for="address_street" class="block text-sm font-medium text-bronze mb-1">Street Address</label>
+              <input type="text" id="address_street" name="address_street"
+                class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+            </div>
+            <div class="grid sm:grid-cols-3 gap-5">
+              <div>
+                <label for="address_city" class="block text-sm font-medium text-bronze mb-1">City</label>
+                <input type="text" id="address_city" name="address_city"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="address_state" class="block text-sm font-medium text-bronze mb-1">State</label>
+                <input type="text" id="address_state" name="address_state" maxlength="2" placeholder="TX"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="address_zip" class="block text-sm font-medium text-bronze mb-1">Zip Code</label>
+                <input type="text" id="address_zip" name="address_zip" maxlength="10"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+            <div class="sm:w-1/2">
+              <label for="date_of_birth" class="block text-sm font-medium text-bronze mb-1">Date of Birth</label>
+              <input type="date" id="date_of_birth" name="date_of_birth"
+                class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Position & Availability -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Position &amp; Availability</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8 space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="position" class="block text-sm font-medium text-bronze mb-1">Position Desired <span class="text-red-500">*</span></label>
+                <select id="position" name="position" required
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors">
+                  <option value="Sales Associate">Sales Associate</option>
+                  <option value="Key Holder">Key Holder</option>
+                  <option value="Store Manager">Store Manager</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="desired_start" class="block text-sm font-medium text-bronze mb-1">Desired Start Date</label>
+                <input type="text" id="desired_start" name="desired_start" placeholder="e.g. Immediately, June 2025"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label for="availability" class="block text-sm font-medium text-bronze mb-1">Availability</label>
+              <select id="availability" name="availability"
+                class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors">
+                <option value="">— Select —</option>
+                <option value="Weekdays only">Weekdays only</option>
+                <option value="Weekends only">Weekends only</option>
+                <option value="Weekdays and weekends">Weekdays and weekends</option>
+                <option value="Flexible / open availability">Flexible / open availability</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Work Authorization -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Work Authorization</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8 space-y-5">
+            <div>
+              <p class="text-sm font-medium text-bronze mb-2">Are you authorized to work in the United States? <span class="text-red-500">*</span></p>
+              <div class="flex gap-6">
+                <label class="flex items-center gap-2 text-bronze-light cursor-pointer">
+                  <input type="radio" name="authorized_to_work" value="true" required class="accent-gold" /> Yes
+                </label>
+                <label class="flex items-center gap-2 text-bronze-light cursor-pointer">
+                  <input type="radio" name="authorized_to_work" value="false" class="accent-gold" /> No
+                </label>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-bronze mb-2">Have you ever been convicted of a felony? <span class="text-red-500">*</span></p>
+              <div class="flex gap-6">
+                <label class="flex items-center gap-2 text-bronze-light cursor-pointer">
+                  <input type="radio" name="felony_conviction" value="true" required class="accent-gold" /> Yes
+                </label>
+                <label class="flex items-center gap-2 text-bronze-light cursor-pointer">
+                  <input type="radio" name="felony_conviction" value="false" class="accent-gold" /> No
+                </label>
+              </div>
+            </div>
+            <div id="felony-explanation-wrap" class="hidden">
+              <label for="felony_explanation" class="block text-sm font-medium text-bronze mb-1">If yes, please explain</label>
+              <textarea id="felony_explanation" name="felony_explanation" rows="3"
+                class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Employment History -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Employment History</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8 space-y-5">
+            <p class="text-sm text-bronze-light">Most recent employer (optional)</p>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="previous_employer" class="block text-sm font-medium text-bronze mb-1">Employer Name</label>
+                <input type="text" id="previous_employer" name="previous_employer"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="previous_title" class="block text-sm font-medium text-bronze mb-1">Job Title</label>
+                <input type="text" id="previous_title" name="previous_title"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="previous_duration" class="block text-sm font-medium text-bronze mb-1">Duration</label>
+                <input type="text" id="previous_duration" name="previous_duration" placeholder="e.g. 2 years"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+              <div>
+                <label for="previous_reason_left" class="block text-sm font-medium text-bronze mb-1">Reason for Leaving</label>
+                <input type="text" id="previous_reason_left" name="previous_reason_left"
+                  class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Education -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Education</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8">
+            <label for="education" class="block text-sm font-medium text-bronze mb-1">Highest Level of Education / School</label>
+            <input type="text" id="education" name="education" placeholder="e.g. High School Diploma, B.A. from UT Dallas"
+              class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+          </div>
+        </section>
+
+        <!-- 6. References -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">References</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8 space-y-6">
+            <div>
+              <p class="text-sm text-bronze-light mb-3">Reference 1</p>
+              <div class="grid sm:grid-cols-3 gap-5">
+                <div>
+                  <label for="reference1_name" class="block text-sm font-medium text-bronze mb-1">Name</label>
+                  <input type="text" id="reference1_name" name="reference1_name"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+                <div>
+                  <label for="reference1_phone" class="block text-sm font-medium text-bronze mb-1">Phone</label>
+                  <input type="tel" id="reference1_phone" name="reference1_phone"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+                <div>
+                  <label for="reference1_relation" class="block text-sm font-medium text-bronze mb-1">Relationship</label>
+                  <input type="text" id="reference1_relation" name="reference1_relation"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-bronze-light mb-3">Reference 2</p>
+              <div class="grid sm:grid-cols-3 gap-5">
+                <div>
+                  <label for="reference2_name" class="block text-sm font-medium text-bronze mb-1">Name</label>
+                  <input type="text" id="reference2_name" name="reference2_name"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+                <div>
+                  <label for="reference2_phone" class="block text-sm font-medium text-bronze mb-1">Phone</label>
+                  <input type="tel" id="reference2_phone" name="reference2_phone"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+                <div>
+                  <label for="reference2_relation" class="block text-sm font-medium text-bronze mb-1">Relationship</label>
+                  <input type="text" id="reference2_relation" name="reference2_relation"
+                    class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Physical Requirements -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Physical Requirements</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8">
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="physical_ack" name="physical_ack" required class="accent-gold mt-1" />
+              <span class="text-sm text-bronze-light leading-relaxed">
+                I understand this position may require standing for extended periods, lifting up to 40 lbs, and performing other physical tasks associated with retail work.
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- 8. How did you hear about us? -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">How Did You Hear About Us?</h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8">
+            <select id="how_heard" name="how_heard"
+              class="w-full px-4 py-3 rounded-lg border border-cream-dark bg-cream text-bronze focus:outline-none focus:border-gold transition-colors">
+              <option value="">— Select —</option>
+              <option value="Walk-in">Walk-in</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Friend or family">Friend or family</option>
+              <option value="Indeed / job board">Indeed / job board</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- 9. Signature -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Signature <span class="text-red-500">*</span></h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8">
+            <p class="text-sm text-bronze-light mb-3">Please sign below using your mouse or finger.</p>
+            <div class="border border-cream-dark rounded-lg overflow-hidden inline-block bg-white">
+              <canvas id="signature-canvas" width="300" height="150" class="block cursor-crosshair"></canvas>
+            </div>
+            <div class="mt-3">
+              <button type="button" id="clear-signature"
+                class="text-sm text-gold hover:text-gold-light transition-colors underline">Clear Signature</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. Certification -->
+        <section class="reveal">
+          <h2 class="font-playfair text-2xl mb-4 text-bronze">Certification <span class="text-red-500">*</span></h2>
+          <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-8">
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="agreed_terms" name="agreed_terms" required class="accent-gold mt-1" />
+              <span class="text-sm text-bronze-light leading-relaxed">
+                I certify that all information provided in this application is true and accurate to the best of my knowledge.
+                I understand that any falsification or omission may be grounds for rejection of this application or termination of employment.
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- 11. Submit -->
+        <div class="text-center reveal">
+          <button type="submit" id="submit-btn"
+            class="inline-block px-12 py-4 bg-gold text-white text-sm uppercase tracking-widest rounded-lg hover:bg-gold-light transition-colors font-medium">
+            Submit Application
+          </button>
+          <p id="form-error" class="text-red-500 text-sm mt-4 hidden"></p>
+        </div>
+
+      </form>
+
+      <!-- Success message (hidden by default) -->
+      <div id="success-message" class="hidden text-center py-20">
+        <div class="bg-cream-dark/40 border border-gold/10 rounded-2xl p-12 max-w-lg mx-auto">
+          <div class="text-gold text-5xl mb-6">&#10003;</div>
+          <h2 class="font-playfair text-3xl mb-4 text-bronze">Application Received!</h2>
+          <p class="text-bronze-light leading-relaxed mb-6">
+            Thank you for your interest in joining the Gugu Gifts team. We'll review your application and reach out if there's a good fit.
+          </p>
+          <a href="/" class="inline-block px-8 py-3 border border-gold text-gold text-sm uppercase tracking-widest rounded-lg hover:bg-gold hover:text-white transition-colors font-medium">
+            Back to Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+  <CookieConsent />
+</Layout>
+
+<script>
+  // ---- Signature Canvas ----
+  const canvas = document.getElementById('signature-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  let drawing = false;
+  let hasSigned = false;
+
+  function getPos(e: MouseEvent | TouchEvent): { x: number; y: number } {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    if ('touches' in e) {
+      return {
+        x: (e.touches[0].clientX - rect.left) * scaleX,
+        y: (e.touches[0].clientY - rect.top) * scaleY,
+      };
+    }
+    return {
+      x: (e.clientX - rect.left) * scaleX,
+      y: (e.clientY - rect.top) * scaleY,
+    };
+  }
+
+  function startDraw(e: MouseEvent | TouchEvent) {
+    drawing = true;
+    hasSigned = true;
+    const pos = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+  }
+  function draw(e: MouseEvent | TouchEvent) {
+    if (!drawing) return;
+    e.preventDefault();
+    const pos = getPos(e);
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '#3d2b1f';
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+  }
+  function stopDraw() { drawing = false; }
+
+  canvas.addEventListener('mousedown', startDraw);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDraw);
+  canvas.addEventListener('mouseleave', stopDraw);
+  canvas.addEventListener('touchstart', startDraw, { passive: false });
+  canvas.addEventListener('touchmove', draw, { passive: false });
+  canvas.addEventListener('touchend', stopDraw);
+
+  document.getElementById('clear-signature')!.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    hasSigned = false;
+  });
+
+  // ---- Felony explanation toggle ----
+  document.querySelectorAll<HTMLInputElement>('input[name="felony_conviction"]').forEach(r => {
+    r.addEventListener('change', () => {
+      const wrap = document.getElementById('felony-explanation-wrap')!;
+      wrap.classList.toggle('hidden', r.value !== 'true' || !r.checked);
+    });
+  });
+
+  // ---- Form submission ----
+  const form = document.getElementById('application-form') as HTMLFormElement;
+  const errorEl = document.getElementById('form-error')!;
+  const successEl = document.getElementById('success-message')!;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.classList.add('hidden');
+
+    if (!hasSigned) {
+      errorEl.textContent = 'Please provide your signature.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    const fd = new FormData(form);
+
+    const radioVal = (name: string) => {
+      const el = form.querySelector<HTMLInputElement>(`input[name="${name}"]:checked`);
+      return el ? el.value === 'true' : null;
+    };
+
+    const authorizedToWork = radioVal('authorized_to_work');
+    const felonyConviction = radioVal('felony_conviction');
+
+    if (authorizedToWork === null || felonyConviction === null) {
+      errorEl.textContent = 'Please answer all required questions.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    const payload: Record<string, unknown> = {
+      first_name: fd.get('first_name'),
+      last_name: fd.get('last_name'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      address_street: fd.get('address_street'),
+      address_city: fd.get('address_city'),
+      address_state: fd.get('address_state'),
+      address_zip: fd.get('address_zip'),
+      date_of_birth: fd.get('date_of_birth') || null,
+      position: fd.get('position'),
+      desired_start: fd.get('desired_start'),
+      authorized_to_work: authorizedToWork,
+      felony_conviction: felonyConviction,
+      felony_explanation: fd.get('felony_explanation'),
+      previous_employer: fd.get('previous_employer'),
+      previous_title: fd.get('previous_title'),
+      previous_duration: fd.get('previous_duration'),
+      previous_reason_left: fd.get('previous_reason_left'),
+      education: fd.get('education'),
+      reference1_name: fd.get('reference1_name'),
+      reference1_phone: fd.get('reference1_phone'),
+      reference1_relation: fd.get('reference1_relation'),
+      reference2_name: fd.get('reference2_name'),
+      reference2_phone: fd.get('reference2_phone'),
+      reference2_relation: fd.get('reference2_relation'),
+      availability: fd.get('availability'),
+      how_heard: fd.get('how_heard'),
+      signature_data: canvas.toDataURL('image/png'),
+      agreed_terms: (form.querySelector<HTMLInputElement>('#agreed_terms')!).checked,
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+
+    try {
+      const apiBase = form.dataset.api || '';
+      const res = await fetch(`${apiBase}/api/applications`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong. Please try again.');
+      }
+      form.classList.add('hidden');
+      successEl.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err: any) {
+      errorEl.textContent = err.message;
+      errorEl.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application';
+    }
+  });
+</script>

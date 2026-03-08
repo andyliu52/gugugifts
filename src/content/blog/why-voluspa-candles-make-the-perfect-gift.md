@@ -32,6 +32,6 @@ Whether it's a housewarming, a birthday, a thank-you, or just a Tuesday treat-yo
 
 ## Visit Us Soon
 
-We're getting ready to open at **301 Tanger Dr, Suite 112, Terrell, TX 75126**. Follow us for updates on our grand opening, and be among the first to shop our curated collection of Voluspa candles and so much more.
+We're getting ready to open at **301 Tanger Dr, Suite 112, Terrell, TX 75160**. Follow us for updates on our grand opening, and be among the first to shop our curated collection of Voluspa candles and so much more.
 
 *Have questions? Reach out at [gugu@gugugifts.com](mailto:gugu@gugugifts.com).*
