@@ -88,13 +88,6 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
               <p class="text-xs uppercase tracking-widest text-gold mb-3 font-medium">Your Gift Cards</p>
               <div id="rewards-list" class="space-y-2"></div>
             </div>
-            <div class="pt-4 border-t border-cream-dark">
-              <p class="text-xs uppercase tracking-widest text-bronze-light mb-2">Your Referral Code</p>
-              <div class="flex items-center gap-3">
-                <code id="referral-code" class="flex-1 bg-cream-dark px-4 py-2 rounded text-center font-medium tracking-wider"></code>
-                <button id="copy-btn" class="px-4 py-2 text-xs uppercase tracking-widest text-gold border border-gold rounded hover:bg-gold hover:text-white transition-colors">Copy</button>
-              </div>
-            </div>
             <div class="pt-4 border-t border-cream-dark text-center">
               <a href="/circle/settings" class="text-xs uppercase tracking-widest text-bronze-light hover:text-gold transition-colors">
                 Account Settings &rarr;
@@ -158,8 +151,6 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
       const remainder = balance % 500;
       const ptsToNext = remainder === 0 && balance > 0 ? 0 : 500 - remainder;
       document.getElementById('next-reward')!.textContent = ptsToNext === 0 ? 'You have a reward ready!' : `${ptsToNext} more pts`;
-
-      document.getElementById('referral-code')!.textContent = c.referral_code;
 
       const rewardsSection = document.getElementById('rewards-section')!;
       const rewardsList = document.getElementById('rewards-list')!;
@@ -274,12 +265,4 @@ const apiUrl = import.meta.env.PUBLIC_API_URL || '';
     }
   });
 
-  document.getElementById('copy-btn')?.addEventListener('click', () => {
-    const code = document.getElementById('referral-code')!.textContent || '';
-    navigator.clipboard.writeText(code).then(() => {
-      const btn = document.getElementById('copy-btn')!;
-      btn.textContent = 'Copied!';
-      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
-    });
-  });
 </script>
