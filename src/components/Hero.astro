@@ -1,20 +1,50 @@
 ---
+import { Image } from 'astro:assets';
 
+const heroImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/hero/*.{jpg,jpeg}',
+  { eager: true }
+);
+const photos = Object.entries(heroImages)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, mod]) => mod.default);
 ---
 
 <section class="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+  <!-- Photo slideshow -->
+  {photos.length > 0 && (
+    <div class="hero-slideshow absolute inset-0">
+      {photos.map((src, i) => (
+        <div class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === 0 ? 'opacity-100' : 'opacity-0'}`}>
+          <Image
+            src={src}
+            alt=""
+            widths={[800, 1200, 1600, 2400]}
+            sizes="100vw"
+            formats={['avif', 'webp', 'jpeg']}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            class="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- Cream wash so the wordmark stays legible over varied photos -->
+  <div class="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/70 to-cream/90"></div>
+
   <!-- Background pattern -->
-  <div class="absolute inset-0 pattern-botanical opacity-40"></div>
-  <div class="absolute inset-0 bg-gradient-to-b from-cream via-transparent to-cream"></div>
+  <div class="absolute inset-0 pattern-botanical opacity-30"></div>
 
   <!-- Decorative top accent line -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-gold/30"></div>
 
   <div class="relative text-center max-w-3xl mx-auto">
     <!-- Grand opening badge -->
-    <div class="reveal inline-flex items-center gap-2 px-5 py-2.5 border border-gold/40 rounded-full text-xs uppercase tracking-[0.2em] text-gold mb-10">
+    <div class="reveal inline-flex items-center gap-2 px-5 py-2.5 border border-gold/40 rounded-full text-xs uppercase tracking-[0.2em] text-gold mb-10 bg-cream/40 backdrop-blur-sm">
       <span class="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
-      Grand Opening &mdash; Coming Soon
+      Now Open
     </div>
 
     <!-- Wordmark -->
@@ -44,3 +74,15 @@
     </svg>
   </div>
 </section>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.hero-slide');
+  if (slides.length > 1) {
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.replace('opacity-100', 'opacity-0');
+      current = (current + 1) % slides.length;
+      slides[current].classList.replace('opacity-0', 'opacity-100');
+    }, 5000);
+  }
+</script>
