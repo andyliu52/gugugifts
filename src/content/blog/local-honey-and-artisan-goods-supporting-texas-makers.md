@@ -4,6 +4,7 @@ description: "From raw Texas honey to handmade soaps and crafts — why shopping
 date: 2026-02-10
 tags: ["local honey", "texas", "artisan", "handmade", "soaps", "terrell tx", "small business"]
 author: "Gugu Gifts"
+heroImage: "/images/blog/local-honey-and-artisan-goods-supporting-texas-makers.jpg"
 ---
 
 ## Good Things Come From Close to Home

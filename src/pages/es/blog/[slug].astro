@@ -1,11 +1,11 @@
 ---
-import BlogPost from '../../layouts/BlogPost.astro';
+import BlogPost from '../../../layouts/BlogPost.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const isDev = import.meta.env.DEV;
   const now = new Date();
-  const posts = await getCollection('blog', ({ data }) => !data.draft && (isDev || data.date <= now));
+  const posts = await getCollection('blog-es', ({ data }) => !data.draft && (isDev || data.date <= now));
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -23,7 +23,7 @@ const { Content } = await render(post);
   author={post.data.author}
   tags={post.data.tags}
   slug={post.id}
-  lang="en"
+  lang="es"
   heroImage={post.data.heroImage}
 >
   <Content />

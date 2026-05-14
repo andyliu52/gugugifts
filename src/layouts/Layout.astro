@@ -4,91 +4,132 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  lang?: 'en' | 'es';
 }
 
-const {
-  title = 'Gugu Gifts | Curated Gift Shop in Terrell, TX',
-  description = 'Gugu Gifts is a curated mid-luxe gift shop in Terrell, Texas featuring Voluspa, Julie Vos, Greenleaf, Kaweco, Swig, Lucky Feather, local honey, artisan soaps, and unique home décor. Grand opening coming soon.',
-} = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
+
+const defaults = {
+  en: {
+    title: 'Gugu Gifts | Curated Gift Shop in Terrell, TX',
+    description:
+      'Gugu Gifts is a curated mid-luxe gift shop at Tanger Outlets in Terrell, Texas — featuring Voluspa, Julie Vos, Splendid Iris, Meri Meri, Kaweco, Govino, local honey, and unique home décor.',
+    keywords:
+      'gift shop Terrell TX, Tanger Outlets Terrell, Terrell Texas gift store, gifts near 75160, Kaufman County gift shop, curated gifts, Voluspa candles, Julie Vos jewelry, Splendid Iris, Meri Meri, Kaweco pens, Govino, local honey Texas, artisan gifts, home décor, mid-luxe gifts, gifts near I-20',
+    locale: 'en_US',
+    rssTitle: 'Gugu Gifts Blog',
+    rssHref: '/rss.xml',
+  },
+  es: {
+    title: 'Gugu Gifts | Tienda de Regalos en Terrell, TX',
+    description:
+      'Gugu Gifts es una tienda de regalos curada en Tanger Outlets en Terrell, Texas — con Voluspa, Julie Vos, Splendid Iris, Meri Meri, Kaweco, Govino, miel local y decoración para el hogar.',
+    keywords:
+      'tienda de regalos Terrell TX, Tanger Outlets Terrell, regalos cerca de 75160, regalos en Kaufman County, regalos curados, velas Voluspa, joyería Julie Vos, Splendid Iris, Meri Meri, plumas Kaweco, miel local de Texas, regalos artesanales, decoración, regalos cerca de I-20',
+    locale: 'es_MX',
+    rssTitle: 'Blog de Gugu Gifts',
+    rssHref: '/es/rss.xml',
+  },
+} as const;
+
+const t = defaults[lang];
+const pageTitle = title ?? t.title;
+const pageDescription = description ?? t.description;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
+// hreflang alternates: pair EN paths with /es/-prefixed counterparts.
+const path = Astro.url.pathname;
+const enPath = path.startsWith('/es/') ? path.slice(3) : (path === '/es' ? '/' : path);
+const esPath = path.startsWith('/es/') || path === '/es' ? path : `/es${path === '/' ? '' : path}`;
+const enURL = new URL(enPath, Astro.site).toString();
+const esURL = new URL(esPath, Astro.site).toString();
+
 const schema = {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "Gugu Gifts",
-  "description": description,
-  "url": "https://www.gugugifts.com",
-  "email": "gugu@gugugifts.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "301 Tanger Dr, Suite 112",
-    "addressLocality": "Terrell",
-    "addressRegion": "TX",
-    "postalCode": "75160",
-    "addressCountry": "US"
+  '@context': 'https://schema.org',
+  '@type': 'Store',
+  name: 'Gugu Gifts',
+  description: pageDescription,
+  url: 'https://www.gugugifts.com',
+  email: 'gugu@gugugifts.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '301 Tanger Dr, Suite 112',
+    addressLocality: 'Terrell',
+    addressRegion: 'TX',
+    postalCode: '75160',
+    addressCountry: 'US',
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 32.7191,
-    "longitude": -96.2753
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7191,
+    longitude: -96.2753,
   },
-  "brand": [
-    { "@type": "Brand", "name": "Greenleaf" },
-    { "@type": "Brand", "name": "Voluspa" },
-    { "@type": "Brand", "name": "Splendid Iris" },
-    { "@type": "Brand", "name": "Kaweco" },
-    { "@type": "Brand", "name": "Julie Vos" },
-    { "@type": "Brand", "name": "Swig" },
-    { "@type": "Brand", "name": "Lucky Feather" }
+  brand: [
+    { '@type': 'Brand', name: 'Greenleaf' },
+    { '@type': 'Brand', name: 'Voluspa' },
+    { '@type': 'Brand', name: 'Splendid Iris' },
+    { '@type': 'Brand', name: 'Kaweco' },
+    { '@type': 'Brand', name: 'Julie Vos' },
+    { '@type': 'Brand', name: 'Swig' },
+    { '@type': 'Brand', name: 'Lucky Feather' },
   ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Gift Shop Products",
-    "itemListElement": [
-      { "@type": "OfferCatalog", "name": "Home Fragrance" },
-      { "@type": "OfferCatalog", "name": "Jewelry & Accessories" },
-      { "@type": "OfferCatalog", "name": "Fine Stationery" },
-      { "@type": "OfferCatalog", "name": "Home Décor" },
-      { "@type": "OfferCatalog", "name": "Local Honey & Artisan Goods" },
-      { "@type": "OfferCatalog", "name": "Curated Gift Sets" }
-    ]
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Gift Shop Products',
+    itemListElement: [
+      { '@type': 'OfferCatalog', name: 'Home Fragrance' },
+      { '@type': 'OfferCatalog', name: 'Jewelry & Accessories' },
+      { '@type': 'OfferCatalog', name: 'Fine Stationery' },
+      { '@type': 'OfferCatalog', name: 'Home Décor' },
+      { '@type': 'OfferCatalog', name: 'Local Honey & Artisan Goods' },
+      { '@type': 'OfferCatalog', name: 'Curated Gift Sets' },
+    ],
   },
-  "image": "https://www.gugugifts.com/og-image.png",
-  "priceRange": "$$"
+  image: 'https://www.gugugifts.com/og-image.png',
+  priceRange: '$$',
 };
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content="gift shop Terrell TX, curated gifts, Voluspa candles, Julie Vos jewelry, Greenleaf, Kaweco pens, Swig, Lucky Feather, local honey Texas, artisan gifts, home décor, mid-luxe gifts, Tanger Outlets Terrell" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={t.keywords} />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- hreflang alternates -->
+    <link rel="alternate" hreflang="en" href={enURL} />
+    <link rel="alternate" hreflang="es" href={esURL} />
+    <link rel="alternate" hreflang="x-default" href={enURL} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:site_name" content="Gugu Gifts" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={t.locale} />
+    {lang === 'en'
+      ? <meta property="og:locale:alternate" content="es_MX" />
+      : <meta property="og:locale:alternate" content="en_US" />
+    }
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="Gugu Gifts Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={t.rssTitle} href={t.rssHref} />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,7 +143,7 @@ const schema = {
   </head>
   <body class="bg-cream text-bronze font-jost min-h-screen">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">
-      Skip to main content
+      {lang === 'es' ? 'Saltar al contenido principal' : 'Skip to main content'}
     </a>
     <slot />
 

@@ -4,6 +4,7 @@ description: "A sneak peek at the curated brands you'll find at Gugu Gifts — f
 date: 2026-02-15
 tags: ["brands", "julie vos", "kaweco", "greenleaf", "swig", "gift ideas", "terrell tx"]
 author: "Gugu Gifts"
+heroImage: "/images/blog/the-art-of-gift-giving-our-favorite-brands.jpg"
 ---
 
 ## Gifting Is an Art — and We Take It Seriously

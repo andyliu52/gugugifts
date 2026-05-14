@@ -5,19 +5,20 @@ import type { APIContext } from 'astro';
 export async function GET(context: APIContext) {
   const isDev = import.meta.env.DEV;
   const now = new Date();
-  const posts = (await getCollection('blog', ({ data }) => !data.draft && (isDev || data.date <= now)))
+  const posts = (await getCollection('blog-es', ({ data }) => !data.draft && (isDev || data.date <= now)))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return rss({
-    title: 'Gugu Gifts Blog',
-    description: 'Gift-giving inspiration, brand spotlights, and local artisan features from Gugu Gifts in Terrell, Texas.',
+    title: 'Blog de Gugu Gifts',
+    description:
+      'Inspiración para regalar, historias de marcas y artesanos locales desde Gugu Gifts en Terrell, Texas.',
     site: context.site!.toString(),
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.date,
-      link: `/blog/${post.id}`,
+      link: `/es/blog/${post.id}`,
     })),
-    customData: '<language>en-us</language>',
+    customData: '<language>es-mx</language>',
   });
 }

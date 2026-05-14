@@ -7,75 +7,132 @@ interface Props {
   date: Date;
   author: string;
   tags: string[];
+  slug: string;
+  lang?: 'en' | 'es';
+  heroImage?: string;
 }
 
-const { title, description, date, author, tags } = Astro.props;
+const { title, description, date, author, tags, slug, lang = 'en', heroImage } = Astro.props;
+
+const t = {
+  en: {
+    titleSuffix: 'Gugu Gifts Blog',
+    rssTitle: 'Gugu Gifts Blog',
+    rssHref: '/rss.xml',
+    siteName: 'Gugu Gifts',
+    breadcrumbHome: 'Home',
+    breadcrumbBlog: 'Blog',
+    blogHref: '/blog',
+    homeHref: '/',
+    allPosts: 'All Posts',
+    locale: 'en_US',
+    altLocale: 'es_MX',
+    inLanguage: 'en-US',
+    dateLocale: 'en-US',
+    skip: 'Skip to main content',
+  },
+  es: {
+    titleSuffix: 'Blog de Gugu Gifts',
+    rssTitle: 'Blog de Gugu Gifts',
+    rssHref: '/es/rss.xml',
+    siteName: 'Gugu Gifts',
+    breadcrumbHome: 'Inicio',
+    breadcrumbBlog: 'Blog',
+    blogHref: '/es/blog',
+    homeHref: '/es',
+    allPosts: 'Todas las publicaciones',
+    locale: 'es_MX',
+    altLocale: 'en_US',
+    inLanguage: 'es-MX',
+    dateLocale: 'es-MX',
+    skip: 'Saltar al contenido principal',
+  },
+}[lang];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const formattedDate = date.toLocaleDateString('en-US', {
+const formattedDate = date.toLocaleDateString(t.dateLocale, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
 const isoDate = date.toISOString();
 
+const enURL = new URL(`/blog/${slug}`, Astro.site).toString();
+const esURL = new URL(`/es/blog/${slug}`, Astro.site).toString();
+
 const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": title,
-  "description": description,
-  "datePublished": isoDate,
-  "author": {
-    "@type": "Organization",
-    "name": author,
-    "url": "https://www.gugugifts.com"
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  datePublished: isoDate,
+  inLanguage: t.inLanguage,
+  author: {
+    '@type': 'Organization',
+    name: author,
+    url: 'https://www.gugugifts.com',
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Gugu Gifts",
-    "url": "https://www.gugugifts.com"
+  publisher: {
+    '@type': 'Organization',
+    name: 'Gugu Gifts',
+    url: 'https://www.gugugifts.com',
   },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": canonicalURL.toString()
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalURL.toString(),
   },
-  "keywords": tags.join(', ')
+  keywords: tags.join(', '),
+  ...(heroImage ? { image: new URL(heroImage, Astro.site).toString() } : {}),
 };
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gugugifts.com" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.gugugifts.com/blog" },
-    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalURL.toString() }
-  ]
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.breadcrumbHome, item: new URL(t.homeHref, Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: t.breadcrumbBlog, item: new URL(t.blogHref, Astro.site).toString() },
+    { '@type': 'ListItem', position: 3, name: title, item: canonicalURL.toString() },
+  ],
 };
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{title} | Gugu Gifts Blog</title>
+    <title>{title} | {t.titleSuffix}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- hreflang alternates pairing EN<->ES counterparts -->
+    <link rel="alternate" hreflang="en" href={enURL} />
+    <link rel="alternate" hreflang="es" href={esURL} />
+    <link rel="alternate" hreflang="x-default" href={enURL} />
 
     <meta property="og:type" content="article" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="Gugu Gifts" />
+    <meta property="og:site_name" content={t.siteName} />
+    <meta property="og:locale" content={t.locale} />
+    <meta property="og:locale:alternate" content={t.altLocale} />
     <meta property="article:published_time" content={isoDate} />
+
+    {heroImage && (
+      <>
+        <meta property="og:image" content={new URL(heroImage, Astro.site).toString()} />
+        <meta name="twitter:image" content={new URL(heroImage, Astro.site).toString()} />
+      </>
+    )}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate" type="application/rss+xml" title="Gugu Gifts Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={t.rssTitle} href={t.rssHref} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -87,27 +144,30 @@ const breadcrumbSchema = {
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="bg-cream text-bronze font-jost min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded">
+      {t.skip}
+    </a>
     <!-- Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-sm transition-all duration-300">
       <nav class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
-        <a href="/" class="flex items-baseline gap-0 text-2xl tracking-wide">
+        <a href={t.homeHref} class="flex items-baseline gap-0 text-2xl tracking-wide">
           <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
         </a>
         <div class="flex items-center gap-8">
-          <a href="/" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200 hidden sm:inline">Home</a>
-          <a href="/blog" class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200">Blog</a>
+          <a href={t.homeHref} class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200 hidden sm:inline">{t.breadcrumbHome}</a>
+          <a href={t.blogHref} class="text-sm uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200">{t.breadcrumbBlog}</a>
         </div>
       </nav>
     </header>
 
-    <main class="pt-32 pb-20 px-6">
+    <main id="main-content" class="pt-32 pb-20 px-6">
       <article class="max-w-3xl mx-auto">
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" class="mb-8 text-sm text-warmgray">
           <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href={t.homeHref} class="hover:text-gold transition-colors">{t.breadcrumbHome}</a></li>
             <li class="text-gold/40">/</li>
-            <li><a href="/blog" class="hover:text-gold transition-colors">Blog</a></li>
+            <li><a href={t.blogHref} class="hover:text-gold transition-colors">{t.breadcrumbBlog}</a></li>
             <li class="text-gold/40">/</li>
             <li class="text-bronze-light truncate max-w-[200px] sm:max-w-none">{title}</li>
           </ol>
@@ -130,6 +190,17 @@ const breadcrumbSchema = {
           </div>
         </header>
 
+        {heroImage && (
+          <figure class="mb-12 -mx-6 sm:mx-0">
+            <img
+              src={heroImage}
+              alt={title}
+              loading="eager"
+              class="w-full h-auto sm:rounded-2xl shadow-lg"
+            />
+          </figure>
+        )}
+
         <div class="divider-gold mb-12"></div>
 
         <!-- Post content -->
@@ -139,11 +210,11 @@ const breadcrumbSchema = {
 
         <!-- Back link -->
         <div class="mt-16 pt-8 border-t border-gold/15">
-          <a href="/blog" class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-warmgray hover:text-gold transition-colors">
+          <a href={t.blogHref} class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-warmgray hover:text-gold transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m0 0l7 7m-7-7l7-7" />
             </svg>
-            All Posts
+            {t.allPosts}
           </a>
         </div>
       </article>
@@ -152,7 +223,7 @@ const breadcrumbSchema = {
     <!-- Simple footer -->
     <footer class="bg-bronze text-cream/60 py-8 px-6">
       <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <a href="/" class="text-cream text-lg tracking-wide">
+        <a href={t.homeHref} class="text-cream text-lg tracking-wide">
           <span class="font-semibold">gugu</span><span class="font-light">gifts</span>
         </a>
         <p>&copy; {new Date().getFullYear()} Gugu Gifts. All rights reserved.</p>

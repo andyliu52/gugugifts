@@ -1,0 +1,42 @@
+name: Scheduled Blog Publish
+
+on:
+  schedule:
+    # Runs daily at 6:00 AM Central Time (12:00 UTC)
+    # Triggers a rebuild so future-dated EN/ES blog posts go live on their scheduled date.
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for posts to publish today
+        id: check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          if grep -rl "date: $TODAY" src/content/blog/ src/content/blog-es/ 2>/dev/null; then
+            echo "found=true" >> $GITHUB_OUTPUT
+            echo "Posts scheduled for today ($TODAY) found"
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+            echo "No posts scheduled for today ($TODAY)"
+          fi
+
+      - name: Trigger deployment rebuild
+        if: steps.check.outputs.found == 'true'
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -X POST "$DEPLOY_HOOK"
+            echo "Triggered deploy via webhook"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit --allow-empty -m "chore: publish scheduled blog posts for $(date -u +%Y-%m-%d)"
+            git push
+            echo "Triggered deploy via empty commit"
+          fi

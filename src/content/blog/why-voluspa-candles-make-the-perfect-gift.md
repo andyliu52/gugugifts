@@ -4,6 +4,7 @@ description: "Discover what makes Voluspa candles a go-to luxury gift — from t
 date: 2026-02-18
 tags: ["voluspa", "candles", "home fragrance", "gift ideas", "luxury gifts"]
 author: "Gugu Gifts"
+heroImage: "/images/blog/why-voluspa-candles-make-the-perfect-gift.jpg"
 ---
 
 ## A Candle That Feels Like a Gift Before You Even Light It
