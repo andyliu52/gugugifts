@@ -1,0 +1,37 @@
+---
+// Shared <head> partial: site-verification meta tags + consent-gated GA4 loader.
+// Included from both Layout.astro and BlogPost.astro so analytics & verification
+// are applied on every page.
+
+// Paste verification codes here when you get them. Empty string = meta not rendered.
+const GSC_VERIFICATION = '';
+const BING_VERIFICATION = '';
+
+const GA4_ID = 'G-R95WEWHLZS';
+---
+
+{GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION} />}
+{BING_VERIFICATION && <meta name="msvalidate.01" content={BING_VERIFICATION} />}
+
+<script is:inline define:vars={{ GA4_ID }}>
+  (function () {
+    let loaded = false;
+    function loadGA4() {
+      if (loaded) return;
+      loaded = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA4_ID);
+    }
+    try {
+      if (localStorage.getItem('cookie-consent') === 'accepted') loadGA4();
+    } catch (e) { /* localStorage unavailable (private mode, etc.) */ }
+    window.addEventListener('consent:accept', loadGA4);
+  })();
+</script>

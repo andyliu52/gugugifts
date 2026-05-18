@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteHead from '../components/SiteHead.astro';
 
 interface Props {
   title: string;
@@ -140,6 +141,8 @@ const breadcrumbSchema = {
 
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+    <SiteHead />
 
     <meta name="generator" content={Astro.generator} />
   </head>

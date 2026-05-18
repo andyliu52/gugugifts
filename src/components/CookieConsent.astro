@@ -44,6 +44,9 @@
 
   function handleConsent(accepted: boolean) {
     localStorage.setItem('cookie-consent', accepted ? 'accepted' : 'declined');
+    if (accepted) {
+      window.dispatchEvent(new CustomEvent('consent:accept'));
+    }
     hideBanner();
   }
 

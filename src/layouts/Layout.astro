@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteHead from '../components/SiteHead.astro';
 
 interface Props {
   title?: string;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 const { title, description, lang = 'en' } = Astro.props;
+
+const ogImageURL = new URL('/og-image.jpg', Astro.site ?? 'https://www.gugugifts.com').toString();
 
 const defaults = {
   en: {
@@ -86,8 +89,13 @@ const schema = {
       { '@type': 'OfferCatalog', name: 'Curated Gift Sets' },
     ],
   },
-  image: 'https://www.gugugifts.com/og-image.png',
+  image: 'https://www.gugugifts.com/og-image.jpg',
   priceRange: '$$',
+  sameAs: [
+    'https://www.instagram.com/gugugiftstx',
+    'https://www.facebook.com/gugugiftstx',
+    'https://www.tiktok.com/@gugugifts',
+  ],
 };
 ---
 
@@ -119,11 +127,13 @@ const schema = {
       ? <meta property="og:locale:alternate" content="es_MX" />
       : <meta property="og:locale:alternate" content="en_US" />
     }
+    <meta property="og:image" content={ogImageURL} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImageURL} />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -138,6 +148,8 @@ const schema = {
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+    <SiteHead />
 
     <meta name="generator" content={Astro.generator} />
   </head>

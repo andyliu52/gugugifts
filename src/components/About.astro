@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import ourStory from '../assets/about/our-story.jpg';
 ---
 
 <section id="about" class="py-24 md:py-32 px-6">
@@ -25,24 +26,17 @@
         </div>
       </div>
 
-      <!-- Decorative column -->
+      <!-- Photo column -->
       <div class="reveal reveal-delay-2 relative hidden md:block">
-        <div class="aspect-[3/4] rounded-2xl bg-gradient-to-br from-cream-dark via-gold/10 to-sage/10 border border-gold/20 flex items-center justify-center overflow-hidden">
-          <!-- Decorative botanical illustration -->
-          <svg viewBox="0 0 200 260" class="w-48 h-auto text-gold/25" fill="none" stroke="currentColor" stroke-width="0.75">
-            <!-- Stem -->
-            <path d="M100 240 C100 200 95 160 100 120 C105 80 100 50 100 20" />
-            <!-- Left leaves -->
-            <path d="M100 180 C80 170 55 175 45 160 C55 155 80 150 100 170" />
-            <path d="M100 140 C75 125 50 130 40 115 C55 108 78 110 100 130" />
-            <path d="M100 100 C80 85 58 88 48 73 C62 68 82 72 100 90" />
-            <!-- Right leaves -->
-            <path d="M100 160 C120 150 145 155 155 140 C145 135 120 130 100 150" />
-            <path d="M100 120 C125 105 150 110 160 95 C145 88 122 90 100 110" />
-            <path d="M100 80 C120 65 142 68 152 53 C138 48 118 52 100 70" />
-            <!-- Top bud -->
-            <ellipse cx="100" cy="18" rx="8" ry="12" />
-          </svg>
+        <div class="aspect-[3/4] rounded-2xl border border-gold/20 overflow-hidden">
+          <Image
+            src={ourStory}
+            alt="Valley Orchid Farms honey bottles on display at Gugu Gifts in Terrell, TX"
+            widths={[600, 900, 1200]}
+            sizes="(min-width: 768px) 40vw, 100vw"
+            formats={['avif', 'webp', 'jpeg']}
+            class="w-full h-full object-cover"
+          />
         </div>
         <!-- Floating accent -->
         <div class="absolute -bottom-4 -left-4 w-24 h-24 rounded-full border border-gold/20"></div>
