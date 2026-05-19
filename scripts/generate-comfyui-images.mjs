@@ -1,15 +1,20 @@
 #!/usr/bin/env node
-// Generate hero images for blog posts using a remote ComfyUI server.
+// Generate hero images for blog posts using local ComfyUI (Flux Dev Q8 GGUF).
 // Adapted from txfitness for the bilingual gugugifts blog.
 //
 // Usage:
 //   node scripts/generate-comfyui-images.mjs --slug <slug>
 //   node scripts/generate-comfyui-images.mjs --all
 //   node scripts/generate-comfyui-images.mjs --slug <slug> --regenerate
+//
+// Requires the ComfyUI-GGUF custom node (city96) to be installed and loaded
+// on the ComfyUI server. On WSL2 + ComfyUI Desktop on Windows, the script
+// auto-detects the Windows host IP from the default gateway.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
@@ -21,20 +26,25 @@ const BLOG_DIRS = [
 ];
 const IMAGE_DIR = path.join(ROOT, 'public', 'images', 'blog');
 
-const COMFY = process.env.COMFYUI_URL || 'http://192.168.1.235:8000';
-const CHECKPOINT = process.env.COMFYUI_CHECKPOINT || 'juggernautXL.safetensors';
-const STEPS = Number(process.env.COMFYUI_STEPS || 28);
-const CFG = Number(process.env.COMFYUI_CFG || 6.5);
-const SAMPLER = process.env.COMFYUI_SAMPLER || 'dpmpp_2m';
-const SCHEDULER = process.env.COMFYUI_SCHEDULER || 'karras';
+// ComfyUI server. Env override wins; otherwise auto-detect WSL→Windows host.
+const COMFY = (() => {
+  if (process.env.COMFYUI_URL) return process.env.COMFYUI_URL.replace(/\/$/, '');
+  try {
+    const route = execSync('ip route show default', { encoding: 'utf8' });
+    const m = route.match(/default via (\S+)/);
+    if (m) return `http://${m[1]}:8000`;
+  } catch {}
+  return 'http://127.0.0.1:8000';
+})();
+
+// Flux Dev Q8 GGUF. cfg=1.0, euler, simple — Flux defaults.
+const UNET_MODEL = process.env.COMFYUI_UNET || 'flux1-dev-Q8_0.gguf';
+const CLIP_T5 = 't5xxl_fp8_e4m3fn.safetensors';
+const CLIP_L = 'clip_l.safetensors';
+const VAE_MODEL = 'ae.safetensors';
+const STEPS = Number(process.env.COMFYUI_STEPS || 22);
 const WIDTH = 1280;
 const HEIGHT = 720;
-
-const NEG =
-  'text, watermark, logo, signage, letters, words, typography, captions, brand names, ' +
-  'low quality, blurry, deformed, bad anatomy, extra limbs, distorted faces, ' +
-  'cartoon, illustration, anime, oversaturated, plastic, fake-looking, ai-artifacts, ' +
-  'people facing camera, crowd, cluttered';
 
 function args() {
   const a = process.argv.slice(2);
@@ -69,50 +79,59 @@ function buildPrompt(title, description) {
   const t = strip(title);
   const d = strip(description);
   return (
-    `editorial lifestyle photograph, cinematic 16:9 hero image evoking: ${t}. ${d}. ` +
-    `Curated mid-luxe gift shop aesthetic, soft natural light, warm cream and gold tones, ` +
-    `Texas retail or domestic interior setting, beautiful objects in soft focus, ` +
-    `clean composition, magazine quality, depth of field, photo-realistic, high detail, ` +
-    `no text, no logos, no signage, no people facing camera`
+    `Editorial lifestyle photograph of a bright curated gift shop interior, themed around: ${t}. ${d} ` +
+    `Wooden shelves with candles in soft pastel ceramics, vases of fresh flowers, ` +
+    `neatly wrapped gift boxes in cream paper with ribbon, arranged on a warm wood counter. ` +
+    `Soft natural window light from a tall window, warm cream and gold tones, ` +
+    `mid-range subjects in clear focus with gently blurred background, magazine quality, photo-realistic. ` +
+    `No text, no signage, no logos, no lettering.`
   );
 }
 
 function buildWorkflow(positivePrompt, seed) {
   return {
+    "1": {
+      class_type: "UnetLoaderGGUF",
+      inputs: { unet_name: UNET_MODEL },
+    },
+    "2": {
+      class_type: "DualCLIPLoader",
+      inputs: { clip_name1: CLIP_T5, clip_name2: CLIP_L, type: "flux" },
+    },
     "3": {
+      class_type: "VAELoader",
+      inputs: { vae_name: VAE_MODEL },
+    },
+    "4": {
+      class_type: "CLIPTextEncode",
+      inputs: { text: positivePrompt, clip: ["2", 0] },
+    },
+    "5": {
+      class_type: "ConditioningZeroOut",
+      inputs: { conditioning: ["4", 0] },
+    },
+    "6": {
+      class_type: "EmptySD3LatentImage",
+      inputs: { width: WIDTH, height: HEIGHT, batch_size: 1 },
+    },
+    "7": {
       class_type: "KSampler",
       inputs: {
         seed,
         steps: STEPS,
-        cfg: CFG,
-        sampler_name: SAMPLER,
-        scheduler: SCHEDULER,
+        cfg: 1.0,
+        sampler_name: "euler",
+        scheduler: "simple",
         denoise: 1.0,
-        model: ["4", 0],
-        positive: ["6", 0],
-        negative: ["7", 0],
-        latent_image: ["5", 0],
+        model: ["1", 0],
+        positive: ["4", 0],
+        negative: ["5", 0],
+        latent_image: ["6", 0],
       },
-    },
-    "4": {
-      class_type: "CheckpointLoaderSimple",
-      inputs: { ckpt_name: CHECKPOINT },
-    },
-    "5": {
-      class_type: "EmptyLatentImage",
-      inputs: { width: WIDTH, height: HEIGHT, batch_size: 1 },
-    },
-    "6": {
-      class_type: "CLIPTextEncode",
-      inputs: { text: positivePrompt, clip: ["4", 1] },
-    },
-    "7": {
-      class_type: "CLIPTextEncode",
-      inputs: { text: NEG, clip: ["4", 1] },
     },
     "8": {
       class_type: "VAEDecode",
-      inputs: { samples: ["3", 0], vae: ["4", 2] },
+      inputs: { samples: ["7", 0], vae: ["3", 0] },
     },
     "9": {
       class_type: "SaveImage",
@@ -150,7 +169,7 @@ async function downloadImage(filename, subfolder, type) {
   return Buffer.from(await res.arrayBuffer());
 }
 
-async function pollUntilDone(promptId, timeoutMs = 5 * 60 * 1000) {
+async function pollUntilDone(promptId, timeoutMs = 8 * 60 * 1000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     const h = await getHistory(promptId);
@@ -269,7 +288,7 @@ async function main() {
     console.error(`ComfyUI not reachable at ${COMFY}: ${e.message}`);
     process.exit(1);
   }
-  console.log(`ComfyUI ${COMFY}  checkpoint=${CHECKPOINT}  steps=${STEPS}  cfg=${CFG}`);
+  console.log(`ComfyUI ${COMFY}  unet=${UNET_MODEL}  steps=${STEPS}`);
 
   let ok = 0, fail = 0, skip = 0;
   for (const slug of slugs) {
