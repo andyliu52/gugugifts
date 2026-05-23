@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "resize-photos": "node scripts/resize-photos.mjs",
-    "generate-images": "node scripts/generate-comfyui-images.mjs"
+    "generate-images": "node scripts/generate-comfyui-images.mjs",
+    "gbp:post-next": "node scripts/post-to-google-business.mjs",
+    "gbp:dry-run": "node scripts/post-to-google-business.mjs --dry-run"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",

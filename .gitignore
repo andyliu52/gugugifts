@@ -17,6 +17,10 @@ pnpm-debug.log*
 .env
 .env.production
 
+# google business profile script
+scripts/.google-business-credentials.json
+scripts/.google-business-state.json
+
 # macOS-specific files
 .DS_Store
 
