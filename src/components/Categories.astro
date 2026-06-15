@@ -16,6 +16,7 @@ const categories = [
     name: 'Home Fragrance',
     description: 'Luxury candles, diffusers, and room sprays',
     gradient: 'from-gold/15 to-rose/10',
+    image: 'home-fragrance',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M24 6c-2 4-6 8-6 14a6 6 0 0012 0c0-6-4-10-6-14z"/><rect x="20" y="24" width="8" height="16" rx="2"/><line x1="18" y1="40" x2="30" y2="40"/></svg>`,
   },
   {
@@ -36,12 +37,14 @@ const categories = [
     name: 'Home Décor',
     description: 'Elegant vases, throws, and accent pieces',
     gradient: 'from-gold/10 to-sage/15',
+    image: 'home-decor',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M16 40c0-12 -2-20 8-28 10 8 8 16 8 28z"/><line x1="14" y1="40" x2="34" y2="40"/><path d="M24 12v28"/></svg>`,
   },
   {
     name: 'Local Honey & Artisan Goods',
     description: 'Farm-fresh honey, handmade soaps, and local crafts',
     gradient: 'from-gold/20 to-cream-dark',
+    image: 'local-honey',
     icon: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" class="w-10 h-10"><path d="M24 6l8 4.6v9.2L24 24.4l-8-4.6v-9.2z"/><path d="M24 24.4l8 4.6v9.2L24 42.8l-8-4.6v-9.2z"/><path d="M32 19.8l8 4.6v9.2l-8 4.6"/><path d="M16 19.8l-8 4.6v9.2l8 4.6"/></svg>`,
   },
   {
@@ -70,7 +73,7 @@ const categories = [
                 <div class="w-28 h-28 rounded-2xl overflow-hidden ring-1 ring-gold/20 shadow-md">
                   <Image
                     src={photo}
-                    alt={cat.name}
+                    alt={`${cat.name} at Gugu Gifts in Terrell, TX`}
                     widths={[224, 336, 448]}
                     sizes="112px"
                     formats={['avif', 'webp', 'jpeg']}

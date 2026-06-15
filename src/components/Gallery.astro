@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+
+// Real photos of the shop, loaded from src/assets/gallery and sorted by the
+// numeric filename prefix so the grid order is deterministic.
+const galleryImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/gallery/*.{jpg,jpeg}',
+  { eager: true }
+);
+
+// Descriptive, local-keyword alt text keyed by filename slug (SEO + a11y).
+const altBySlug: Record<string, string> = {
+  '01-inside-the-shop': 'Inside Gugu Gifts gift shop in Terrell, TX — gift towers and curated displays',
+  '02-jewelry-wall': 'Jewelry wall and display cases at Gugu Gifts in Terrell, TX',
+  '03-greeting-cards': 'Greeting card wall at Gugu Gifts in Terrell, TX',
+  '04-entertaining': 'Govino glassware and Bundt bakeware for entertaining at Gugu Gifts in Terrell, TX',
+  '05-swig-drinkware': 'Swig insulated tumblers and water bottles at Gugu Gifts in Terrell, TX',
+  '06-gift-bags': 'Wall of gift bags and wrap at Gugu Gifts in Terrell, TX',
+  '07-bath-and-body': 'Beekman 1802 goat-milk bath and body shelf at Gugu Gifts in Terrell, TX',
+  '08-plush-toys': 'TY plush and Beanie Boos for kids at Gugu Gifts in Terrell, TX',
+  '09-whimsical-gifts': 'Whimsical ceramic gifts and Pampa Bay serveware at Gugu Gifts in Terrell, TX',
+};
+
+const photos = Object.entries(galleryImages)
+  .map(([path, mod]) => {
+    const slug = path.split('/').pop()!.replace(/\.(jpg|jpeg)$/, '');
+    return { slug, src: mod.default, alt: altBySlug[slug] ?? 'Inside Gugu Gifts in Terrell, TX' };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+---
+
+<section id="gallery" class="py-24 md:py-32 px-6 bg-cream-dark/30">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="reveal text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">Step Inside</p>
+    <h2 class="reveal reveal-delay-1 font-playfair text-4xl md:text-5xl mb-6">Inside the Shop</h2>
+    <div class="reveal reveal-delay-2 divider-gold mx-auto mb-6"></div>
+    <p class="reveal reveal-delay-2 max-w-2xl mx-auto text-bronze-light leading-relaxed mb-16">
+      A little look around Gugu Gifts at 301 Tanger Dr in Terrell — from the jewelry cases to
+      the candle wall, the card spinners, and the shelves of curated finds we hand-pick for you.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      {photos.map((photo, i) => (
+        <div class={`reveal reveal-delay-${(i % 3) + 1} group aspect-[4/5] overflow-hidden rounded-2xl border border-gold/10 shadow-sm`}>
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            widths={[400, 700, 1000]}
+            sizes="(min-width: 768px) 33vw, 50vw"
+            formats={['avif', 'webp', 'jpeg']}
+            loading="lazy"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
