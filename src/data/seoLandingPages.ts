@@ -59,7 +59,7 @@ export const seoPages: SeoPage[] = [
       { title: 'Gifts for every budget', body: 'From a $12 stocking stuffer to a showpiece statement necklace, there’s something at every price point.' },
       { title: 'Complimentary gift-ready feel', body: 'Beautiful packaging and a team that helps you put the perfect set together for any recipient.' },
     ],
-    brands: ['Voluspa', 'Julie Vos', 'Greenleaf', 'Swig', 'Splendid Iris', 'Lucky Feather'],
+    brands: ['Voluspa', 'Julie Vos', 'Rain', 'Greenleaf', 'Swig', 'Splendid Iris', 'Lucky Feather', 'Ty'],
     related: ['jewelry-terrell', 'candles-terrell', 'home-decor-terrell', 'gift-baskets-terrell'],
     faq: [
       { q: 'Where is Gugu Gifts located in Terrell?', a: 'We’re at 301 Tanger Dr, Suite 112, Terrell, TX 75160 — inside Tanger Outlets, in the former Claire’s location.' },
@@ -187,8 +187,8 @@ export const seoPages: SeoPage[] = [
       { title: 'For every occasion', body: 'Necklaces, earrings, bracelets, and rings across price points — from everyday to special-occasion.' },
       { title: 'Try before you buy', body: 'See the pieces in person, compare finishes, and get help choosing the right gift.' },
     ],
-    brands: ['Julie Vos', 'Lucky Feather'],
-    related: ['gift-shop-terrell', 'candles-terrell', 'gift-baskets-terrell', 'julie-vos-jewelry-terrell'],
+    brands: ['Julie Vos', 'Rain', 'Lucky Feather'],
+    related: ['julie-vos-jewelry-terrell', 'rain-jewelry-terrell', 'lucky-feather-jewelry-terrell', 'gift-shop-terrell'],
     faq: [
       { q: 'Do you carry Julie Vos in Terrell?', a: 'Yes — Gugu Gifts carries Julie Vos jewelry at our store in Tanger Outlets, Terrell.' },
       { q: 'What jewelry brands do you sell?', a: 'We carry Julie Vos and Lucky Feather, plus artisan pieces, with new styles arriving regularly.' },
@@ -214,7 +214,7 @@ export const seoPages: SeoPage[] = [
       { title: 'Smell before you buy', body: 'Test scents in person to find the one that suits the room — or the recipient.' },
     ],
     brands: ['Voluspa', 'Greenleaf', 'Splendid Iris'],
-    related: ['gift-shop-terrell', 'home-decor-terrell', 'voluspa-candles-terrell', 'gift-baskets-terrell'],
+    related: ['voluspa-candles-terrell', 'greenleaf-terrell', 'splendid-iris-terrell', 'home-decor-terrell'],
     faq: [
       { q: 'Do you sell Voluspa candles in Terrell?', a: 'Yes — Voluspa is one of our signature candle lines, available at our Tanger Outlets store in Terrell.' },
       { q: 'What candle brands do you carry?', a: 'Voluspa, Greenleaf home fragrance, and Splendid Iris artisan candles, among others.' },
@@ -264,7 +264,7 @@ export const seoPages: SeoPage[] = [
       { title: 'Gift-ready pairings', body: 'Combine a pen and journal into a polished gift set in minutes.' },
     ],
     brands: ['Kaweco'],
-    related: ['gift-shop-terrell', 'gift-baskets-terrell', 'jewelry-terrell', 'candles-terrell'],
+    related: ['kaweco-pens-terrell', 'gift-shop-terrell', 'gift-baskets-terrell', 'jewelry-terrell'],
     faq: [
       { q: 'Do you carry Kaweco pens in Terrell?', a: 'Yes — Kaweco fountain and ballpoint pens are part of our stationery selection at the Terrell store.' },
       { q: 'Do you have journals and notebooks?', a: 'Yes — we carry journals and premium paper goods that pair perfectly with our pens.' },
@@ -371,6 +371,181 @@ export const seoPages: SeoPage[] = [
       { q: 'Do you carry Julie Vos in Terrell?', a: 'Yes — Gugu Gifts carries Julie Vos jewelry at our store in Tanger Outlets, Terrell.' },
       { q: 'Can I try Julie Vos pieces on?', a: 'Yes — come in to try on bangles, earrings, and necklaces and compare finishes.' },
       { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'rain-jewelry-terrell',
+    kind: 'Brand',
+    title: 'Rain Jewelry in Terrell, TX',
+    description:
+      'Shop Rain jewelry in Terrell, TX at Gugu Gifts. Lightweight, gold-dipped statement necklaces, earrings, and bracelets — try them on at Tanger Outlets.',
+    h1: 'Rain Jewelry in Terrell',
+    eyebrow: 'Rain · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Rain jewelry in Terrell — the go-to line for lightweight, gold-dipped pieces that make a statement without weighing you down. Come see the colors and finishes in person.',
+      'Rain is loved for its layered necklaces, druzy and semi-precious accents, and easy-to-wear earrings that dress up jeans or an evening look just the same. At approachable price points, it’s a favorite for gifting and self-treats alike.',
+    ],
+    highlights: [
+      { title: 'Feather-light to wear', body: 'Statement looks you’ll actually keep on all day — Rain is known for how light it feels.' },
+      { title: 'Gold-dipped finishes', body: 'Warm, layered designs with druzy and semi-precious accents that catch the light.' },
+      { title: 'Easy to gift', body: 'Approachable prices and crowd-pleasing styles make Rain a reliable go-to gift.' },
+    ],
+    brands: ['Rain'],
+    related: ['jewelry-terrell', 'julie-vos-jewelry-terrell', 'lucky-feather-jewelry-terrell', 'gift-shop-terrell'],
+    faq: [
+      { q: 'Do you carry Rain jewelry in Terrell?', a: 'Yes — Gugu Gifts carries Rain jewelry at our store in Tanger Outlets, Terrell.' },
+      { q: 'Is Rain jewelry lightweight?', a: 'Yes — Rain is known for statement designs that stay comfortable and light to wear all day.' },
+      { q: 'Where are you located?', a: '301 Tanger Dr, Suite 112, Terrell, TX 75160, inside Tanger Outlets.' },
+    ],
+  },
+  {
+    slug: 'lucky-feather-jewelry-terrell',
+    kind: 'Brand',
+    title: 'Lucky Feather Jewelry in Terrell, TX',
+    description:
+      'Shop Lucky Feather jewelry in Terrell, TX at Gugu Gifts. Meaningful, message-driven necklaces and earrings that make heartfelt, affordable gifts.',
+    h1: 'Lucky Feather Jewelry in Terrell',
+    eyebrow: 'Lucky Feather · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Lucky Feather jewelry in Terrell — delicate, meaningful pieces designed to be given. Each style pairs a pretty, wearable design with a message that makes it feel personal.',
+      'From birthday and graduation pieces to “just because” gifts for a friend, Lucky Feather is affordable, sweet, and ready to give. It’s one of the easiest ways to turn a small gesture into a memorable one.',
+    ],
+    highlights: [
+      { title: 'Gifts with meaning', body: 'Message-driven designs for birthdays, graduations, friendships, and milestones.' },
+      { title: 'Dainty and wearable', body: 'Delicate gold-tone styles that layer well and suit everyday wear.' },
+      { title: 'Easy on the budget', body: 'Thoughtful, giftable pieces at a friendly price point.' },
+    ],
+    brands: ['Lucky Feather'],
+    related: ['jewelry-terrell', 'rain-jewelry-terrell', 'julie-vos-jewelry-terrell', 'gift-baskets-terrell'],
+    faq: [
+      { q: 'Do you carry Lucky Feather in Terrell?', a: 'Yes — Lucky Feather jewelry is part of our selection at Gugu Gifts in Tanger Outlets, Terrell.' },
+      { q: 'Is Lucky Feather good for gifts?', a: 'Yes — its meaningful, message-based designs make heartfelt and affordable gifts.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'greenleaf-terrell',
+    kind: 'Brand',
+    title: 'Greenleaf Home Fragrance in Terrell, TX',
+    description:
+      'Shop Greenleaf home fragrance in Terrell, TX at Gugu Gifts. Flower diffusers, sachets, candles, and room sprays — flameless fragrance for any space.',
+    h1: 'Greenleaf Home Fragrance in Terrell',
+    eyebrow: 'Greenleaf · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Greenleaf home fragrance in Terrell, including the brand’s signature Flower Diffusers, sachets, candles, and room sprays. Come find a scent that makes your home feel like home.',
+      'Greenleaf is a favorite for flameless fragrance — slip a sachet in a drawer, set out a flower diffuser, or freshen a room with a spritz. The scents are beautifully blended and make easy, welcome gifts.',
+    ],
+    highlights: [
+      { title: 'Signature Flower Diffusers', body: 'Greenleaf’s iconic paper-flower diffusers — fragrance and décor in one, no flame needed.' },
+      { title: 'Sachets & room sprays', body: 'Freshen drawers, closets, and cars, or mist a room in seconds.' },
+      { title: 'Giftable scents', body: 'Beautifully blended fragrances that make easy hostess and thank-you gifts.' },
+    ],
+    brands: ['Greenleaf'],
+    related: ['candles-terrell', 'home-decor-terrell', 'splendid-iris-terrell', 'gift-shop-terrell'],
+    faq: [
+      { q: 'Do you carry Greenleaf in Terrell?', a: 'Yes — Greenleaf home fragrance, including the Flower Diffusers, is available at our Terrell store.' },
+      { q: 'What is a Greenleaf Flower Diffuser?', a: 'It’s a decorative paper flower that draws up scented oil to fragrance a room without a flame.' },
+      { q: 'Where are you located?', a: 'Tanger Outlets, 301 Tanger Dr, Suite 112, Terrell, TX 75160.' },
+    ],
+  },
+  {
+    slug: 'splendid-iris-terrell',
+    kind: 'Brand',
+    title: 'Splendid Iris in Terrell, TX',
+    description:
+      'Shop Splendid Iris candles and gifts in Terrell, TX at Gugu Gifts. Artisan candles and gift-worthy scents you won’t find at the grocery store.',
+    h1: 'Splendid Iris Candles & Gifts in Terrell',
+    eyebrow: 'Splendid Iris · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Splendid Iris in Terrell — artisan candles and gifts with character you won’t find on a grocery-store shelf. Stop in to discover a new favorite scent.',
+      'Splendid Iris pieces are made to be gifted and displayed, pairing thoughtful fragrance with charming presentation. They sit right at home next to our Voluspa and Greenleaf lines.',
+    ],
+    highlights: [
+      { title: 'Artisan candles', body: 'Small-batch character and fragrances that stand apart from mass-market candles.' },
+      { title: 'Made to gift', body: 'Charming presentation that looks as good as it smells — gift-ready as-is.' },
+      { title: 'Pairs beautifully', body: 'Mix with Voluspa or Greenleaf for a layered home-fragrance gift set.' },
+    ],
+    brands: ['Splendid Iris'],
+    related: ['candles-terrell', 'greenleaf-terrell', 'voluspa-candles-terrell', 'gift-baskets-terrell'],
+    faq: [
+      { q: 'Do you carry Splendid Iris in Terrell?', a: 'Yes — Splendid Iris artisan candles and gifts are part of our selection in Terrell.' },
+      { q: 'Are Splendid Iris candles good gifts?', a: 'Yes — their fragrance and presentation make them gift-ready right off the shelf.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'swig-drinkware-terrell',
+    kind: 'Brand',
+    title: 'Swig Drinkware in Terrell, TX',
+    description:
+      'Shop Swig drinkware in Terrell, TX at Gugu Gifts. Insulated stainless-steel tumblers, cups, and can coolers in bold patterns — perfect everyday gifts.',
+    h1: 'Swig Drinkware in Terrell',
+    eyebrow: 'Swig · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Swig drinkware in Terrell — the colorful, insulated tumblers, cups, and can coolers that keep drinks cold for hours and hot ones hot. Come pick your pattern.',
+      'Swig’s triple-insulated stainless steel and bold prints have made it a runaway favorite for gifting, teacher appreciation, bridal parties, and everyday use. Grab one for yourself and a few to give.',
+    ],
+    highlights: [
+      { title: 'Keeps drinks cold for hours', body: 'Triple-insulated stainless steel that holds temperature far longer than a basic cup.' },
+      { title: 'Bold, fun patterns', body: 'Eye-catching prints and colors that make Swig instantly recognizable.' },
+      { title: 'Gift in multiples', body: 'A go-to for teacher gifts, bridal parties, and stocking stuffers.' },
+    ],
+    brands: ['Swig'],
+    related: ['gift-shop-terrell', 'gift-baskets-terrell', 'home-decor-terrell', 'candles-terrell'],
+    faq: [
+      { q: 'Do you sell Swig cups in Terrell?', a: 'Yes — Swig tumblers, cups, and can coolers are available at Gugu Gifts in Tanger Outlets, Terrell.' },
+      { q: 'Do Swig tumblers keep drinks cold?', a: 'Yes — they’re triple-insulated stainless steel and keep cold drinks cold and hot drinks hot for hours.' },
+      { q: 'Where are you located?', a: '301 Tanger Dr, Suite 112, Terrell, TX 75160.' },
+    ],
+  },
+  {
+    slug: 'kaweco-pens-terrell',
+    kind: 'Brand',
+    title: 'Kaweco Pens in Terrell, TX',
+    description:
+      'Shop Kaweco pens in Terrell, TX at Gugu Gifts. Iconic German pocket fountain and ballpoint pens — a memorable gift for writers and design lovers.',
+    h1: 'Kaweco Pens in Terrell',
+    eyebrow: 'Kaweco · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Kaweco pens in Terrell — the German-made pocket fountain and ballpoint pens prized by writers, students, and collectors. See the iconic Sport in person and find your nib.',
+      'Compact when closed and full-size when posted, Kaweco pens are as practical as they are handsome. Pair one with a journal for a gift that feels considered and lasts for years.',
+    ],
+    highlights: [
+      { title: 'The iconic Sport', body: 'Pocket-sized when closed, full-length when posted — a design classic since the 1930s.' },
+      { title: 'Fountain & ballpoint', body: 'Smooth writers in a range of finishes for everyday carry or gifting.' },
+      { title: 'Pairs with a journal', body: 'Add a notebook for a polished, ready-to-give stationery set.' },
+    ],
+    brands: ['Kaweco'],
+    related: ['fine-stationery-terrell', 'gift-shop-terrell', 'gift-baskets-terrell', 'jewelry-terrell'],
+    faq: [
+      { q: 'Do you carry Kaweco pens in Terrell?', a: 'Yes — Kaweco fountain and ballpoint pens are part of our stationery selection in Terrell.' },
+      { q: 'Are Kaweco pens good gifts?', a: 'Yes — they’re a beloved gift for writers and design lovers, especially paired with a journal.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'ty-beanie-babies-terrell',
+    kind: 'Brand',
+    title: 'Ty Beanie Babies & Plush in Terrell, TX',
+    description:
+      'Shop Ty Beanie Babies and Beanie Boos in Terrell, TX at Gugu Gifts. Soft, collectible plush toys kids love — perfect birthday and just-because gifts.',
+    h1: 'Ty Beanie Babies & Plush in Terrell',
+    eyebrow: 'Ty · Terrell, TX',
+    intro: [
+      'Gugu Gifts carries Ty plush in Terrell — including the beloved Beanie Babies and big-eyed Beanie Boos that kids (and collectors) adore. Come pick out a new cuddly friend.',
+      'Soft, huggable, and endlessly collectible, Ty plush make easy birthday, get-well, and just-because gifts. Add one to a gift set or let a little one choose their favorite in person.',
+    ],
+    highlights: [
+      { title: 'Beanie Boos & Beanie Babies', body: 'The big-eyed Boos and the classic Beanie Babies kids love to collect.' },
+      { title: 'Soft and huggable', body: 'Cuddly plush that makes a reliable birthday, get-well, or new-baby gift.' },
+      { title: 'Add to any gift set', body: 'Tuck a plush friend into a curated gift basket for an extra-sweet touch.' },
+    ],
+    brands: ['Ty'],
+    related: ['gift-shop-terrell', 'gift-baskets-terrell', 'home-decor-terrell', 'gift-shop-forney'],
+    faq: [
+      { q: 'Do you sell Ty Beanie Babies in Terrell?', a: 'Yes — Gugu Gifts carries Ty plush, including Beanie Babies and Beanie Boos, at our Terrell store.' },
+      { q: 'Are Ty plush good for kids?', a: 'Yes — they’re soft, huggable, and collectible, making great birthday and just-because gifts.' },
+      { q: 'Where are you located?', a: 'Tanger Outlets, 301 Tanger Dr, Suite 112, Terrell, TX 75160.' },
     ],
   },
 ];
