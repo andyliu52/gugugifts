@@ -30,30 +30,21 @@ const links = [
       ))}
     </ul>
 
-    <!-- Mobile hamburger -->
+    <!-- Mobile hamburger / close toggle -->
     <button
       id="menu-toggle"
-      class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg bg-cream/80 backdrop-blur-sm shadow-sm"
+      class="md:hidden relative z-50 flex flex-col justify-center items-center w-10 h-10 gap-1.5 -mr-2"
       aria-label="Toggle menu"
       aria-expanded="false"
     >
-      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
-      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
-      <span class="menu-line block w-6 h-0.5 bg-bronze transition-all duration-300 origin-center"></span>
+      <span class="menu-line block w-6 h-0.5 bg-bronze rounded-full transition-all duration-300 origin-center"></span>
+      <span class="menu-line block w-6 h-0.5 bg-bronze rounded-full transition-all duration-300 origin-center"></span>
+      <span class="menu-line block w-6 h-0.5 bg-bronze rounded-full transition-all duration-300 origin-center"></span>
     </button>
   </nav>
 
   <!-- Mobile overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-cream/98 z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
-    <button
-      id="menu-close"
-      class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center"
-      aria-label="Close menu"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+  <div id="mobile-menu" class="fixed inset-0 bg-cream/98 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
     {links.map(({ href, label }) => (
       <a
         href={href}
@@ -69,26 +60,36 @@ const links = [
   const navbar = document.getElementById('navbar')!;
   const toggle = document.getElementById('menu-toggle')!;
   const menu = document.getElementById('mobile-menu')!;
-  const closeBtn = document.getElementById('menu-close')!;
   const mobileLinks = menu.querySelectorAll('.mobile-link');
 
   function openMenu() {
     menu.classList.remove('opacity-0', 'pointer-events-none');
     menu.classList.add('opacity-100', 'pointer-events-auto');
+    toggle.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menu.classList.add('opacity-0', 'pointer-events-none');
     menu.classList.remove('opacity-100', 'pointer-events-auto');
+    toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
     document.body.style.overflow = '';
   }
 
-  toggle.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
   mobileLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Close on Escape for keyboard users
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu();
+  });
 
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
@@ -103,3 +104,17 @@ const links = [
     lastScroll = scrollY;
   });
 </script>
+
+<style>
+  /* Morph the three bars into an X when the menu is open.
+     Bar centers sit 8px apart (2px line + 6px gap). */
+  #menu-toggle.is-open .menu-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #menu-toggle.is-open .menu-line:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle.is-open .menu-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
