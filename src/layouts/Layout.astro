@@ -8,11 +8,13 @@ interface Props {
   lang?: 'en' | 'es';
   /** Emit EN/ES hreflang alternates. Set false for pages with no localized counterpart. */
   localized?: boolean;
+  /** Site-relative path to a custom social share image (defaults to /og-image.jpg). */
+  ogImage?: string;
 }
 
-const { title, description, lang = 'en', localized = true } = Astro.props;
+const { title, description, lang = 'en', localized = true, ogImage = '/og-image.jpg' } = Astro.props;
 
-const ogImageURL = new URL('/og-image.jpg', Astro.site ?? 'https://www.gugugifts.com').toString();
+const ogImageURL = new URL(ogImage, Astro.site ?? 'https://www.gugugifts.com').toString();
 
 const defaults = {
   en: {

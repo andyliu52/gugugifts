@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import { seoPages } from '../data/seoLandingPages';
+
+const groups = [
+  { kind: 'Shop', heading: 'Shop by Category', blurb: 'Browse what we carry — candles, jewelry, décor, stationery, and more.' },
+  { kind: 'Brand', heading: 'Shop by Brand', blurb: 'The labels we love, from Voluspa and Julie Vos to Rain and Ty.' },
+  { kind: 'Location', heading: 'Visit From Nearby', blurb: 'A curated gift shop within easy reach of Terrell and its neighbors.' },
+] as const;
+---
+
+<Layout
+  title="Shop Gugu Gifts | Brands, Categories & Locations in Terrell, TX"
+  description="Explore everything at Gugu Gifts in Terrell, TX — shop by category, browse our brands like Voluspa, Julie Vos, Rain, and Swig, and find us from nearby towns."
+  ogImage="/og/gift-shop-terrell.jpg"
+>
+  <Navbar />
+
+  <main id="main-content">
+    <section class="relative pt-36 pb-12 md:pt-44 md:pb-16 px-6 overflow-hidden">
+      <div class="absolute inset-0 pattern-botanical opacity-20"></div>
+      <div class="relative max-w-3xl mx-auto text-center">
+        <p class="text-xs uppercase tracking-[0.2em] text-gold mb-4 font-medium">Explore the Shop</p>
+        <h1 class="font-playfair text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">Find your perfect gift</h1>
+        <div class="divider-gold mx-auto mb-8"></div>
+        <p class="text-bronze-light leading-relaxed">
+          Gugu Gifts is a curated gift shop at Tanger Outlets in Terrell, Texas. Browse by category,
+          explore the brands we carry, or see how easy we are to reach from your town.
+        </p>
+      </div>
+    </section>
+
+    {groups.map((group, gi) => {
+      const pages = seoPages.filter((p) => p.kind === group.kind);
+      return (
+        <section class={`py-14 md:py-16 px-6 ${gi % 2 === 0 ? 'bg-cream-dark/50' : ''}`}>
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+              <h2 class="font-playfair text-3xl md:text-4xl mb-3">{group.heading}</h2>
+              <p class="text-bronze-light max-w-xl mx-auto">{group.blurb}</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {pages.map((p) => (
+                <a href={`/${p.slug}`} class="group block bg-cream border border-gold/15 rounded-2xl p-6 transition-all duration-300 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/5 hover:-translate-y-1">
+                  <p class="text-xs uppercase tracking-widest text-gold/70 mb-2">{p.eyebrow}</p>
+                  <h3 class="font-playfair text-lg group-hover:text-gold transition-colors">{p.h1}</h3>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    })}
+  </main>
+
+  <Footer />
+  <CookieConsent />
+</Layout>

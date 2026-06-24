@@ -548,6 +548,133 @@ export const seoPages: SeoPage[] = [
       { q: 'Where are you located?', a: 'Tanger Outlets, 301 Tanger Dr, Suite 112, Terrell, TX 75160.' },
     ],
   },
+
+  // ──────────────── Town + category combos ────────────────
+  {
+    slug: 'gift-shop-canton',
+    kind: 'Location',
+    title: 'Gift Shop Near Canton, TX',
+    description:
+      'A curated gift shop near Canton, TX. Gugu Gifts in Terrell was born from Valley Orchid Farms in Canton — candles, jewelry, local honey, and gift sets.',
+    h1: 'A Gift Shop With Canton Roots',
+    eyebrow: 'Near Canton, TX',
+    intro: [
+      'Gugu Gifts has a special connection to Canton: we were born from Valley Orchid Farms right there in town. Today you’ll find that same spirit a short drive west at Tanger Outlets in Terrell.',
+      'If you’re coming through for First Monday Trade Days or live nearby, it’s an easy stop for curated candles, jewelry, Texas honey, and beautifully assembled gift sets — including honey with roots at our own Canton farm.',
+    ],
+    highlights: [
+      { title: 'Born in Canton', body: 'Our story starts at Valley Orchid Farms in Canton — local honey is in our DNA.' },
+      { title: 'Easy off I-20', body: 'About 25–30 minutes west of Canton, a simple stop coming or going on I-20.' },
+      { title: 'Pair with Trade Days', body: 'In town for First Monday? Round out the trip with a curated gift you won’t find in the fields.' },
+    ],
+    brands: ['Voluspa', 'Julie Vos', 'Local Artisans'],
+    related: ['gift-shop-terrell', 'local-honey-terrell', 'candles-terrell', 'gift-baskets-terrell'],
+    faq: [
+      { q: 'How far is Gugu Gifts from Canton?', a: 'About 25–30 minutes west on I-20 to Tanger Outlets in Terrell, at 301 Tanger Dr, Suite 112.' },
+      { q: 'What’s your connection to Canton?', a: 'Gugu Gifts was born from Valley Orchid Farms in Canton, Texas, and we still carry local honey with those roots.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'candles-forney',
+    kind: 'Location',
+    title: 'Candles Near Forney, TX',
+    description:
+      'Shopping for candles near Forney, TX? Gugu Gifts in Terrell carries Voluspa, Greenleaf, and Splendid Iris — luxury home fragrance a short drive east.',
+    h1: 'Luxury Candles a Short Drive From Forney',
+    eyebrow: 'Candles · Near Forney',
+    intro: [
+      'Forney neighbors looking for candles beyond the grocery aisle: Gugu Gifts is just east on US-80 in Terrell, with premium home-fragrance brands you can actually smell before you buy.',
+      'We carry Voluspa’s coconut-wax candles, Greenleaf’s flameless diffusers, and Splendid Iris artisan scents — perfect for a new Forney home, a hostess gift, or a treat for yourself.',
+    ],
+    highlights: [
+      { title: 'A quick trip east', body: 'About 15 minutes from Forney on US-80 — closer than the mall for nicer candles.' },
+      { title: 'Smell before you buy', body: 'Test Voluspa, Greenleaf, and Splendid Iris in person to find your scent.' },
+      { title: 'Great for new homes', body: 'A candle or diffuser set makes an easy housewarming gift for a new Forney build.' },
+    ],
+    brands: ['Voluspa', 'Greenleaf', 'Splendid Iris'],
+    related: ['candles-terrell', 'gift-shop-forney', 'voluspa-candles-terrell', 'greenleaf-terrell'],
+    faq: [
+      { q: 'Where can I buy Voluspa candles near Forney?', a: 'At Gugu Gifts in Tanger Outlets, Terrell — about 15 minutes east of Forney on US-80.' },
+      { q: 'Do you have flameless options?', a: 'Yes — Greenleaf flower diffusers, sachets, and room sprays offer fragrance without a flame.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'jewelry-forney',
+    kind: 'Location',
+    title: 'Jewelry Near Forney, TX',
+    description:
+      'Looking for jewelry near Forney, TX? Gugu Gifts in Terrell carries Julie Vos, Rain, and Lucky Feather — designer and artisan pieces a short drive east.',
+    h1: 'Designer & Artisan Jewelry Near Forney',
+    eyebrow: 'Jewelry · Near Forney',
+    intro: [
+      'For jewelry near Forney that isn’t the same mall case everyone has, Gugu Gifts is a quick trip east in Terrell. Try on designer and artisan pieces and find something that feels like you.',
+      'We carry Julie Vos’s 24k gold-plated heirloom designs, lightweight Rain statement pieces, and meaningful Lucky Feather styles — across price points, all easy to gift.',
+    ],
+    highlights: [
+      { title: '15 minutes from Forney', body: 'A short hop east on US-80 — worth it for jewelry you won’t see on everyone else.' },
+      { title: 'Designer to dainty', body: 'Julie Vos statement pieces, lightweight Rain, and delicate Lucky Feather under one roof.' },
+      { title: 'Try it on', body: 'See the finishes in person and get help choosing the right piece or gift.' },
+    ],
+    brands: ['Julie Vos', 'Rain', 'Lucky Feather'],
+    related: ['jewelry-terrell', 'gift-shop-forney', 'julie-vos-jewelry-terrell', 'rain-jewelry-terrell'],
+    faq: [
+      { q: 'Where can I buy Julie Vos near Forney?', a: 'At Gugu Gifts in Tanger Outlets, Terrell — about 15 minutes east of Forney.' },
+      { q: 'What jewelry brands do you carry?', a: 'Julie Vos, Rain, and Lucky Feather, plus artisan pieces, with new styles arriving regularly.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'jewelry-rockwall',
+    kind: 'Location',
+    title: 'Jewelry Near Rockwall, TX',
+    description:
+      'Shopping for jewelry near Rockwall, TX? Gugu Gifts in Terrell carries Julie Vos, Rain, and Lucky Feather — designer and artisan pieces worth the short drive.',
+    h1: 'Designer & Artisan Jewelry Near Rockwall',
+    eyebrow: 'Jewelry · Near Rockwall',
+    intro: [
+      'Rockwall shoppers who love a beautifully curated jewelry case will feel at home at Gugu Gifts, a short drive south in Terrell. Try on designer and artisan pieces side by side.',
+      'From Julie Vos’s gold-plated heirloom looks to lightweight Rain statement pieces and meaningful Lucky Feather styles, there’s something for every outfit, occasion, and budget.',
+    ],
+    highlights: [
+      { title: 'Worth the short drive', body: 'About 25 minutes south of Rockwall — and the curation makes it worth the trip.' },
+      { title: 'Designer + artisan', body: 'Julie Vos, Rain, and Lucky Feather together, from statement to dainty.' },
+      { title: 'Gift-ready', body: 'We’ll help you choose a piece and make it gift-ready in minutes.' },
+    ],
+    brands: ['Julie Vos', 'Rain', 'Lucky Feather'],
+    related: ['jewelry-terrell', 'gift-shop-rockwall', 'julie-vos-jewelry-terrell', 'rain-jewelry-terrell'],
+    faq: [
+      { q: 'Where can I buy Julie Vos near Rockwall?', a: 'At Gugu Gifts in Tanger Outlets, Terrell — about 25 minutes south of Rockwall.' },
+      { q: 'Is it worth the drive from Rockwall?', a: 'Our curated mix of Julie Vos, Rain, and Lucky Feather is hard to find locally — many shoppers think so.' },
+      { q: 'When are you open?', a: 'Tue–Sat 10 AM–7 PM, Sun 11 AM–6 PM, closed Monday.' },
+    ],
+  },
+  {
+    slug: 'kids-gifts-terrell',
+    kind: 'Shop',
+    title: 'Kids’ Gifts & Plush in Terrell, TX',
+    description:
+      'Shop kids’ gifts in Terrell, TX at Gugu Gifts — Ty Beanie Babies and Boos, sweet jewelry, and fun finds for birthdays, new babies, and just because.',
+    h1: 'Kids’ Gifts & Plush in Terrell',
+    eyebrow: 'For Kids · Terrell, TX',
+    intro: [
+      'Need a gift for a little one? Gugu Gifts in Terrell has kid-friendly favorites that feel special — soft Ty plush, sweet starter jewelry, and fun finds that make birthdays and new-baby visits easy.',
+      'Let a child pick out a Beanie Boo in person, or let us tuck a plush friend and a little keepsake into a curated gift set. Thoughtful, age-appropriate, and always gift-ready.',
+    ],
+    highlights: [
+      { title: 'Ty plush they’ll love', body: 'Big-eyed Beanie Boos and classic Beanie Babies — soft, huggable, and collectible.' },
+      { title: 'Sweet keepsakes', body: 'Dainty Lucky Feather pieces and small gifts that work for kids and tweens.' },
+      { title: 'New-baby ready', body: 'Plush and keepsakes that make easy new-baby and birthday gifts.' },
+    ],
+    brands: ['Ty', 'Lucky Feather'],
+    related: ['ty-beanie-babies-terrell', 'gift-shop-terrell', 'gift-baskets-terrell', 'jewelry-terrell'],
+    faq: [
+      { q: 'Do you have gifts for kids in Terrell?', a: 'Yes — Ty plush, sweet jewelry, and fun finds make great kids’ gifts at Gugu Gifts in Terrell.' },
+      { q: 'Do you carry Ty Beanie Boos?', a: 'Yes — we carry Ty plush including Beanie Boos and Beanie Babies.' },
+      { q: 'Where are you located?', a: 'Tanger Outlets, 301 Tanger Dr, Suite 112, Terrell, TX 75160.' },
+    ],
+  },
 ];
 
 export function getPage(slug: string): SeoPage | undefined {

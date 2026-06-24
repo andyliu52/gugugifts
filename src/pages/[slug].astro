@@ -43,7 +43,7 @@ const directionsURL =
   'https://maps.google.com/?q=301+Tanger+Dr+Suite+112+Terrell+TX+75160';
 ---
 
-<Layout title={`${page.title} | Gugu Gifts`} description={page.description} localized={false}>
+<Layout title={`${page.title} | Gugu Gifts`} description={page.description} localized={false} ogImage={`/og/${page.slug}.jpg`}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
