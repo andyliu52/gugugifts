@@ -42,19 +42,21 @@ const links = [
       <span class="menu-line block w-6 h-0.5 bg-bronze rounded-full transition-all duration-300 origin-center"></span>
     </button>
   </nav>
-
-  <!-- Mobile overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-cream/98 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
-    {links.map(({ href, label }) => (
-      <a
-        href={href}
-        class="mobile-link text-2xl uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200"
-      >
-        {label}
-      </a>
-    ))}
-  </div>
 </header>
+
+<!-- Mobile overlay — kept OUTSIDE <header> so it is not trapped by the
+     header's backdrop-filter, which would turn `fixed inset-0` into the
+     header's box instead of the viewport. -->
+<div id="mobile-menu" class="fixed inset-0 bg-cream z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+  {links.map(({ href, label }) => (
+    <a
+      href={href}
+      class="mobile-link text-2xl uppercase tracking-widest font-medium hover:text-gold transition-colors duration-200"
+    >
+      {label}
+    </a>
+  ))}
+</div>
 
 <script>
   const navbar = document.getElementById('navbar')!;
