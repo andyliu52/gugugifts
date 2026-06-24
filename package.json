@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "resize-photos": "node scripts/resize-photos.mjs",
+    "generate-og": "node --experimental-strip-types scripts/generate-og-images.mjs",
     "generate-images": "node scripts/generate-comfyui-images.mjs",
     "gbp:post-next": "node scripts/post-to-google-business.mjs",
     "gbp:dry-run": "node scripts/post-to-google-business.mjs --dry-run"

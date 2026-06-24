@@ -6,11 +6,15 @@ interface Props {
   title?: string;
   description?: string;
   lang?: 'en' | 'es';
+  /** Emit EN/ES hreflang alternates. Set false for pages with no localized counterpart. */
+  localized?: boolean;
+  /** Site-relative path to a custom social share image (defaults to /og-image.jpg). */
+  ogImage?: string;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', localized = true, ogImage = '/og-image.jpg' } = Astro.props;
 
-const ogImageURL = new URL('/og-image.jpg', Astro.site ?? 'https://www.gugugifts.com').toString();
+const ogImageURL = new URL(ogImage, Astro.site ?? 'https://www.gugugifts.com').toString();
 
 const defaults = {
   en: {
@@ -88,8 +92,10 @@ const schema = {
     { '@type': 'Brand', name: 'Splendid Iris' },
     { '@type': 'Brand', name: 'Kaweco' },
     { '@type': 'Brand', name: 'Julie Vos' },
+    { '@type': 'Brand', name: 'Rain' },
     { '@type': 'Brand', name: 'Swig' },
     { '@type': 'Brand', name: 'Lucky Feather' },
+    { '@type': 'Brand', name: 'Ty' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -100,6 +106,7 @@ const schema = {
       { '@type': 'OfferCatalog', name: 'Fine Stationery' },
       { '@type': 'OfferCatalog', name: 'Home Décor' },
       { '@type': 'OfferCatalog', name: 'Local Honey & Artisan Goods' },
+      { '@type': 'OfferCatalog', name: 'Plush & Toys' },
       { '@type': 'OfferCatalog', name: 'Curated Gift Sets' },
     ],
   },
@@ -131,9 +138,13 @@ const schema = {
     <link rel="canonical" href={canonicalURL} />
 
     <!-- hreflang alternates -->
-    <link rel="alternate" hreflang="en" href={enURL} />
-    <link rel="alternate" hreflang="es" href={esURL} />
-    <link rel="alternate" hreflang="x-default" href={enURL} />
+    {localized && (
+      <Fragment>
+        <link rel="alternate" hreflang="en" href={enURL} />
+        <link rel="alternate" hreflang="es" href={esURL} />
+        <link rel="alternate" hreflang="x-default" href={enURL} />
+      </Fragment>
+    )}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -167,6 +178,9 @@ const schema = {
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+    <!-- Per-page head additions (extra JSON-LD, etc.) -->
+    <slot name="head" />
 
     <SiteHead />
 

@@ -1,13 +1,15 @@
 ---
 const brands = [
-  { name: 'Voluspa', tagline: 'Luxury candles & fragrance' },
-  { name: 'Julie Vos', tagline: 'Designer jewelry' },
-  { name: 'Greenleaf', tagline: 'Home fragrance & décor' },
-  { name: 'Kaweco', tagline: 'Fine writing instruments' },
-  { name: 'Splendid Iris', tagline: 'Artisan candles & gifts' },
-  { name: 'Swig', tagline: 'Insulated drinkware' },
-  { name: 'Lucky Feather', tagline: 'Meaningful jewelry' },
-  { name: 'Local Artisans', tagline: 'Honey, soaps & crafts' },
+  { name: 'Voluspa', tagline: 'Luxury candles & fragrance', href: '/voluspa-candles-terrell' },
+  { name: 'Julie Vos', tagline: 'Designer jewelry', href: '/julie-vos-jewelry-terrell' },
+  { name: 'Rain', tagline: 'Lightweight statement jewelry', href: '/rain-jewelry-terrell' },
+  { name: 'Greenleaf', tagline: 'Home fragrance & diffusers', href: '/greenleaf-terrell' },
+  { name: 'Kaweco', tagline: 'Fine writing instruments', href: '/kaweco-pens-terrell' },
+  { name: 'Splendid Iris', tagline: 'Artisan candles & gifts', href: '/splendid-iris-terrell' },
+  { name: 'Swig', tagline: 'Insulated drinkware', href: '/swig-drinkware-terrell' },
+  { name: 'Lucky Feather', tagline: 'Meaningful jewelry', href: '/lucky-feather-jewelry-terrell' },
+  { name: 'Ty', tagline: 'Beanie Babies & plush', href: '/ty-beanie-babies-terrell' },
+  { name: 'Local Artisans', tagline: 'Honey, soaps & crafts', href: '/local-honey-terrell' },
 ];
 ---
 
@@ -19,7 +21,7 @@ const brands = [
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
       {brands.map((brand, i) => (
-        <div class={`reveal reveal-delay-${(i % 4) + 1} group`}>
+        <a href={brand.href} class={`reveal reveal-delay-${(i % 4) + 1} group block`} aria-label={`${brand.name} at Gugu Gifts in Terrell`}>
           <div class="bg-cream border border-gold/15 rounded-xl p-6 md:p-8 h-full flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/5 hover:-translate-y-1">
             <h3 class="font-playfair text-lg md:text-xl text-bronze group-hover:text-gold transition-colors duration-300">
               {brand.name}
@@ -28,7 +30,7 @@ const brands = [
               {brand.tagline}
             </p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
 
