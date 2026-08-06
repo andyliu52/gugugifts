@@ -1,4 +1,20 @@
-# Square → blog post workflow
+# Square → blog + social workflow
+
+Two tracks share one Square pull: bilingual blog posts, and scheduled social
+posts pushed to Facebook / Instagram / Google Business Profile through the
+GoHighLevel Social Planner API.
+
+## Quick reference
+
+| Command | Does |
+| --- | --- |
+| `npm run square:seed` | One-time: mark the current catalog as already seen |
+| `npm run square:new` | Report items added since the last run |
+| `npm run square:catalog` | Snapshot everything in stock → `social/catalog-snapshot.{json,md}` |
+| `npm run ghl:accounts` | Read-only: list connected FB/IG/GBP accounts and their IDs |
+
+---
+
 
 Pull newly-added items from the Square catalog, then turn them into a bilingual
 blog post. Two stages: a script that fetches facts, and a Claude Code session
@@ -105,6 +121,65 @@ recoverable in post.
 
 Square product photos in the brief are a reasonable alternative if you would
 rather use a real product shot than a generated scene.
+
+## GoHighLevel social scheduling
+
+Posts go out through the Social Planner **API**, not a CSV import. That
+removes the manual upload step, the 90-rows-per-file cap, and the 40-column
+positional CSV format entirely.
+
+### Setup
+
+1. In GHL, open the **Gugu Gifts** sub-account (not TX Fitness) → Settings →
+   Private Integrations → create a token with scopes:
+   `socialplanner/post.write`, `socialplanner/account.readonly`,
+   `medias.readonly`, `medias.write`.
+2. Connect Facebook, Instagram and Google Business Profile under
+   Marketing → Social Planner → Settings.
+3. Create `scripts/.ghl-credentials.json` (gitignored):
+
+   ```json
+   {
+     "apiToken": "pit-...",
+     "locationId": "<Gugu Gifts sub-account id>",
+     "userId": "<a user id in that sub-account>",
+     "timezone": "America/Chicago"
+   }
+   ```
+
+4. `npm run ghl:accounts` — read-only. Prints every connected account with the
+   `id` values that `accountIds` needs. Copy them back into the credentials
+   file under `"accounts"`. These IDs cannot be guessed or derived.
+
+### Why the account probe comes first
+
+`CreatePostDTO.accountIds` takes GHL's internal account IDs, and a post
+targeting Facebook vs Instagram vs GBP is the *same* endpoint with different
+IDs. The probe is also how you find out a connection has silently expired —
+`isExpired` on an account means posts to it fail at publish time, hours after
+the API accepted them.
+
+### Scheduling and the DST trap
+
+Posts are scheduled for **5:00 PM local time in Terrell**. The campaign window
+crosses the time change: America/Chicago is UTC-5 through 2026-11-01 and UTC-6
+after. A hardcoded offset would post an hour off for part of the run, so
+`zonedToUtc()` in `scripts/lib/ghl.mjs` resolves the real offset per date.
+
+Note "5pm CST" strictly means UTC-6 year-round; what's implemented is 5pm on
+the clock in Terrell, which is what people mean. `npm run ghl:accounts` prints
+a sanity check on both sides of the boundary.
+
+### Two API versions on one host
+
+Social Planner endpoints want `Version: v3`. Media Storage wants
+`Version: 2021-07-28`. Sending the wrong one returns a confusing 422 rather
+than a clear error. `ghlFetch()` handles this per-endpoint.
+
+### Cloudflare
+
+Every GHL request needs a browser-like `User-Agent`. Undici's default is
+literally `node`, which Cloudflare 1010-bans. Set once in `ghlFetch()`.
 
 ## Suggested cadence
 

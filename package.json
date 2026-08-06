@@ -16,7 +16,8 @@
     "square:new": "node scripts/pull-square-new-items.mjs",
     "square:dry-run": "node scripts/pull-square-new-items.mjs --dry-run",
     "square:catalog": "node scripts/pull-square-catalog.mjs",
-    "square:catalog:dry-run": "node scripts/pull-square-catalog.mjs --dry-run"
+    "square:catalog:dry-run": "node scripts/pull-square-catalog.mjs --dry-run",
+    "ghl:accounts": "node scripts/ghl-accounts.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
