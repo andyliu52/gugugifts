@@ -21,6 +21,12 @@ pnpm-debug.log*
 scripts/.google-business-credentials.json
 scripts/.google-business-state.json
 
+# square catalog script
+scripts/.square-credentials.json
+scripts/.square-state.json
+scripts/.square-new-items.json
+scripts/.square-new-items.md
+
 # macOS-specific files
 .DS_Store
 

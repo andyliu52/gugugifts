@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Generate hero images for blog posts using local ComfyUI (Flux Dev Q8 GGUF).
+// Generate hero images for blog posts using local ComfyUI (Z-Image-Turbo).
 // Adapted from txfitness for the bilingual gugugifts blog.
 //
 // Usage:
@@ -7,14 +7,17 @@
 //   node scripts/generate-comfyui-images.mjs --all
 //   node scripts/generate-comfyui-images.mjs --slug <slug> --regenerate
 //
-// Requires the ComfyUI-GGUF custom node (city96) to be installed and loaded
-// on the ComfyUI server. On WSL2 + ComfyUI Desktop on Windows, the script
-// auto-detects the Windows host IP from the default gateway.
+// ComfyUI runs natively in WSL at 127.0.0.1:8188 (~/comfy/ComfyUI), not on the
+// Windows host. Override with COMFYUI_URL if that changes.
+//
+// Default model is Z-Image-Turbo (6B, 8 steps, Apache 2.0) — the same model
+// txfitness uses for blog heroes. COMFYUI_MODE=flux falls back to the
+// flux1-schnell all-in-one checkpoint. The old Flux Dev GGUF path is gone:
+// its t5xxl/clip_l text encoders were deleted from the box to reclaim disk.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
@@ -26,23 +29,21 @@ const BLOG_DIRS = [
 ];
 const IMAGE_DIR = path.join(ROOT, 'public', 'images', 'blog');
 
-// ComfyUI server. Env override wins; otherwise auto-detect WSL→Windows host.
-const COMFY = (() => {
-  if (process.env.COMFYUI_URL) return process.env.COMFYUI_URL.replace(/\/$/, '');
-  try {
-    const route = execSync('ip route show default', { encoding: 'utf8' });
-    const m = route.match(/default via (\S+)/);
-    if (m) return `http://${m[1]}:8000`;
-  } catch {}
-  return 'http://127.0.0.1:8000';
-})();
+// ComfyUI runs in WSL alongside this repo.
+const COMFY = (process.env.COMFYUI_URL || 'http://127.0.0.1:8188').replace(/\/$/, '');
 
-// Flux Dev Q8 GGUF. cfg=1.0, euler, simple — Flux defaults.
-const UNET_MODEL = process.env.COMFYUI_UNET || 'flux1-dev-Q8_0.gguf';
-const CLIP_T5 = 't5xxl_fp8_e4m3fn.safetensors';
-const CLIP_L = 'clip_l.safetensors';
-const VAE_MODEL = 'ae.safetensors';
-const STEPS = Number(process.env.COMFYUI_STEPS || 22);
+const MODE = (process.env.COMFYUI_MODE || 'zimage').toLowerCase();
+
+// Z-Image-Turbo: split UNET / CLIP / VAE.
+const ZIMAGE_UNET = process.env.COMFYUI_UNET || 'z_image_turbo_bf16.safetensors';
+const ZIMAGE_CLIP = 'qwen_3_4b.safetensors';
+const ZIMAGE_VAE = 'z_image_ae.safetensors';
+
+// Flux schnell fallback: all-in-one checkpoint, no separate encoders needed.
+const FLUX_CKPT = 'flux1-schnell-fp8.safetensors';
+
+const DEFAULT_STEPS = { zimage: 8, flux: 4 };
+const STEPS = Number(process.env.COMFYUI_STEPS || DEFAULT_STEPS[MODE] || 8);
 const WIDTH = 1280;
 const HEIGHT = 720;
 
@@ -76,68 +77,70 @@ function strip(v) {
 }
 
 function buildPrompt(title, description) {
-  const t = strip(title);
   const d = strip(description);
+  // Z-Image renders text aggressively and will happily invent a misspelled
+  // shop sign. Naming "text"/"signage"/"logos" in the prompt only summons
+  // them — cfg is 1.0, so there is no negative pass to suppress anything.
+  // Instead describe every surface as blank, and keep the post title out of
+  // the prompt (a title reads as a headline instruction and gets rendered).
   return (
-    `Editorial lifestyle photograph of a bright curated gift shop interior, themed around: ${t}. ${d} ` +
+    `Editorial lifestyle photograph of a bright curated gift shop interior. ` +
+    `Seasonal mood: ${d} ` +
     `Wooden shelves with candles in soft pastel ceramics, vases of fresh flowers, ` +
     `neatly wrapped gift boxes in cream paper with ribbon, arranged on a warm wood counter. ` +
     `Soft natural window light from a tall window, warm cream and gold tones, ` +
     `mid-range subjects in clear focus with gently blurred background, magazine quality, photo-realistic. ` +
-    `No text, no signage, no logos, no lettering.`
+    `Every surface is completely blank: plain unlabeled packaging, smooth unmarked ceramics, ` +
+    `bare walls, empty picture frames, closed blank-covered notebooks. Nothing is printed or written on anywhere.`
   );
 }
 
-function buildWorkflow(positivePrompt, seed) {
+// Z-Image-Turbo. Text encoder is Qwen3-4B loaded through the lumina2 handler.
+// Distilled to 8 steps, so cfg is 1.0 and the negative is a zeroed-out copy of
+// the positive. ModelSamplingAuraFlow shift=3 matches ComfyUI's template.
+function buildZImageWorkflow(positivePrompt, seed) {
   return {
-    "1": {
-      class_type: "UnetLoaderGGUF",
-      inputs: { unet_name: UNET_MODEL },
-    },
-    "2": {
-      class_type: "DualCLIPLoader",
-      inputs: { clip_name1: CLIP_T5, clip_name2: CLIP_L, type: "flux" },
-    },
-    "3": {
-      class_type: "VAELoader",
-      inputs: { vae_name: VAE_MODEL },
-    },
-    "4": {
-      class_type: "CLIPTextEncode",
-      inputs: { text: positivePrompt, clip: ["2", 0] },
-    },
-    "5": {
-      class_type: "ConditioningZeroOut",
-      inputs: { conditioning: ["4", 0] },
-    },
-    "6": {
-      class_type: "EmptySD3LatentImage",
-      inputs: { width: WIDTH, height: HEIGHT, batch_size: 1 },
-    },
+    "1": { class_type: "UNETLoader", inputs: { unet_name: ZIMAGE_UNET, weight_dtype: "default" } },
+    "2": { class_type: "CLIPLoader", inputs: { clip_name: ZIMAGE_CLIP, type: "lumina2", device: "default" } },
+    "3": { class_type: "VAELoader", inputs: { vae_name: ZIMAGE_VAE } },
+    "4": { class_type: "CLIPTextEncode", inputs: { text: positivePrompt, clip: ["2", 0] } },
+    "5": { class_type: "ConditioningZeroOut", inputs: { conditioning: ["4", 0] } },
+    "6": { class_type: "EmptySD3LatentImage", inputs: { width: WIDTH, height: HEIGHT, batch_size: 1 } },
+    "10": { class_type: "ModelSamplingAuraFlow", inputs: { model: ["1", 0], shift: 3 } },
     "7": {
       class_type: "KSampler",
       inputs: {
-        seed,
-        steps: STEPS,
-        cfg: 1.0,
-        sampler_name: "euler",
-        scheduler: "simple",
-        denoise: 1.0,
-        model: ["1", 0],
-        positive: ["4", 0],
-        negative: ["5", 0],
-        latent_image: ["6", 0],
+        seed, steps: STEPS, cfg: 1.0, sampler_name: "res_multistep", scheduler: "simple", denoise: 1.0,
+        model: ["10", 0], positive: ["4", 0], negative: ["5", 0], latent_image: ["6", 0],
       },
     },
-    "8": {
-      class_type: "VAEDecode",
-      inputs: { samples: ["7", 0], vae: ["3", 0] },
-    },
-    "9": {
-      class_type: "SaveImage",
-      inputs: { filename_prefix: "gugu-blog", images: ["8", 0] },
-    },
+    "8": { class_type: "VAEDecode", inputs: { samples: ["7", 0], vae: ["3", 0] } },
+    "9": { class_type: "SaveImage", inputs: { filename_prefix: "gugu-blog", images: ["8", 0] } },
   };
+}
+
+// Flux schnell all-in-one: CheckpointLoaderSimple yields MODEL/CLIP/VAE.
+function buildFluxWorkflow(positivePrompt, seed) {
+  return {
+    "1": { class_type: "CheckpointLoaderSimple", inputs: { ckpt_name: FLUX_CKPT } },
+    "4": { class_type: "CLIPTextEncode", inputs: { text: positivePrompt, clip: ["1", 1] } },
+    "5": { class_type: "ConditioningZeroOut", inputs: { conditioning: ["4", 0] } },
+    "6": { class_type: "EmptySD3LatentImage", inputs: { width: WIDTH, height: HEIGHT, batch_size: 1 } },
+    "7": {
+      class_type: "KSampler",
+      inputs: {
+        seed, steps: STEPS, cfg: 1.0, sampler_name: "euler", scheduler: "simple", denoise: 1.0,
+        model: ["1", 0], positive: ["4", 0], negative: ["5", 0], latent_image: ["6", 0],
+      },
+    },
+    "8": { class_type: "VAEDecode", inputs: { samples: ["7", 0], vae: ["1", 2] } },
+    "9": { class_type: "SaveImage", inputs: { filename_prefix: "gugu-blog", images: ["8", 0] } },
+  };
+}
+
+function buildWorkflow(positivePrompt, seed) {
+  if (MODE === 'flux') return buildFluxWorkflow(positivePrompt, seed);
+  return buildZImageWorkflow(positivePrompt, seed);
 }
 
 async function postPrompt(workflow, clientId) {
@@ -288,7 +291,7 @@ async function main() {
     console.error(`ComfyUI not reachable at ${COMFY}: ${e.message}`);
     process.exit(1);
   }
-  console.log(`ComfyUI ${COMFY}  unet=${UNET_MODEL}  steps=${STEPS}`);
+  console.log(`ComfyUI ${COMFY}  mode=${MODE}  model=${MODE === 'flux' ? FLUX_CKPT : ZIMAGE_UNET}  steps=${STEPS}`);
 
   let ok = 0, fail = 0, skip = 0;
   for (const slug of slugs) {
