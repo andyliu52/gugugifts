@@ -72,7 +72,7 @@ October weekdays are the best browsing conditions of the entire fall. The store 
 
 By mid-November that changes. By December it changes a lot.
 
-- **Best for browsing**: weekday mornings, October through early November
+- **Best for browsing**: Tuesday–Friday mornings, October through early November (closed Mondays)
 - **Best for a focused gift run**: weekend mornings before noon
 - **Parking**: free and easy at **The Shops at Terrell**, all season
 

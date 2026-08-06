@@ -73,7 +73,7 @@ Because you're probably combining errands anyway, and **The Shops at Terrell** (
 - **Famous Footwear or Crocs** — the shoes that no longer fit, which is all of them
 - **Gugu Gifts, Suite 112** — teacher gifts and the Swig bottle, wrapped before you leave
 
-Free parking. Weekday mornings in August are the calm window; the weekend before the first day of school is the busiest we get all month.
+Free parking. Tuesday–Friday mornings in August are the calm window (we're closed Mondays); the weekend before the first day of school is the busiest we get all month.
 
 ## Dates Worth Knowing
 

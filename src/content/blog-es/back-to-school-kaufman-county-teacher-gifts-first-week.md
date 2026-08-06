@@ -73,7 +73,7 @@ Porque de todos modos probablemente vas a combinar mandados, y **The Shops at Te
 - **Famous Footwear o Crocs** — los zapatos que ya no le quedan, o sea todos
 - **Gugu Gifts, Suite 112** — regalos para maestros y la botella Swig, envueltos antes de que salgas
 
-Estacionamiento gratis. Las mañanas entre semana de agosto son la ventana tranquila; el fin de semana antes del primer día de clases es lo más lleno que estamos en todo el mes.
+Estacionamiento gratis. Las mañanas de martes a viernes de agosto son la ventana tranquila (cerramos los lunes); el fin de semana antes del primer día de clases es lo más lleno que estamos en todo el mes.
 
 ## Fechas Que Vale la Pena Saber
 

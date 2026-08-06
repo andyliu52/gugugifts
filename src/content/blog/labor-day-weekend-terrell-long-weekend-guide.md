@@ -65,13 +65,21 @@ If you're a Thanksgiving host, September is genuinely the right time to look. Th
 
 - **Parking**: free, plentiful, never actually a problem — even on a holiday Saturday
 - **The drive**: I-20 Exit 501. From Forney, Heartland, Travis Ranch, Devonshire, Gateway Parks, Mesquite, or Rockwall, you're 10–25 minutes out
-- **Best window**: Saturday morning. Monday afternoon is the quietest of the three days if you'd rather have the place to yourself
+- **Best window**: Saturday morning, or Sunday afternoon if you'd rather have the place to yourself
 - **Downtown Terrell**: five minutes away if you want lunch somewhere with more character than a food court
 
-## Holiday-Weekend Hours
+## One Scheduling Note
 
-Store hours across the center shift a little on Labor Day Monday — most stay open with a shortened afternoon. We'd rather you not drive out on a guess: check our page or send a note before you come Monday.
+**We're closed on Mondays — including Labor Day itself.** So if you need a host gift for a Monday cookout, Saturday or Sunday is your window. Don't drive out Monday expecting us.
+
+Our hours:
+
+- **Tuesday – Saturday:** 10 AM – 7 PM
+- **Sunday:** 11 AM – 6 PM
+- **Monday:** closed
+
+The rest of The Shops at Terrell keeps its own holiday hours, so the outlet anchors are still a Monday option — just not us.
 
 **Gugu Gifts — 301 Tanger Dr, Suite 112, Terrell, TX 75160.** Free wrapping, walk-ins welcome.
 
-Email [gugu@gugugifts.com](mailto:gugu@gugugifts.com) and we'll confirm hours or hold a host gift aside for you.
+Email [gugu@gugugifts.com](mailto:gugu@gugugifts.com) and we'll hold a host gift aside for you.

@@ -72,7 +72,7 @@ Los días entre semana de octubre son las mejores condiciones para curiosear de 
 
 Para mediados de noviembre eso cambia. Para diciembre cambia mucho.
 
-- **Mejor para curiosear**: mañanas entre semana, de octubre a principios de noviembre
+- **Mejor para curiosear**: mañanas de martes a viernes, de octubre a principios de noviembre (cerramos los lunes)
 - **Mejor para una vuelta de regalos con objetivo**: mañanas de fin de semana antes del mediodía
 - **Estacionamiento**: gratis y fácil en **The Shops at Terrell**, toda la temporada
 

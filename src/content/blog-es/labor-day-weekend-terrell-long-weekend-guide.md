@@ -65,13 +65,21 @@ Si tú eres quien organiza Thanksgiving, septiembre es genuinamente el momento c
 
 - **Estacionamiento**: gratis, abundante, nunca es realmente un problema — ni un sábado festivo
 - **El camino**: Salida 501 de la I-20. Desde Forney, Heartland, Travis Ranch, Devonshire, Gateway Parks, Mesquite o Rockwall, estás a 10–25 minutos
-- **Mejor ventana**: sábado en la mañana. El lunes en la tarde es el más tranquilo de los tres días si prefieres tener el lugar para ti
+- **Mejor ventana**: sábado en la mañana, o domingo en la tarde si prefieres tener el lugar para ti
 - **Centro de Terrell**: a cinco minutos si quieres comer en un lugar con más carácter que un food court
 
-## Horarios de Fin Festivo
+## Una Nota de Horario
 
-Los horarios de las tiendas del centro cambian un poco el lunes del Día del Trabajo — la mayoría abre con tarde recortada. Preferimos que no manejes hasta acá adivinando: revisa nuestra página o mándanos un mensaje antes de venir el lunes.
+**Cerramos los lunes — incluido el Día del Trabajo.** Así que si necesitas un regalo de anfitrión para un cookout del lunes, tu ventana es sábado o domingo. No manejes hasta acá el lunes esperando encontrarnos.
+
+Nuestros horarios:
+
+- **Martes a sábado:** 10 AM – 7 PM
+- **Domingo:** 11 AM – 6 PM
+- **Lunes:** cerrado
+
+El resto de The Shops at Terrell maneja sus propios horarios festivos, así que las tiendas ancla del outlet siguen siendo opción el lunes — nomás nosotros no.
 
 **Gugu Gifts — 301 Tanger Dr, Suite 112, Terrell, TX 75160.** Empaque gratis, bienvenidos sin cita.
 
-Escribe a [gugu@gugugifts.com](mailto:gugu@gugugifts.com) y te confirmamos horarios o te apartamos un regalo de anfitrión.
+Escribe a [gugu@gugugifts.com](mailto:gugu@gugugifts.com) y te apartamos un regalo de anfitrión.
