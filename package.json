@@ -14,7 +14,9 @@
     "gbp:dry-run": "node scripts/post-to-google-business.mjs --dry-run",
     "square:seed": "node scripts/pull-square-new-items.mjs --reset",
     "square:new": "node scripts/pull-square-new-items.mjs",
-    "square:dry-run": "node scripts/pull-square-new-items.mjs --dry-run"
+    "square:dry-run": "node scripts/pull-square-new-items.mjs --dry-run",
+    "square:catalog": "node scripts/pull-square-catalog.mjs",
+    "square:catalog:dry-run": "node scripts/pull-square-catalog.mjs --dry-run"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",

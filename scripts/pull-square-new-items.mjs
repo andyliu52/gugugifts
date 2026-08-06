@@ -8,6 +8,10 @@
 // seen (scripts/.square-state.json), the same way the GBP script tracks
 // which posts it has already pushed.
 //
+// For the full in-stock catalog (not just what's new), use
+// pull-square-catalog.mjs instead — it deliberately does NOT touch the state
+// file here, so a snapshot run can never destroy the new-items baseline.
+//
 // Usage:
 //   node scripts/pull-square-new-items.mjs --reset       # first run: seed state, report nothing
 //   node scripts/pull-square-new-items.mjs               # report items not seen before
@@ -24,18 +28,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  loadCreds, fetchItems, shapeItem, fetchInventory, applyStock,
+} from './lib/square.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const CREDS_PATH = path.join(__dirname, '.square-credentials.json');
 const STATE_PATH = path.join(__dirname, '.square-state.json');
 const OUT_JSON = path.join(__dirname, '.square-new-items.json');
 const OUT_MD = path.join(__dirname, '.square-new-items.md');
-
-const SQUARE_VERSION = '2026-07-15';
-const HOSTS = {
-  production: 'https://connect.squareup.com',
-  sandbox: 'https://connect.squareupsandbox.com',
-};
 
 function args() {
   const out = {
@@ -60,23 +60,6 @@ function args() {
   return out;
 }
 
-function loadCreds() {
-  if (!fs.existsSync(CREDS_PATH)) {
-    console.error(`Missing credentials file: ${CREDS_PATH}`);
-    console.error(`Expected JSON: { accessToken, locationId, environment }`);
-    console.error(`Get an access token at https://developer.squareup.com/apps -> your app -> Credentials.`);
-    process.exit(1);
-  }
-  const c = JSON.parse(fs.readFileSync(CREDS_PATH, 'utf8'));
-  if (!c.accessToken) { console.error('Missing field in credentials: accessToken'); process.exit(1); }
-  c.environment = c.environment || 'production';
-  if (!HOSTS[c.environment]) {
-    console.error(`environment must be "production" or "sandbox", got: ${c.environment}`);
-    process.exit(1);
-  }
-  return c;
-}
-
 function loadState() {
   if (!fs.existsSync(STATE_PATH)) return { seen: [], lastRun: null };
   const s = JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'));
@@ -88,124 +71,9 @@ function saveState(state) {
   fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
 }
 
-async function squarePost(creds, apiPath, body) {
-  const res = await fetch(`${HOSTS[creds.environment]}${apiPath}`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${creds.accessToken}`,
-      'Content-Type': 'application/json',
-      'Square-Version': SQUARE_VERSION,
-    },
-    body: JSON.stringify(body),
-  });
-  const text = await res.text();
-  if (!res.ok) throw new Error(`POST ${apiPath} ${res.status}: ${text}`);
-  return JSON.parse(text);
-}
-
-// Page through POST /v2/catalog/search for ITEM objects, collecting related
-// CATEGORY and IMAGE objects so we can resolve names and image URLs.
-async function fetchItems(creds, since) {
-  const items = [];
-  const related = new Map();
-  let cursor;
-  let page = 0;
-
-  do {
-    const body = {
-      object_types: ['ITEM'],
-      include_related_objects: true,
-      limit: 200,
-    };
-    if (cursor) body.cursor = cursor;
-    if (since) body.begin_time = new Date(since).toISOString();
-
-    const json = await squarePost(creds, '/v2/catalog/search', body);
-    for (const o of json.objects || []) items.push(o);
-    for (const o of json.related_objects || []) related.set(o.id, o);
-    cursor = json.cursor;
-    page++;
-    process.stdout.write(`\r  fetched ${items.length} items (page ${page})...`);
-  } while (cursor);
-
-  process.stdout.write('\n');
-  return { items, related };
-}
-
-// Square returns money in the smallest currency unit (cents for USD).
-function formatMoney(money) {
-  if (!money || typeof money.amount !== 'number') return null;
-  const value = money.amount / 100;
-  const currency = money.currency || 'USD';
-  const symbol = currency === 'USD' ? '$' : `${currency} `;
-  return value % 1 === 0 ? `${symbol}${value}` : `${symbol}${value.toFixed(2)}`;
-}
-
-function priceRange(variations) {
-  const amounts = variations
-    .map(v => v.item_variation_data?.price_money)
-    .filter(m => m && typeof m.amount === 'number');
-  if (amounts.length === 0) return null;
-  const sorted = [...amounts].sort((a, b) => a.amount - b.amount);
-  const low = formatMoney(sorted[0]);
-  const high = formatMoney(sorted[sorted.length - 1]);
-  return low === high ? low : `${low}–${high}`;
-}
-
-function shapeItem(obj, related) {
-  const d = obj.item_data || {};
-  const variations = d.variations || [];
-
-  const categories = (d.categories || [])
-    .map(c => related.get(c.id)?.category_data?.name)
-    .filter(Boolean);
-
-  const images = (d.image_ids || [])
-    .map(id => related.get(id)?.image_data?.url)
-    .filter(Boolean);
-
-  return {
-    id: obj.id,
-    name: d.name || '(unnamed)',
-    description: (d.description_plaintext || d.description || '').trim() || null,
-    categories,
-    price: priceRange(variations),
-    variations: variations.map(v => ({
-      id: v.id,
-      name: v.item_variation_data?.name || null,
-      sku: v.item_variation_data?.sku || null,
-      price: formatMoney(v.item_variation_data?.price_money),
-      trackInventory: v.item_variation_data?.track_inventory ?? null,
-    })),
-    images,
-    isArchived: d.is_archived === true,
-    updatedAt: obj.updated_at || null,
-  };
-}
-
-// Batch-retrieve on-hand counts so the brief can say what's actually sellable.
-async function fetchInventory(creds, variationIds) {
-  const counts = new Map();
-  const CHUNK = 500;
-
-  for (let i = 0; i < variationIds.length; i += CHUNK) {
-    const chunk = variationIds.slice(i, i + CHUNK);
-    let cursor;
-    do {
-      const body = { catalog_object_ids: chunk };
-      if (creds.locationId) body.location_ids = [creds.locationId];
-      if (cursor) body.cursor = cursor;
-
-      const json = await squarePost(creds, '/v2/inventory/counts/batch-retrieve', body);
-      for (const c of json.counts || []) {
-        if (c.state !== 'IN_STOCK') continue;
-        const qty = Number(c.quantity) || 0;
-        counts.set(c.catalog_object_id, (counts.get(c.catalog_object_id) || 0) + qty);
-      }
-      cursor = json.cursor;
-    } while (cursor);
-  }
-  return counts;
+function stockLabel(item) {
+  if (!item.stockKnown) return 'in stock (untracked)';
+  return `${item.stock} on hand`;
 }
 
 function renderMarkdown(newItems, meta) {
@@ -231,7 +99,7 @@ function renderMarkdown(newItems, meta) {
     for (const item of items) {
       const bits = [];
       if (item.price) bits.push(item.price);
-      if (item.stock !== undefined && item.stock !== null) bits.push(`${item.stock} on hand`);
+      if (item.inStock !== undefined) bits.push(stockLabel(item));
       if (item.isArchived) bits.push('ARCHIVED');
       lines.push(`### ${item.name}${bits.length ? ` — ${bits.join(', ')}` : ''}`);
       if (item.description) lines.push('', item.description);
@@ -241,7 +109,7 @@ function renderMarkdown(newItems, meta) {
           lines.push(`- ${v.name || v.id}${v.price ? ` — ${v.price}` : ''}${v.sku ? ` (SKU ${v.sku})` : ''}`);
         }
       }
-      if (item.images.length) lines.push('', `Images: ${item.images.join(' , ')}`);
+      if (item.images.length) lines.push('', `Images: ${item.images.map(i => i.url).join(' , ')}`);
       lines.push('');
     }
   }
@@ -265,7 +133,9 @@ async function main() {
   if (opts.since) console.log(`SINCE  ${opts.since}`);
 
   const { items, related } = await fetchItems(creds, opts.since);
-  const shaped = items.map(o => shapeItem(o, related)).filter(i => !i.isArchived);
+  const shaped = items
+    .map(o => shapeItem(o, related, creds.locationId))
+    .filter(i => !i.isArchived);
 
   let newItems = shaped.filter(i => !seen.has(i.id));
   newItems.sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
@@ -289,10 +159,7 @@ async function main() {
     if (variationIds.length) {
       try {
         const counts = await fetchInventory(creds, variationIds);
-        for (const item of newItems) {
-          const total = item.variations.reduce((sum, v) => sum + (counts.get(v.id) || 0), 0);
-          item.stock = total;
-        }
+        for (const item of newItems) applyStock(item, counts);
       } catch (err) {
         console.warn(`\nInventory lookup failed (continuing without stock counts): ${err.message}`);
       }
