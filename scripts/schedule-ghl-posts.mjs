@@ -130,7 +130,11 @@ function buildDto(p, doc, creds, platform) {
   const dto = {
     accountIds: [accountId],
     summary,
-    media: [{ url: p.image.url, type: 'image' }],
+    // MIME type, not a word. "image", "IMAGE" and "photo" are all rejected
+    // with "Invalid media format type"; only image/jpeg and image/jpg pass.
+    // Note draft posts accept anything here — the validation only runs for
+    // status: 'scheduled', so a draft round-trip does NOT prove the shape.
+    media: [{ url: p.image.url, type: 'image/jpeg' }],
     status: 'scheduled',
     type: 'post',
     scheduleDate,
@@ -142,9 +146,12 @@ function buildDto(p, doc, creds, platform) {
   // have no equivalent field — the URL goes in the caption text there.
   if (platform === 'google') {
     const cta = p.cta || doc.defaults?.cta;
+    // gmbEventType is uppercase STANDARD | EVENT | OFFER. A plain CTA post is
+    // STANDARD — there is no "call_to_action" value, despite the CSV format's
+    // eventType column using exactly that string.
     if (p.offer) {
       dto.gmbPostDetails = {
-        gmbEventType: 'offer',
+        gmbEventType: 'OFFER',
         title: p.offer.title,
         offerTitle: p.offer.offerTitle,
         startDate: p.offer.startDate,
@@ -155,7 +162,7 @@ function buildDto(p, doc, creds, platform) {
       };
     } else if (cta && cta.actionType !== 'none') {
       dto.gmbPostDetails = {
-        gmbEventType: 'call_to_action',
+        gmbEventType: 'STANDARD',
         actionType: cta.actionType,
         url: cta.actionUrl,
       };
