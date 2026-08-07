@@ -60,6 +60,17 @@ export function loadCreds() {
 
   if (!c.apiToken) { console.error('Missing field in credentials: apiToken'); process.exit(1); }
   if (!c.locationId) { console.error('Missing field in credentials: locationId'); process.exit(1); }
+
+  // The template ships with FILL_IN_ placeholders. Catch them here — sending
+  // one to the API returns a bare 401 that reads like a scope problem.
+  const unfilled = Object.entries(c)
+    .filter(([, v]) => typeof v === 'string' && v.startsWith('FILL_IN_'))
+    .map(([k]) => k);
+  if (unfilled.length) {
+    console.error(`Credentials not filled in yet: ${unfilled.join(', ')}`);
+    console.error(`Edit ${CREDS_PATH} — the _readme in that file says where each value comes from.`);
+    process.exit(1);
+  }
   return c;
 }
 
