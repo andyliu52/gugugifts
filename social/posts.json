@@ -1,0 +1,449 @@
+{
+  "_readme": [
+    "Hand-authored social posts. This is the only file in social/ that is committed.",
+    "Captions are English only; the blog carries Spanish.",
+    "Posts go out 5:00 PM America/Chicago — DST-aware, see scripts/lib/ghl.mjs.",
+    "Validate with: npm run social:validate   Dry run: npm run social:schedule",
+    "Actually schedule with: node scripts/schedule-ghl-posts.mjs --commit"
+  ],
+  "defaults": {
+    "time": "17:00:00",
+    "platforms": [
+      "facebook",
+      "instagram",
+      "google"
+    ],
+    "cta": {
+      "actionType": "learn_more",
+      "actionUrl": "https://www.gugugifts.com/blog"
+    }
+  },
+  "posts": [
+    {
+      "id": "2026-09-15-julie-vos",
+      "groupId": "julie-vos",
+      "date": "2026-09-15",
+      "itemIds": [
+        "HIG6RMT6GELJIWSOVE5G4SZC",
+        "NVWVOPQL3ZJ6TZ5FVY4ASR2H",
+        "5UVZP2N2O4WBMP3KK47CSWTW",
+        "UCO5BFNWAZWZQFT7TSN4AAMC",
+        "P5NKP6ZHRJD2R65XFCPOOAHV"
+      ],
+      "caption": "The Julie Vos case just got restocked for fall.\n\nCrescent Hoops start at $65. The Milano Luxe bangles are $125. The Honeybee statement necklace is $395 and it is exactly as good in person as it looks.\n\nThese come in small quantities and when a piece sells it usually doesn't come back that season. If there's someone specific in mind for December, October is when the piece still exists.\n\nGugu Gifts · Suite 112 · The Shops at Terrell",
+      "image": {
+        "source": "square",
+        "itemId": "HIG6RMT6GELJIWSOVE5G4SZC",
+        "imageId": "HESG3R2KWOBPYKRCCU2GC4GW",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/506b18c58a084fb196e4f07b570d2b6ea926b038/original.jpeg",
+        "itemName": "Honeybee Statement Necklace-Iridescent Clear Crystal-OS"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/good-jewelry-case-julie-vos-brenda-grands-terrell"
+      }
+    },
+    {
+      "id": "2026-09-18-luddite",
+      "groupId": "luddite",
+      "date": "2026-09-18",
+      "itemIds": [
+        "5NNOI4VFZR5FEFMUGKKKI3LR",
+        "EXTAD7KPQ76M2KR4VP3PF6AS",
+        "BPZVHH6EH7DAZL2LXRIFKGIJ",
+        "KNF2L67XLTJ77OWQ2ZXG2XVX",
+        "IBQWPOTIPCWJGX5HZAXQRCGP"
+      ],
+      "caption": "Probably not what you expect to find in Terrell: 143 pieces of Japanese stationery.\n\nOSCOLABO carved rubber stamps from $7. Shachihata Iromoyo pigment ink at $12. Kaweco Lunar Sport pens at $28. Luddite canvas pen cases woven in Kurashiki, $18.\n\nPeople come in for a candle and leave forty minutes later holding a stamp of a swallow in flight. Full guide on the blog.",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/japanese-stationery-terrell-stamps-ink-pens.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/japanese-stationery-terrell-stamps-ink-pens"
+      }
+    },
+    {
+      "id": "2026-09-22-rain-jewelry-earring",
+      "groupId": "rain-jewelry-earring",
+      "date": "2026-09-22",
+      "itemIds": [
+        "BAOMKOW66ALVKARSLBK4M2T4",
+        "DB5DX6ZLWSOBDZBVXC5HDTMD",
+        "MQCMTFQW6QZCTQPQDXAWWFQS",
+        "2MML735DPIGEZIW2GPZOQKUS",
+        "2N5U4WZTYFG2ENBDYLZH5CYV"
+      ],
+      "caption": "Sixty-four pairs of Rain earrings in the case right now, starting at $13.\n\nSilver, oxidized finishes, Southwestern and nature motifs — the kind of thing that reads as Texas without being a longhorn.\n\nThe blue butterfly pair at $13 is the cheapest thing in the store that still reads as real jewelry. Under $20 means you can buy it without a reason.",
+      "image": {
+        "source": "square",
+        "itemId": "BAOMKOW66ALVKARSLBK4M2T4",
+        "imageId": "XKYNTOKPLW62RJMJDYLWFFJP",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/a399114f1bdfbd548ce0aa97a6e9c464c1813534/original.jpeg",
+        "itemName": "Gold Red Flowers & Bees Seven Post Earring Set"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/everyday-jewelry-under-35-terrell-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-09-25-voluspa",
+      "groupId": "voluspa",
+      "date": "2026-09-25",
+      "itemIds": [
+        "B7FK5H5YXAWMIRRNRT2BDUPC",
+        "2YKB26JTTZTJ4AQDW22FE2VA",
+        "D77PETJO3QQ2VYOGPV7OBBWI",
+        "JBLVLFPSR5JX3BCQOOATVB5U",
+        "O2ZJ2QMQ4ZEBCL5KY2EAOHLV"
+      ],
+      "caption": "The scent shift is done. Summer citrus is out, the warm fall Voluspa is in.\n\nMini tins at $16. The 9 oz classics at $34. Full 18 oz jars in Panjore Lychee and Baltic Amber, also $34.\n\nIf you've only ever bought the bright summer scents, the fall range is a genuinely different experience. Come smell them — that part doesn't work through a screen.",
+      "image": {
+        "source": "square",
+        "itemId": "B7FK5H5YXAWMIRRNRT2BDUPC",
+        "imageId": "WMTJ2SJ4HL3LAS4EJVAWCUM5",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/ab468eb1863ae95011b4f5fe9a734bfb6b08ed4f/original.jpeg",
+        "itemName": "Best Sellers 2.5oz Gift Set 2024"
+      }
+    },
+    {
+      "id": "2026-09-29-splendid-iris-earring",
+      "groupId": "splendid-iris-earring",
+      "date": "2026-09-29",
+      "itemIds": [
+        "XS4NG63POPHQC2TIDUOT73PO",
+        "E5JMQLP2P3RYKOSXO4WR6VQS",
+        "FQV3WU5QB3M6IX4VNC6WNLZQ",
+        "GOFA2BHKT3XRX5JOVXMXPK5Q",
+        "ZQJBDHNVZOWVJS6IV3SFCRVG"
+      ],
+      "caption": "Seventy-eight pairs of Splendid Iris earrings, from $18.\n\nGold, clean, classic. Huggies, thin hoops, studs, alphabet initials. Less pattern, more shape.\n\nIf you genuinely don't know someone's taste, the 4mm gold huggies at $18 are the least wrong thing in the case. That's not a small compliment.",
+      "image": {
+        "source": "square",
+        "itemId": "XS4NG63POPHQC2TIDUOT73PO",
+        "imageId": "LCVWP5RHX2XESSQ2ELVTQWGM",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/bd5593db451da9e0e58505aae6c27d2caecdc627/original.jpeg",
+        "itemName": "Earrings - Long pointed teardrop, Gold"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/everyday-jewelry-under-35-terrell-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-10-02-ty",
+      "groupId": "ty",
+      "date": "2026-10-02",
+      "itemIds": [
+        "LXVQZBPTEFJIMYNLWULURMUG",
+        "7IX6XZJUTHHENOBSH5ROOGUA",
+        "NE6OHNJVWJF7WFJDKPJEVU3Q",
+        "32BVU3EYOGWLA57GJ6KC3QGE",
+        "BCQZ7DRVCSIH5YP2UXOTVU77"
+      ],
+      "caption": "Close to 60 Ty in stock, from $6.99.\n\nIt is reliably the busiest three feet of the store between Thanksgiving and Christmas, and it solves four problems: stockings, party favors for a kid you barely know, the \"one more small thing\" gift, and keeping a child occupied while you shop.\n\nLARA the capybara is the one that stops people mid-aisle.",
+      "image": {
+        "source": "square",
+        "itemId": "LXVQZBPTEFJIMYNLWULURMUG",
+        "imageId": "SLUAQZHUUVQ2FZOG2HCZFRQP",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/6ecd8e6634f36e887d22b8561bb7bff26c3c9cb9/original.jpeg",
+        "itemName": "LARA - capybara tan med"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/ty-plush-terrell-small-gifts-under-16"
+      }
+    },
+    {
+      "id": "2026-10-06-luddite",
+      "groupId": "luddite",
+      "date": "2026-10-06",
+      "itemIds": [
+        "5NNOI4VFZR5FEFMUGKKKI3LR",
+        "EXTAD7KPQ76M2KR4VP3PF6AS",
+        "BPZVHH6EH7DAZL2LXRIFKGIJ",
+        "KNF2L67XLTJ77OWQ2ZXG2XVX",
+        "IBQWPOTIPCWJGX5HZAXQRCGP"
+      ],
+      "caption": "The Kaweco wall: 22 Lunar Sport pens, ballpoint and rollerball, $28 each.\n\nOctagonal barrel, pocket length, threads closed so it won't leak in a bag. German-made, adopted by Japanese stationery shops and never let go of.\n\nThis is our standard answer to \"I need a gift for someone who writes constantly and has never owned a good pen.\"",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/japanese-stationery-terrell-stamps-ink-pens.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/japanese-stationery-terrell-stamps-ink-pens"
+      }
+    },
+    {
+      "id": "2026-10-09-rain-jewelry-necklace",
+      "groupId": "rain-jewelry-necklace",
+      "date": "2026-10-09",
+      "itemIds": [
+        "WWPUIFJFBNPAF6X5ZDQEZOUY",
+        "22KLTORZ37KSZNMI3IN3AJYV",
+        "C2Q2TVF7WG4VBDFID3EX5VBR",
+        "ZBC5T3JBNR5OKX5SNJM7DL4E",
+        "KSHXCACDR7JVXWGIVU73WD55"
+      ],
+      "caption": "Rain necklaces, $20 to $33.\n\nSilver and turquoise, crystal sets, oxidized detail. The price band where jewelry stops being an occasion and starts being something you wear on a Tuesday.\n\nFree wrapping at the counter, so you can walk in without a gift bag in the car.",
+      "image": {
+        "source": "square",
+        "itemId": "WWPUIFJFBNPAF6X5ZDQEZOUY",
+        "imageId": "3BJ67BOQIKGXYCQ772RGIVT4",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/efd70b5e76e759d208fbbd1cac96f7efd437793d/original.jpeg",
+        "itemName": "Silver Big Blue Crystal Necklace Set"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/everyday-jewelry-under-35-terrell-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-10-13-brenda-grands",
+      "groupId": "brenda-grands",
+      "date": "2026-10-13",
+      "itemIds": [
+        "ESNI75N6YY6QGPXT6ASSWS7W",
+        "R3BWVLKFQIW5UAEBXNMGFQZ6",
+        "TYTRANMU46FNGBOGPD3JREEJ",
+        "V5FP2UFSM5IPXTE7TN4S7HLX",
+        "QBBFE27NHUVYJLS2WFBQ3BKM"
+      ],
+      "caption": "Real gold under $85.\n\nBrenda Grands: 18K Zenith hoops at $38, triple mini hoops at $48, a dainty diamond cross pendant at $53, 24K hammered hoops at $60.\n\nThis is the line for someone building a set they'll wear daily, rather than making a statement. It stacks with whatever they already own — which is why it's hard to get wrong.",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/good-jewelry-case-julie-vos-brenda-grands-terrell.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/good-jewelry-case-julie-vos-brenda-grands-terrell"
+      }
+    },
+    {
+      "id": "2026-10-16-splendid-iris-ring",
+      "groupId": "splendid-iris-ring",
+      "date": "2026-10-16",
+      "itemIds": [
+        "3F5TYOIZLTETFLX45MWSOHN2",
+        "FMSGKH2EBFBYTVVPHMJJV4LH",
+        "ELV7ETGDBYEQNEYA35VAW3HD",
+        "GJLSKNHP3DMXVRIRWKKSORXR",
+        "LSD4C2N7GMTSKNZFNGKNUNPE"
+      ],
+      "caption": "Splendid Iris rings, $17 to $25.\n\nPave leaf adjustable, stacking bands, simple gold. Adjustable means you don't need to know a ring size, which removes the single most common reason a jewelry gift fails.",
+      "image": {
+        "source": "square",
+        "itemId": "3F5TYOIZLTETFLX45MWSOHN2",
+        "imageId": "BQGTZUHJTBX5DZLWTJAHYEII",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/ba0f51e5cc7c79d4a3fcd5a1855b3245ae96e042/original.jpeg",
+        "itemName": "Ring - Pave leaf adjustable ring, Gold"
+      }
+    },
+    {
+      "id": "2026-10-20-julie-vos",
+      "groupId": "julie-vos",
+      "date": "2026-10-20",
+      "itemIds": [
+        "HIG6RMT6GELJIWSOVE5G4SZC",
+        "NVWVOPQL3ZJ6TZ5FVY4ASR2H",
+        "5UVZP2N2O4WBMP3KK47CSWTW",
+        "UCO5BFNWAZWZQFT7TSN4AAMC",
+        "P5NKP6ZHRJD2R65XFCPOOAHV"
+      ],
+      "caption": "If you're buying one serious gift this season, start looking now.\n\nJulie Vos runs $65 to $395 here. By mid-December the case is picked over — the popular bangles and the initial pieces go first, and initials go in an unpredictable order depending on which letters people need.\n\nWe'll hold a piece with a note. Costs you nothing and removes the December problem entirely.",
+      "image": {
+        "source": "square",
+        "itemId": "HIG6RMT6GELJIWSOVE5G4SZC",
+        "imageId": "HESG3R2KWOBPYKRCCU2GC4GW",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/506b18c58a084fb196e4f07b570d2b6ea926b038/original.jpeg",
+        "itemName": "Honeybee Statement Necklace-Iridescent Clear Crystal-OS"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/good-jewelry-case-julie-vos-brenda-grands-terrell"
+      }
+    },
+    {
+      "id": "2026-10-23-faire",
+      "groupId": "faire",
+      "date": "2026-10-23",
+      "itemIds": [
+        "K5LMDNO52RJOD7EWBCXKS7A6",
+        "M5JRIUZ7IIVCYN6W3OBTLLJS",
+        "BLD43KQKHQ6EYAVMCYKVD6HM",
+        "5UXJ77X7Q6F2GPCCZ6ZJEMK5",
+        "G3T7VG2Q2PRBQ4M7HHRAZKRS"
+      ],
+      "caption": "New in: interchangeable enamel pin sets.\n\nThe dim sum basket is the one everyone picks up first. Small, odd, specific — the kind of gift that gets remembered because nobody else thought of it.",
+      "image": {
+        "source": "square",
+        "itemId": "K5LMDNO52RJOD7EWBCXKS7A6",
+        "imageId": "EXJPSGBILLESXRZX6IYHOWKO",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/ae1355634187e359276ce16e322468123a00d9a1/original.jpeg",
+        "itemName": "Dim Sum Basket Interchangeable Enamel Pin Set"
+      }
+    },
+    {
+      "id": "2026-10-27-cardthartic",
+      "groupId": "cardthartic",
+      "date": "2026-10-27",
+      "itemIds": [],
+      "caption": "Forty-four Cardthartic cards in stock, from $2.\n\nIllustrated, and they don't do the sentimental thing — the art carries it. Mini cards at $2, standard at $4.25, a boxed Flowery Hello collection at $14.\n\nA $2 mini card attached to a $6 item turns two cheap things into one considered thing. That's most of gift-giving, honestly.",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/under-15-gifts-terrell-cards-sachets-small-things.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/under-15-gifts-terrell-cards-sachets-small-things"
+      }
+    },
+    {
+      "id": "2026-11-03-splendid-iris-necklace",
+      "groupId": "splendid-iris-necklace",
+      "date": "2026-11-03",
+      "itemIds": [
+        "UTWCRX7UYZXB6CK52SLJB3JZ",
+        "PWAJBR4QWC7R2CRVUSM5NTY2",
+        "OU6LTPPM6HP63PR66HEN5U4S",
+        "KGZAGI2DDUXCN6C5IQC2FI7Y",
+        "F73A6BHGNEKCJMVOLDEMZ6ET"
+      ],
+      "caption": "Splendid Iris necklaces, $14 to $43.\n\nQuatrefoil shell pendants, delicate chains, layering pieces. Some of the studs come mounted on a velvet gift tag — including a red velvet Christmas tag that's already in.\n\nThat's a wrapped gift with no wrapping required, which is exactly what you want in December.",
+      "image": {
+        "source": "square",
+        "itemId": "UTWCRX7UYZXB6CK52SLJB3JZ",
+        "imageId": "ZI4Z6QZQIAYCJBG72ITZF2RY",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/60d978866f53c649682f0202f607d5c010ea7204/original.jpeg",
+        "itemName": "Necklace - Quatrefoil shell pendant with dotted border, Gold"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/everyday-jewelry-under-35-terrell-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-11-06-rain-jewelry-bracelet",
+      "groupId": "rain-jewelry-bracelet",
+      "date": "2026-11-06",
+      "itemIds": [
+        "G47HRPLCRO2I32V754BA57NG",
+        "ZMZPU2GIHWE6MF7K5EBFSYTJ",
+        "JYPKB23WY2MYK6YRAYE6OMXW",
+        "VEPBYSSCMGMMP4VJLREEGWQ3",
+        "XMUB72K5PJ6A6S4WAAEBUOUG"
+      ],
+      "caption": "Rain stretch bracelets — including 6-packs you can split up.\n\n$19 and up. One pack covers several people, which is the actual problem most of you are solving in November.",
+      "image": {
+        "source": "square",
+        "itemId": "G47HRPLCRO2I32V754BA57NG",
+        "imageId": "OC663CVCQXKYVPV6KXQZDKXW",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/519dc9f01c3a180e3c1dbbd614124e7272602e16/original.jpeg",
+        "itemName": "Silver Design 6 Pack Metal Stretch Bracelets"
+      }
+    },
+    {
+      "id": "2026-11-10-ty",
+      "groupId": "ty",
+      "date": "2026-11-10",
+      "itemIds": [
+        "LXVQZBPTEFJIMYNLWULURMUG",
+        "7IX6XZJUTHHENOBSH5ROOGUA",
+        "NE6OHNJVWJF7WFJDKPJEVU3Q",
+        "32BVU3EYOGWLA57GJ6KC3QGE",
+        "BCQZ7DRVCSIH5YP2UXOTVU77"
+      ],
+      "caption": "The Ty wall is at its fullest right now and at its thinnest the week before Christmas.\n\nThat's not a sales pitch, it's just how a small shop's reorder cycle works against the national supply of plush animals in December.\n\nFrom $6.99. Buy stocking stuffers in November and you get selection. Buy them December 20th and you get what's left — same as everyone else in Kaufman County.",
+      "image": {
+        "source": "square",
+        "itemId": "LXVQZBPTEFJIMYNLWULURMUG",
+        "imageId": "SLUAQZHUUVQ2FZOG2HCZFRQP",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/6ecd8e6634f36e887d22b8561bb7bff26c3c9cb9/original.jpeg",
+        "itemName": "LARA - capybara tan med"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/ty-plush-terrell-small-gifts-under-16"
+      }
+    },
+    {
+      "id": "2026-11-17-voluspa",
+      "groupId": "voluspa",
+      "date": "2026-11-17",
+      "itemIds": [
+        "B7FK5H5YXAWMIRRNRT2BDUPC",
+        "2YKB26JTTZTJ4AQDW22FE2VA",
+        "D77PETJO3QQ2VYOGPV7OBBWI",
+        "JBLVLFPSR5JX3BCQOOATVB5U",
+        "O2ZJ2QMQ4ZEBCL5KY2EAOHLV"
+      ],
+      "caption": "Voluspa gift sets are in.\n\nThe 2.5 oz best-sellers set is the one to reach for when you need something that looks considered and costs less than people assume. Singles from $16.\n\nThe safe, always-correct gift for a coworker, a neighbor, or a teacher.",
+      "image": {
+        "source": "square",
+        "itemId": "B7FK5H5YXAWMIRRNRT2BDUPC",
+        "imageId": "WMTJ2SJ4HL3LAS4EJVAWCUM5",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/ab468eb1863ae95011b4f5fe9a734bfb6b08ed4f/original.jpeg",
+        "itemName": "Best Sellers 2.5oz Gift Set 2024"
+      }
+    },
+    {
+      "id": "2026-12-01-cardthartic",
+      "groupId": "cardthartic",
+      "date": "2026-12-01",
+      "itemIds": [],
+      "caption": "Twelve coworkers, $42, wrapped.\n\nTwelve Cardthartic mini cards ($24) plus twelve Greenleaf sachets ($18). Three-fifty a person and not one of them reads as cheap.\n\nPeople spend $150 on a dozen mediocre small gifts every December. Under $15 is where most gifting actually happens and where most of it goes wrong. Full guide on the blog.",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/under-15-gifts-terrell-cards-sachets-small-things.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/under-15-gifts-terrell-cards-sachets-small-things"
+      }
+    },
+    {
+      "id": "2026-12-08-splendid-iris-earring",
+      "groupId": "splendid-iris-earring",
+      "date": "2026-12-08",
+      "itemIds": [
+        "XS4NG63POPHQC2TIDUOT73PO",
+        "E5JMQLP2P3RYKOSXO4WR6VQS",
+        "FQV3WU5QB3M6IX4VNC6WNLZQ",
+        "GOFA2BHKT3XRX5JOVXMXPK5Q",
+        "ZQJBDHNVZOWVJS6IV3SFCRVG"
+      ],
+      "caption": "Christmas tree studs, mounted on red velvet gift tags. $18.\n\nWrapped without wrapping. We have a lot of these and they will not last the month.",
+      "image": {
+        "source": "square",
+        "itemId": "XS4NG63POPHQC2TIDUOT73PO",
+        "imageId": "LCVWP5RHX2XESSQ2ELVTQWGM",
+        "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/bd5593db451da9e0e58505aae6c27d2caecdc627/original.jpeg",
+        "itemName": "Earrings - Long pointed teardrop, Gold"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/everyday-jewelry-under-35-terrell-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-12-15-julie-vos",
+      "groupId": "julie-vos",
+      "date": "2026-12-15",
+      "itemIds": [
+        "HIG6RMT6GELJIWSOVE5G4SZC",
+        "NVWVOPQL3ZJ6TZ5FVY4ASR2H",
+        "5UVZP2N2O4WBMP3KK47CSWTW",
+        "UCO5BFNWAZWZQFT7TSN4AAMC",
+        "P5NKP6ZHRJD2R65XFCPOOAHV"
+      ],
+      "caption": "Still time.\n\nWe wrap everything free, we're open Tuesday through Saturday 10–7 and Sunday 11–6, and there is a real person here who will help you pick something rather than pointing at a shelf.\n\n301 Tanger Dr, Suite 112, Terrell. I-20 Exit 501. Closed Mondays.",
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/blog/inside-gugu-gifts-terrell-photo-tour.jpg"
+      }
+    }
+  ]
+}

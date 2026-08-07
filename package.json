@@ -18,6 +18,8 @@
     "square:catalog": "node scripts/pull-square-catalog.mjs",
     "square:catalog:dry-run": "node scripts/pull-square-catalog.mjs --dry-run",
     "blog:heroes": "node scripts/build-blog-heroes.mjs",
+    "social:validate": "node scripts/schedule-ghl-posts.mjs --validate",
+    "social:schedule": "node scripts/schedule-ghl-posts.mjs",
     "ghl:accounts": "node scripts/ghl-accounts.mjs",
     "social:group": "node scripts/group-catalog.mjs",
     "social:brands": "node scripts/group-catalog.mjs --suggest-brands"
