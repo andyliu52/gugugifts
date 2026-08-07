@@ -38,12 +38,12 @@ El mismo consejo que damos cada fin de cookout, porque sigue siendo cierto: **no
 
 - **Vela Greenleaf Citron Sol ($12)** — cítrico brillante, todavía se lee a verano, no pelea con el humo del asador en un patio
 - **Plato Crow Canyon Enamelware Marmoleado ($14)** — ponle un listón y se presenta como un regalo de $30
-- **Vaso Govino ($15)** — irrompible, genuinamente la cristalería correcta para patio texano
-- **Vela Voluspa Lychee 5.5 oz ($22)** — para el anfitrión cuya casa ya parece catálogo
+- **Set Govino de 2 ($15)** — irrompible, genuinamente la cristalería correcta para patio texano
+- **Vela Voluspa 5.5 oz ($22)** — para el anfitrión cuya casa ya parece catálogo
 
 ### Menos de $40
 
-- **Set de copas Govino ($30)** — el que la gente vuelve a comprar calladita después del primer set
+- **Vela Voluspa de 18 oz ($34)** — la grande, en Panjore Lychee o Amber. Dura meses y el frasco se queda afuera después
 - **Difusor Greenleaf Citron Sol ($34)** — sin flama, dura meses pasado el fin de semana
 - **Platón ovalado Crow Canyon Enamelware ($36–$40)** — lo desenvuelven y lo usan para la sandía dentro de la hora
 
@@ -56,7 +56,7 @@ Si tienes dos o tres reuniones a lo largo del fin — común aquí — compra tr
 Principios de septiembre es cuando la tienda empieza a cambiar. Si vienes este fin vas a alcanzar lo primero del inventario de otoño junto a lo que queda del verano:
 
 - **Aromas Voluspa más cálidos** entrando conforme salen los cítricos y el coco
-- **La línea de fragancias de otoño de Greenleaf** — los sobrecitos ($3) son la manera más barata de probar un aroma antes de comprometerte con un difusor de $34
+- **La línea de fragancias de otoño de Greenleaf** — los sobrecitos ($1.50) son la manera más barata de probar un aroma antes de comprometerte con un difusor de $34
 - Primeras piezas de **Pampa Bay** y de mesa para quienes organizan Thanksgiving y empiezan a pensarlo en septiembre
 
 Si tú eres quien organiza Thanksgiving, septiembre es genuinamente el momento correcto para ver. Las buenas piezas de servicio no se resurten en noviembre.

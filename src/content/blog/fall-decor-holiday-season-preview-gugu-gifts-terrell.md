@@ -18,7 +18,7 @@ This is the month the shop turns over completely. Here's what's on the shelves, 
 The single biggest change in the store this month is fragrance. Summer's citrus and coconut are out; warmer, heavier scents are in.
 
 - **Voluspa** — the fall range is where the brand is at its best. Warm, layered, and the jars themselves are decorative enough that people leave them out year-round. If you've only ever bought the bright summer scents, the fall ones are a different experience.
-- **Greenleaf** — the **$3 sachets** remain the smartest thing in the store. Buy three fall scents, put them in a drawer or a car, and figure out what you actually like before spending $34 on a diffuser.
+- **Greenleaf** — the **$1.50 sachets** remain the smartest thing in the store. Buy three fall scents, put them in a drawer or a car, and figure out what you actually like before spending $34 on a diffuser.
 - **Greenleaf Flower Diffusers ($34)** — no flame, months of throw, and the right answer for anyone with pets, small kids, or a rental with a no-candles clause.
 - **Birch & Bloom Tin Candle ($15)** — lidded and portable, our standard recommendation for a hostess gift you hand over at the door.
 
@@ -32,7 +32,7 @@ If you're hosting this year:
 
 - **Pampa Bay** — the pieces that make a table look considered without looking fussy. Our [tablescaping guide](/blog/tablescaping-pampa-bay-splatterware-terrell) covers how the splatterware and serving pieces work together.
 - **Crow Canyon Enamelware ($14–$40)** — durable, photographs well, and survives a table with kids at it. The **oval serving platter ($36–$40)** is the piece that gets used every year.
-- **Govino Glass Set ($30)** — unbreakable stemware for a table where someone will absolutely knock a glass over.
+- **Govino 2-pack ($15)** — unbreakable stemware for a table where someone will absolutely knock a glass over.
 
 The pattern we see: people come in the second week of November looking for one specific platter, and it went in early October. Come look now, even if you're not buying yet.
 
@@ -50,11 +50,11 @@ We understand this sounds like a shop telling you to shop. Here's the actual rea
 
 ### A reasonable October list
 
-- **Julie Vos jewelry ($16–$28 entry pieces)** — the "I got you something real" gift, [and Texans have opinions about this brand](/blog/julie-vos-jewelry-why-texans-choose-it)
+- **Julie Vos jewelry ($65–$395)** — the "I got you something real" gift, [and Texans have opinions about this brand](/blog/julie-vos-jewelry-why-texans-choose-it). The Crescent Hoops start at $65; the bangles run $75–$225. This is the one to look at early, because the pieces come in small quantities and don't come back.
 - **Voluspa fall candles ($22)** — the safe, always-correct gift for a coworker, neighbor, or teacher
 - **Swig drinkware** — the gift for the person who already has everything but keeps losing water bottles
 - **Glory Haus mug ($20)** — pairs with coffee or a gift card for a genuinely nice $35 package
-- **Kaweco Sport pen ($25)** — for the writer, the planner person, the one who's hard to shop for
+- **Kaweco Sport pen ($28)** — for the writer, the planner person, the one who's hard to shop for
 
 ## Fall Gifting Occasions People Forget
 

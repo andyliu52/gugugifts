@@ -18,7 +18,7 @@ Este es el mes en que la tienda cambia por completo. Esto es lo que hay en los e
 El cambio más grande en la tienda este mes es la fragancia. Salen los cítricos y el coco del verano; entran aromas más cálidos y más densos.
 
 - **Voluspa** — la línea de otoño es donde la marca da lo mejor de sí. Cálidos, con capas, y los frascos son lo bastante decorativos como para que la gente los deje afuera todo el año. Si solo has comprado los aromas brillantes de verano, los de otoño son otra experiencia.
-- **Greenleaf** — los **sobrecitos de $3** siguen siendo lo más inteligente de la tienda. Compra tres aromas de otoño, ponlos en un cajón o en el carro, y averigua qué te gusta de verdad antes de gastar $34 en un difusor.
+- **Greenleaf** — los **sobrecitos de $1.50** siguen siendo lo más inteligente de la tienda. Compra tres aromas de otoño, ponlos en un cajón o en el carro, y averigua qué te gusta de verdad antes de gastar $34 en un difusor.
 - **Difusores de flor Greenleaf ($34)** — sin flama, meses de aroma, y la respuesta correcta para quien tenga mascotas, niños chicos, o una renta con cláusula de no-velas.
 - **Vela de lata Birch & Bloom ($15)** — con tapa y portátil, nuestra recomendación estándar para el regalo de anfitriona que entregas en la puerta.
 
@@ -32,7 +32,7 @@ Si tú organizas este año:
 
 - **Pampa Bay** — las piezas que hacen que una mesa se vea pensada sin verse pretenciosa. Nuestra [guía de decoración de mesa](/es/blog/tablescaping-pampa-bay-splatterware-terrell) cubre cómo funcionan juntas.
 - **Crow Canyon Enamelware ($14–$40)** — durable, sale bien en fotos, y sobrevive una mesa con niños. El **platón ovalado ($36–$40)** es la pieza que se usa cada año.
-- **Set de copas Govino ($30)** — cristalería irrompible para una mesa donde alguien definitivamente va a tirar una copa.
+- **Set Govino de 2 ($15)** — cristalería irrompible para una mesa donde alguien definitivamente va a tirar una copa.
 
 El patrón que vemos: la gente llega la segunda semana de noviembre buscando un platón específico, y se fue a principios de octubre. Ven a ver ahora, aunque todavía no vayas a comprar.
 
@@ -50,11 +50,11 @@ Entendemos que suena a tienda diciéndote que compres. Este es el razonamiento r
 
 ### Una lista razonable de octubre
 
-- **Joyería Julie Vos (piezas de entrada $16–$28)** — el regalo de "te traje algo de verdad", [y los texanos tienen opiniones sobre esta marca](/es/blog/julie-vos-jewelry-why-texans-choose-it)
+- **Joyería Julie Vos ($65–$395)** — el regalo de "te traje algo de verdad", [y los texanos tienen opiniones sobre esta marca](/es/blog/julie-vos-jewelry-why-texans-choose-it). Los Crescent Hoops empiezan en $65; los brazaletes van de $75 a $225. Esta es la que hay que ver temprano, porque las piezas llegan en cantidades chicas y no regresan.
 - **Velas Voluspa de otoño ($22)** — el regalo seguro y siempre correcto para un compañero de trabajo, vecino o maestra
 - **Swig** — el regalo para quien ya tiene todo pero sigue perdiendo botellas de agua
 - **Taza Glory Haus ($20)** — combínala con café o una tarjeta de regalo para un paquete genuinamente bonito de $35
-- **Pluma Kaweco Sport ($25)** — para quien escribe, para el de las agendas, para el difícil de complacer
+- **Pluma Kaweco Sport ($28)** — para quien escribe, para el de las agendas, para el difícil de complacer
 
 ## Ocasiones de Otoño Que Se Le Olvidan a la Gente
 

@@ -21,9 +21,9 @@ The honest read from teachers we've talked to: they are handed a lot of mugs. Th
 
 ### Under $25
 
-- **Greenleaf Sachet ($3)** — small, thoughtful, goes in a desk drawer or a classroom closet. Pair it with a card and you have a genuinely nice $6 gesture.
+- **Greenleaf Sachet ($1.50)** — small, thoughtful, goes in a desk drawer or a classroom closet. Pair it with a card and you have a thoughtful gesture for under $5.
 - **Birch & Bloom Tin Candle ($15)** — for the teacher's home, not the classroom. Lidded, travels well in a tote.
-- **Kaweco Sport pen ($25)** — the gift for the teacher who writes constantly and has never owned a good pen. This one gets remembered.
+- **Kaweco Sport pen ($28)** — the gift for the teacher who writes constantly and has never owned a good pen. This one gets remembered.
 - **Glory Haus mug ($20)** — yes, a mug. But a nice one, and if you know they've been using a chipped freebie for three years, it lands.
 
 ### Under $40
@@ -33,7 +33,7 @@ The honest read from teachers we've talked to: they are handed a lot of mugs. Th
 
 ### The gift-card-in-a-nice-package move
 
-If you genuinely don't know the teacher yet — very common at meet-the-teacher — a small item plus a card beats guessing. A **$3 sachet** tucked into a wrapped card is a better first impression than a random $30 object they didn't want.
+If you genuinely don't know the teacher yet — very common at meet-the-teacher — a small item plus a card beats guessing. A **$1.50 sachet** tucked into a wrapped card is a better first impression than a random $30 object they didn't want.
 
 ## Lunchboxes, Water Bottles, and the Swig Situation
 
@@ -50,7 +50,7 @@ Our [stationery corner](/blog/stationery-corner-gugu-gifts-terrell) earns its ke
 
 - **Planners** for the high schooler who is about to have five teachers and no system
 - **Cards** for the "thank you for a great first week" note that teachers genuinely keep
-- **Kaweco Sport pens ($25)** for the college kid, the AP student, or the parent tracking four schedules
+- **Kaweco Sport pens ($28)** for the college kid, the AP student, or the parent tracking four schedules
 
 Paper planners are having a moment with students again — a phone calendar competes with every notification on the device, and a planner doesn't.
 
@@ -59,8 +59,8 @@ Paper planners are having a moment with students again — a phone calendar comp
 If you've got a kid heading to A&M-Commerce, UNT, UT Tyler, or anywhere further, the dorm gift categories that hold up:
 
 - **Birch & Bloom Tin Candle ($15)** — lidded, dorm-safe storage, doesn't leak in a bin
-- **Greenleaf Sachets ($3)** — for a dorm closet or laundry bag, and cheap enough to send four
-- **Govino tumbler ($15)** — unbreakable, dishwasher-safe, survives a shared kitchen
+- **Greenleaf Sachets ($1.50 each)** — for a dorm closet or laundry bag, and cheap enough to send four
+- **Govino 2-pack ($15)** — unbreakable, dishwasher-safe, survives a shared kitchen
 - **Pearl Drop Earrings ($22)** or **Chloe earrings ($24)** — the small "I'm proud of you" gift that fits in a card envelope
 
 The move we see most: a parent buys three or four small things, we wrap them separately, and they get handed out over move-in weekend instead of all at once.

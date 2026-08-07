@@ -21,9 +21,9 @@ La lectura honesta de las maestras con las que hemos platicado: les regalan much
 
 ### Menos de $25
 
-- **Sobrecito Greenleaf ($3)** — chiquito, pensado, va en el cajón del escritorio o en el clóset del salón. Júntalo con una tarjeta y tienes un gesto genuinamente bonito de $6.
+- **Sobrecito Greenleaf ($1.50)** — chiquito, pensado, va en el cajón del escritorio o en el clóset del salón. Júntalo con una tarjeta y tienes un gesto pensado por menos de $5.
 - **Vela de lata Birch & Bloom ($15)** — para la casa de la maestra, no para el salón. Con tapa, viaja bien en una bolsa.
-- **Pluma Kaweco Sport ($25)** — el regalo para la maestra que escribe sin parar y nunca ha tenido una buena pluma. Esta sí se recuerda.
+- **Pluma Kaweco Sport ($28)** — el regalo para la maestra que escribe sin parar y nunca ha tenido una buena pluma. Esta sí se recuerda.
 - **Taza Glory Haus ($20)** — sí, una taza. Pero de las buenas, y si sabes que lleva tres años usando una despostillada de promoción, sí pega.
 
 ### Menos de $40
@@ -33,7 +33,7 @@ La lectura honesta de las maestras con las que hemos platicado: les regalan much
 
 ### La jugada de la tarjeta de regalo bien envuelta
 
-Si de verdad todavía no conoces a la maestra — muy común en esa noche — un artículo chico más una tarjeta le gana a adivinar. Un **sobrecito de $3** metido en una tarjeta envuelta es mejor primera impresión que un objeto random de $30 que no quería.
+Si de verdad todavía no conoces a la maestra — muy común en esa noche — un artículo chico más una tarjeta le gana a adivinar. Un **sobrecito de $1.50** metido en una tarjeta envuelta es mejor primera impresión que un objeto random de $30 que no quería.
 
 ## Loncheras, Botellas de Agua y el Asunto Swig
 
@@ -50,7 +50,7 @@ Nuestro [rincón de papelería](/es/blog/stationery-corner-gugu-gifts-terrell) s
 
 - **Agendas** para el de prepa que está por tener cinco maestros y ningún sistema
 - **Tarjetas** para la nota de "gracias por una gran primera semana" que las maestras sí guardan
-- **Plumas Kaweco Sport ($25)** para el universitario, el estudiante de AP, o el papá siguiendo cuatro horarios
+- **Plumas Kaweco Sport ($28)** para el universitario, el estudiante de AP, o el papá siguiendo cuatro horarios
 
 Las agendas de papel están volviendo con los estudiantes — un calendario en el teléfono compite con cada notificación del aparato, y una agenda no.
 
@@ -59,8 +59,8 @@ Las agendas de papel están volviendo con los estudiantes — un calendario en e
 Si tienes un hijo yéndose a A&M-Commerce, UNT, UT Tyler, o más lejos, las categorías de regalo para dormitorio que aguantan:
 
 - **Vela de lata Birch & Bloom ($15)** — con tapa, se guarda seguro en un dorm, no se derrama en una caja
-- **Sobrecitos Greenleaf ($3)** — para el clóset del dorm o la bolsa de ropa sucia, y bastante baratos para mandar cuatro
-- **Vaso Govino ($15)** — irrompible, apto para lavavajillas, sobrevive una cocina compartida
+- **Sobrecitos Greenleaf ($1.50 cada uno)** — para el clóset del dorm o la bolsa de ropa sucia, y bastante baratos para mandar cuatro
+- **Set Govino de 2 ($15)** — irrompible, apto para lavavajillas, sobrevive una cocina compartida
 - **Aretes Pearl Drop ($22)** o **aretes Chloe ($24)** — el regalito de "estoy orgulloso de ti" que cabe en un sobre de tarjeta
 
 La jugada que más vemos: un papá compra tres o cuatro cosas chicas, se las envolvemos por separado, y las va entregando durante el fin de la mudanza en vez de todas de golpe.

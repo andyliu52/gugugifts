@@ -38,12 +38,12 @@ Same advice we give every cookout weekend, because it keeps being true: **don't 
 
 - **Greenleaf Citron Sol candle ($12)** — bright citrus, still reads summer, doesn't fight with grill smoke on a patio
 - **Crow Canyon Enamelware Marbled Plate ($14)** — add a ribbon and it presents like a $30 gift
-- **Govino tumbler ($15)** — unbreakable, genuinely the correct Texas patio glassware
-- **Voluspa Lychee 5.5 oz ($22)** — for the host whose house already looks like a catalog
+- **Govino 2-pack ($15)** — unbreakable, genuinely the correct Texas patio glassware
+- **Voluspa 5.5 oz ($22)** — for the host whose house already looks like a catalog
 
 ### Under $40
 
-- **Govino Glass Set ($30)** — the one people quietly re-buy after the first set
+- **Voluspa 18 oz jar ($34)** — the big one, in Panjore Lychee or Amber. Burns for months and the jar stays out afterward
 - **Greenleaf Citron Sol Diffuser ($34)** — no flame, lasts months past the weekend
 - **Crow Canyon Enamelware Oval Serving Platter ($36–$40)** — they'll unwrap it and use it for the watermelon within the hour
 
@@ -56,7 +56,7 @@ If you've got two or three gatherings across the weekend — common here — buy
 Early September is when the shop starts turning over. If you come in this weekend you'll catch the first of the fall inventory alongside what's left of summer:
 
 - **Warmer Voluspa scents** moving in as the citrus and coconut fade out
-- **Greenleaf's fall fragrance range** — the sachets ($3) are the cheapest way to test a scent before committing to a diffuser
+- **Greenleaf's fall fragrance range** — the sachets ($1.50) are the cheapest way to test a scent before committing to a diffuser
 - Early **Pampa Bay** and tablescaping pieces for people who host Thanksgiving and start thinking about it in September
 
 If you're a Thanksgiving host, September is genuinely the right time to look. The good serving pieces don't get restocked in November.
