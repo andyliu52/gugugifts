@@ -289,8 +289,12 @@ export function scheduleIso(dateStr, timeStr, timeZone) {
 // actually check against a calendar.
 export function describeSchedule(dateStr, timeStr, timeZone = 'America/Chicago') {
   const d = zonedToUtc(dateStr, timeStr, timeZone);
+  // dateStyle/timeStyle cannot be combined with component options such as
+  // timeZoneName — Intl throws "Invalid option". Spell the components out.
   const local = new Intl.DateTimeFormat('en-US', {
-    timeZone, dateStyle: 'medium', timeStyle: 'short', timeZoneName: 'short',
+    timeZone,
+    year: 'numeric', month: 'short', day: 'numeric',
+    hour: 'numeric', minute: '2-digit', timeZoneName: 'short',
   }).format(d);
   return `${local}  (${d.toISOString()})`;
 }
