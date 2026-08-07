@@ -74,14 +74,33 @@ export function loadCreds() {
   return c;
 }
 
-async function withRetry(fn, label) {
+// `idempotent` decides what may be retried.
+//
+// A 504/524 means the gateway gave up waiting — the request may well have
+// SUCCEEDED server-side with the response lost in transit. Retrying a POST
+// /posts on that creates a second scheduled post. This actually happened: a
+// 524 on the Aug 21 post produced two identical entries, one of which the
+// state file did not know about.
+//
+// So for non-idempotent calls, only 429 (definitively not processed) is
+// retried. Timeouts and 5xx surface to the caller, which then reports a
+// failure the operator can check rather than silently double-posting.
+async function withRetry(fn, label, { idempotent = true } = {}) {
   const backoff = [1000, 4000, 10000];
   for (let attempt = 0; ; attempt++) {
     try {
       return await fn();
     } catch (err) {
-      const retryable = /\b(429|5\d\d)\b/.test(err.message);
-      if (!retryable || attempt >= backoff.length) throw err;
+      const is429 = /\b429\b/.test(err.message);
+      const is5xx = /\b5\d\d\b/.test(err.message);
+      const retryable = is429 || (idempotent && is5xx);
+      if (!retryable || attempt >= backoff.length) {
+        if (is5xx && !idempotent) {
+          console.warn(`  ${label} timed out. NOT retrying — the request may have`);
+          console.warn(`  succeeded server-side. Verify before re-running.`);
+        }
+        throw err;
+      }
       const wait = backoff[attempt];
       console.warn(`  ${label} failed (${err.message.slice(0, 70)}...), retrying in ${wait / 1000}s`);
       await new Promise(r => setTimeout(r, wait));
@@ -89,7 +108,9 @@ async function withRetry(fn, label) {
   }
 }
 
-async function ghlFetch(creds, apiPath, { method = 'GET', body, version = VERSION_SOCIAL, raw } = {}) {
+async function ghlFetch(creds, apiPath, { method = 'GET', body, version = VERSION_SOCIAL, raw, idempotent } = {}) {
+  // Default: anything that isn't a plain read is treated as unsafe to retry.
+  const safe = idempotent ?? (method === 'GET');
   return withRetry(async () => {
     const headers = {
       'Authorization': `Bearer ${creds.apiToken}`,
@@ -108,7 +129,7 @@ async function ghlFetch(creds, apiPath, { method = 'GET', body, version = VERSIO
     const text = await res.text();
     if (!res.ok) throw new Error(`${method} ${apiPath} ${res.status}: ${text.slice(0, 500)}`);
     return text ? JSON.parse(text) : {};
-  }, `${method} ${apiPath}`);
+  }, `${method} ${apiPath}`, { idempotent: safe });
 }
 
 /* ---------------------------------------------------------------- accounts */
@@ -181,6 +202,7 @@ export async function listPosts(creds, { fromDate, toDate, limit = 100, skip = 0
   return ghlFetch(creds, `/social-media-posting/${creds.locationId}/posts/list`, {
     method: 'POST',
     body: { fromDate, toDate, limit: String(limit), skip: String(skip), includeUsers: 'false' },
+    idempotent: true, // a POST, but a pure read — safe to retry
   });
 }
 

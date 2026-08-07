@@ -100,6 +100,24 @@ Running a scheduler twice creates two sets of posts. Keep a state file keyed by
 `postId::platform`, persist it **after each individual call** so a crash
 mid-run cannot re-post, and require an explicit `--commit` flag.
 
+### Never retry a create on a timeout
+
+GHL returns **524** under load. A 524 is a gateway giving up waiting, which
+means the request may have **succeeded server-side with the response lost**.
+Retrying `POST /posts` on that creates a second identical scheduled post whose
+id the state file does not know — so it is invisible to every subsequent
+`--commit` and has to be found by scanning for duplicate `scheduleDate`s.
+
+This happened on a real run. Retry policy must distinguish:
+
+- **429** — definitively not processed, safe to retry on anything.
+- **5xx / timeout** — retry only for reads. For creates, surface the failure
+  and let the operator check.
+
+`POST /posts/list` is a POST but a pure read, so it is explicitly marked
+retryable. After any run that reported a timeout, scan for duplicate schedule
+slots before assuming the state file is accurate.
+
 ### One post, many channels — put every accountId in one call
 
 `accountIds` is an array and the default usage is **one call listing every
