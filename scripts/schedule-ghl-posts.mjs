@@ -121,14 +121,23 @@ function validate(doc, snapshot, accounts) {
   return { errs, warns };
 }
 
-function buildDto(p, doc, creds, platform) {
-  const accountId = creds.accounts[platform];
+// One API call per post, with every target channel in accountIds — GHL then
+// shows a single entry in the Social Planner with all three socials attached,
+// so an edit or a reschedule is one action rather than three.
+//
+// Splitting into one call per platform is the *customization* path, for when a
+// channel needs different copy. We only do that when a post sets gbpCaption,
+// since Google then needs its own text.
+function buildDto(p, doc, creds, platforms) {
+  const accountIds = platforms.map(pl => creds.accounts[pl]);
   const time = p.time || doc.defaults?.time || '17:00:00';
   const scheduleDate = scheduleIso(p.date, time, creds.timezone);
-  const summary = platform === 'google' ? (p.gbpCaption || p.caption) : p.caption;
+  const summary = platforms.length === 1 && platforms[0] === 'google'
+    ? (p.gbpCaption || p.caption)
+    : p.caption;
 
   const dto = {
-    accountIds: [accountId],
+    accountIds,
     summary,
     // MIME type, not a word. "image", "IMAGE" and "photo" are all rejected
     // with "Invalid media format type"; only image/jpeg and image/jpg pass.
@@ -143,8 +152,9 @@ function buildDto(p, doc, creds, platform) {
   if (p.tags?.length) dto.tags = p.tags;
 
   // Google Business Profile carries the CTA / offer. Facebook and Instagram
-  // have no equivalent field — the URL goes in the caption text there.
-  if (platform === 'google') {
+  // have no equivalent field and ignore it, so it is safe to send on a
+  // combined post that includes Google.
+  if (platforms.includes('google')) {
     const cta = p.cta || doc.defaults?.cta;
     // gmbEventType is uppercase STANDARD | EVENT | OFFER. A plain CTA post is
     // STANDARD — there is no "call_to_action" value, despite the CSV format's
@@ -207,30 +217,37 @@ async function main() {
 
     const platforms = (p.platforms || doc.defaults?.platforms || [])
       .filter(pl => !opts.platforms || opts.platforms.includes(pl));
+    if (!platforms.length) continue;
 
-    for (const platform of platforms) {
-      const key = `${p.id}::${platform}`;
+    // A distinct Google caption forces a split; otherwise one combined post.
+    const batches = p.gbpCaption && platforms.includes('google')
+      ? [platforms.filter(pl => pl !== 'google'), ['google']].filter(b => b.length)
+      : [platforms];
+
+    for (const batch of batches) {
+      const key = `${p.id}::${batch.join('+')}`;
       if (state.posted[key]) { skipped++; continue; }
 
-      const dto = buildDto(p, doc, creds, platform);
+      const dto = buildDto(p, doc, creds, batch);
+      const when = describeSchedule(p.date, p.time || doc.defaults?.time || '17:00:00', creds.timezone);
 
       if (!opts.commit) {
-        console.log(`DRY  ${p.id.padEnd(30)} ${platform.padEnd(10)} ${describeSchedule(p.date, p.time || doc.defaults?.time || '17:00:00', creds.timezone)}`);
+        console.log(`DRY  ${p.id.padEnd(30)} ${batch.join('+').padEnd(28)} ${when}`);
         console.log(`     ${dto.summary.split('\n')[0].slice(0, 90)}`);
-        if (dto.gmbPostDetails) console.log(`     CTA ${dto.gmbPostDetails.actionType || dto.gmbPostDetails.gmbEventType} -> ${dto.gmbPostDetails.url || ''}`);
+        if (dto.gmbPostDetails) console.log(`     CTA ${dto.gmbPostDetails.actionType} -> ${dto.gmbPostDetails.url || ''}`);
         scheduled++;
         continue;
       }
 
       try {
         const res = await createPost(creds, dto);
-        const id = res?.post?._id || res?.results?.post?._id || res?._id || '(no id)';
-        state.posted[key] = { ghlPostId: id, scheduleDate: dto.scheduleDate, at: new Date().toISOString() };
+        const id = res?.results?.post?._id || res?.post?._id || res?._id || '(no id)';
+        state.posted[key] = { ghlPostId: id, scheduleDate: dto.scheduleDate, platforms: batch, at: new Date().toISOString() };
         saveState(state);   // persist per post — a crash mid-run must not re-post
-        console.log(`OK   ${p.id.padEnd(30)} ${platform.padEnd(10)} ${id}`);
+        console.log(`OK   ${p.id.padEnd(30)} ${batch.join('+').padEnd(28)} ${id}`);
         scheduled++;
       } catch (e) {
-        console.error(`FAIL ${p.id} ${platform}: ${e.message.slice(0, 200)}`);
+        console.error(`FAIL ${p.id} ${batch.join('+')}: ${e.message.slice(0, 200)}`);
         failed++;
       }
     }

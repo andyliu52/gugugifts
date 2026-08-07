@@ -45,5 +45,7 @@ social/*
 .vercel/
 .vercel
 
-# claude code local settings
-.claude/
+# claude code local settings — but keep skills, which are shared project
+# knowledge and should survive a fresh clone
+.claude/*
+!.claude/skills/
