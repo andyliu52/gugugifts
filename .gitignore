@@ -30,10 +30,13 @@ scripts/.square-new-items.md
 # gohighlevel social planner
 scripts/.ghl-credentials.json
 
-# social pipeline artifacts — everything here is regenerable from Square
-# except posts.json, which is the hand-authored marketing copy.
+# social pipeline artifacts — everything here regenerates from Square except
+# posts.json (hand-authored marketing copy) and .ghl-posted.json, which is the
+# only record of what has already been scheduled. GHL does not de-duplicate,
+# so losing that file means re-posting everything on the next run.
 social/*
 !social/posts.json
+!social/.ghl-posted.json
 
 # macOS-specific files
 .DS_Store
