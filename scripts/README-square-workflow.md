@@ -23,8 +23,10 @@ that writes from those facts.
 ## One-time setup
 
 1. Go to https://developer.squareup.com/apps, open (or create) an application.
-2. **Credentials** tab → copy the **production access token**. It needs read
-   scopes only: `ITEMS_READ` and `INVENTORY_READ`.
+2. **Credentials** tab → copy the **production access token**. The pull scripts
+   need `ITEMS_READ` and `INVENTORY_READ`. The token currently in use also has
+   `ITEMS_WRITE`, which `tax-holiday.mjs` and `retire-tax.mjs` require — treat
+   this token as write-capable, not read-only.
 3. **Locations** tab → copy the location ID for the Terrell store.
 4. Create `scripts/.square-credentials.json` (already gitignored):
 
@@ -180,6 +182,91 @@ than a clear error. `ghlFetch()` handles this per-endpoint.
 
 Every GHL request needs a browser-like `User-Agent`. Undici's default is
 literally `node`, which Cloudflare 1010-bans. Set once in `ghlFetch()`.
+
+## Texas sales tax holiday
+
+`scripts/tax-holiday.mjs` turns the 8.25% sales tax off for qualifying items
+during the August holiday and puts it back exactly as it was. Texas exempts
+clothing, footwear, student backpacks and a closed list of school supplies
+priced **under $100** — not the jewelry, candles or greeting cards that make up
+most of this shop.
+
+| Command | Does | Writes |
+| --- | --- | --- |
+| `npm run tax:plan` | Classify the live catalog, print the review table, write the manifest | local only |
+| `npm run tax:status` | Is the exemption on right now? | nothing |
+| `npm run tax:apply -- --commit` | Strip the taxes | **Square** |
+| `npm run tax:restore -- --commit` | Put back exactly what was recorded | **Square** |
+
+### Scopes
+
+The live token **already has `ITEMS_WRITE`** — verified 2026-08-07 with an
+idempotent no-op call. The "read scopes only" line further up this file was
+never true of the token actually in use.
+
+If that ever changes, `--apply` preflights with the same no-op write, so a
+missing scope fails immediately with a clear message rather than half-way
+through the catalog. Everything except `--apply --commit` / `--restore --commit`
+is read-only regardless.
+
+### Order of operations
+
+1. `npm run tax:plan`. Read the table. Ambiguous items — journals, planners,
+   pen cases, desk pads — default to **excluded**; set `"include": true` in
+   `social/tax-holiday-2026.json` and re-run to flip one. Your edits survive
+   the re-run.
+2. Probe a single item first:
+   `node scripts/tax-holiday.mjs --apply --only=<itemId> --commit`, then check
+   it in the POS.
+3. `npm run tax:apply -- --commit`. It verifies with a fresh read afterwards,
+   because the API response carries no per-item result.
+4. Restore when the shop is closed — Monday for the Aug 7–9 holiday.
+5. Commit `social/tax-holiday-2026.json` and `social/tax-holiday-state.json`.
+   The manifest is the reusable group; the state file is the only record of
+   what each item's taxes were beforehand.
+
+### How it works, and why not the simpler way
+
+`Local Sales Tax` is bound to an `all_products` product set. While that binding
+exists Square will not let you drop the tax from one item, and will not accept a
+narrower product set on the tax either. So `--apply` **swaps the tax out**:
+creates a second tax at the same rate with no product set, attaches it to the
+~1,807 items that should still be taxed, then disables the original and enables
+the new one. `--restore` reverses that and deletes the temporary tax.
+
+The switch is ordered disable-then-enable so the gap is a moment of *no* tax
+rather than *double* tax.
+
+Note the usual online advice — "disable your sales tax and add a 0% holiday
+tax" — is wrong for a gift shop. Taxes are additive, so 0% alongside 8.25%
+still charges 8.25%, and disabling the original would stop collection on the
+94% of the catalog that does not qualify.
+
+**Configuration correctness is not proof.** Ring a real POS test sale on one
+exempt and one non-exempt item before trusting a run.
+
+**Custom amounts are out of reach.** The tax applies to custom amounts, so a
+qualifying item keyed in as a quick sale is still taxed. Staff must ring those
+items by their catalog entry.
+
+### Retiring a duplicate tax
+
+`scripts/retire-tax.mjs` strips a tax from every item that carries it and can
+delete the object. Used once, on 2026-08-07, to retire a disabled duplicate
+`TX Sales Tax` that sat on 294 items — it made prior tax state non-uniform and
+would have re-taxed exempted items if anyone had enabled it.
+
+```
+node scripts/retire-tax.mjs --tax=<id>                    # dry run
+node scripts/retire-tax.mjs --tax=<id> --commit           # strip from items
+node scripts/retire-tax.mjs --tax=<id> --commit --delete-object
+node scripts/retire-tax.mjs --tax=<id> --undo --commit    # re-attach
+```
+
+It refuses to touch an enabled tax, or one with `applies_to_product_set_id`,
+or one that is any item's only tax, unless `--force`. The item list is recorded
+to `social/retired-tax-<id>.json` so `--undo` works; deleting the object is
+irreversible because a re-created tax gets a new id.
 
 ## Suggested cadence
 

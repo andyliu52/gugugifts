@@ -185,6 +185,97 @@ Square image, and fall back to `src/assets/gallery/` (real shop photographs).
 Money is in cents. `image_data.url` is public but not permanent — a re-upload
 mints a new URL, so the image **id** is the stable join key.
 
+### One tax object now — it used to be two
+
+**Current state: a single `Local Sales Tax` (`YMJKIFWDYDWLX6ZPSUCQIEAG`), 8.25%,
+enabled, on all 1,933 items.**
+
+There was a second, `TX Sales Tax` (`MVY6O7…`) — same 8.25%, `enabled: false`,
+sitting on 294 items. Retired 2026-08-07 via `scripts/retire-tax.mjs`: stripped
+from all 294, then the object deleted. The undo record (the 294 item ids) is at
+`social/retired-tax-MVY6O7VQ4P5JXKSKRVLSARQT.json`.
+
+Worth knowing because the shape recurs: a disabled duplicate tax on a subset of
+items means **prior tax state is not uniform**, so anything that strips and
+restores tax must record *each item's own* `tax_ids` rather than assume one
+value. Do not reintroduce a second tax object.
+
+`applies_to_custom_amounts: true`, so a keyed-in custom amount is taxed no
+matter what the catalog says. No script can reach that; it is a staff
+instruction.
+
+### A product-set-bound tax cannot be scoped — swap it out instead
+
+`Local Sales Tax` carries `applies_to_product_set_id` →
+`JMGQGH5Q4BIU6WNUXAZU7XRN` = `{ all_products: true }`. That binding blocks both
+obvious ways to exempt a subset of items, and the errors are worth knowing so
+nobody burns an afternoon rediscovering them:
+
+```
+update-item-taxes, taxes_to_disable: [thatTax]
+  -> "FEE objects passed in the taxes_to_disable field must not have an
+      associated PRODUCT_SET"
+
+upsert tax with applies_to_product_set_id -> a product_ids_any set
+  -> "Product set (...) found on tax ... is invalid."
+```
+
+So the product set governs application, it only tolerates `all_products`, and
+you cannot detach the tax from one item while it is bound.
+
+**What works:** leave the original alone and swap. A *newly created* tax has no
+product set, so per-item assignment is allowed. Create a second tax at the same
+rate (disabled), attach it to the items that SHOULD be taxed, then disable the
+original and enable the new one. `scripts/tax-holiday.mjs` does this.
+
+**Order the switch disable-then-enable.** The gap between the two writes is
+then a moment of no tax rather than a moment of double tax — under-collecting
+briefly beats overcharging a customer.
+
+**The common online advice does not work here.** "Disable your sales tax and
+add a 0% holiday tax" assumes a shop where everything qualifies. Taxes are
+`ADDITIVE`, so a 0% tax next to an 8.25% one still charges 8.25%; and disabling
+the original stops collection on the ~94% of this catalog that does not
+qualify. Scope the *replacement* to the non-exempt items instead.
+
+Configuration correctness is still not proof of what the register charges —
+confirm with a real POS sale.
+
+### `update-item-taxes` is idempotent — the opposite of the GHL rule
+
+`POST /v2/catalog/update-item-taxes` takes item ids and tax ids and nothing
+else. No object body, so no `version` to go stale and no way to clobber
+variations the way a partial `batch-upsert` would. It is a declarative set
+operation, so **retrying on a 5xx is safe** — unlike GHL's `POST /posts`, which
+mints an object per call. `withRetry` needs no opt-out here.
+
+Two consequences that are about bookkeeping, not the API:
+
+- **Record prior state *before* the call, not after.** A 5xx may have succeeded
+  server-side. Holding a prior-state entry for an item that was never changed is
+  harmless (re-enabling a tax it still has is a no-op); missing one is not.
+- **Write prior state ONCE.** On a re-run the "current" tax_ids are the already
+  stripped ones. Overwriting records "this item had no tax", and the restore
+  then puts nothing back — permanently ending collection on it, silently.
+- The response is `{updated_at, errors}` with **no per-item result**. A 200
+  means the batch was accepted, not that every item is correct. Verify by
+  re-reading.
+
+### Classifying items: deny must beat allow, and the category is a signal
+
+Building the tax-holiday exempt list, name-only keyword rules produced three
+false positives that each look right in isolation: `Freshcut **Paper** Pop Up
+Cards` (greeting cards, matched "paper"), `OSCOLABO **Ruler** stamp` (a rubber
+stamp — and the only item in the catalog containing "ruler"), and `COWBOY
+**BOOT** TRINKET DISH` (a dish). Every "Notes & Queries" item is a greeting
+card with a name like `HB Multi Stars Paper Ros` containing no "card" at all —
+there, only the category tells you.
+
+Rules that worked: deny wins over allow; deny by *category* for brand houses
+that stock nothing qualifying; and **no blanket "this allow rule beats a
+category deny" escape** — one was tried and immediately let `Tag`'s trinket
+dish through as footwear and `Ty`'s "chick w hat" through as clothing.
+
 ## Images
 
 ### ComfyUI

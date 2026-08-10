@@ -37,6 +37,12 @@ scripts/.ghl-credentials.json
 social/*
 !social/posts.json
 !social/.ghl-posted.json
+# Texas tax holiday: the manifest is the hand-reviewed list of exempt items,
+# and the state file is the only record of what each item's taxes were before
+# they were stripped. Losing that means the exemption cannot be reversed.
+!social/tax-holiday-2026.json
+!social/tax-holiday-state.json
+!social/retired-tax-*.json
 
 # macOS-specific files
 .DS_Store

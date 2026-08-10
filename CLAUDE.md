@@ -36,6 +36,17 @@ draft workflow.
 default and needs `--commit`. GHL does not de-duplicate. Probe with
 `--only=<id> --commit` before any bulk run.
 
+**The Square token can write.** It has `ITEMS_WRITE`, not just the read scopes
+the old docs claimed. `tax-holiday.mjs` and `retire-tax.mjs` both mutate the
+live catalog; both dry-run by default and need `--commit`.
+
+**`tax-holiday.mjs` changes what customers are charged.**
+`social/tax-holiday-state.json` is the only record of what each item's taxes
+were before they were stripped — it is committed for a reason, and losing it
+means the exemption cannot be reversed exactly. Restore before the next open
+day. There is now exactly **one** tax object (`Local Sales Tax`, 8.25%); the
+disabled duplicate was retired 2026-08-07. Do not add a second.
+
 ## Commands
 
 ```
@@ -46,6 +57,10 @@ npm run social:group           # theme the catalog -> social/groups.json
 npm run ghl:accounts           # read-only: connected FB/IG/GBP account ids
 npm run social:validate        # check posts.json, no network
 npm run social:schedule        # dry run
+npm run tax:plan               # classify the catalog for a TX tax holiday
+npm run tax:status             # read-only: is the exemption on right now?
+npm run tax:apply              # dry run; needs --commit
+npm run tax:restore            # dry run; needs --commit
 npm run blog:heroes            # blog heroes from real Square photos
 npm run generate-images        # ComfyUI heroes (needs 127.0.0.1:8188 up)
 ```

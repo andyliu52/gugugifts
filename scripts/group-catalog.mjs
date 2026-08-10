@@ -28,6 +28,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isTrade } from './lib/catalog-filters.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -58,19 +59,8 @@ const BRANDS = [
   'Living Royal', 'Kay Dee', 'Mixologie', 'Aspen',
 ];
 
-// Retail-only. These are supplier pack, display and sample SKUs that live in
-// the same catalog but are not things a customer can buy — posting
-// "Set/24 Assorted bracelets, $3" or a "$0.02 FREE 12PC Counter Display"
-// would be actively misleading.
-const TRADE_PATTERNS = [
-  /\bset\/\d+/i,
-  /pre-?pack/i,
-  /\bdisplay\b/i,
-  /\bfree\s*\d+\s*pc/i,
-  /\bassorted\b/i,
-  /\bMOQ\b/i,
-  /\btester\b/i,
-];
+// Trade-SKU filtering (TRADE_PATTERNS / isTrade) now lives in
+// lib/catalog-filters.mjs — tax-holiday.mjs needs the same rule.
 
 // Product nouns used to split an oversized brand into postable themes.
 // Ordered longest-first so "Demi Necklace" doesn't match as "Necklace" before
@@ -107,8 +97,6 @@ function args() {
 const slug = s => String(s).toLowerCase()
   .replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-')
   .replace(/^-+|-+$/g, '').slice(0, 60);
-
-const isTrade = name => TRADE_PATTERNS.some(re => re.test(name));
 
 function detectBrand(name) {
   const lower = name.toLowerCase();

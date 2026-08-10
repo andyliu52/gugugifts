@@ -1,0 +1,3256 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-07T21:10:39.715Z",
+    "holiday": {
+      "name": "Texas Sales Tax Holiday 2026",
+      "start": "2026-08-07",
+      "end": "2026-08-09"
+    },
+    "squareVersion": "2026-07-15",
+    "catalogSize": 1933,
+    "tradeSkipped": 65,
+    "counts": {
+      "ambiguous": 40,
+      "denied": 48,
+      "over-threshold": 1,
+      "qualify": 126
+    },
+    "includedCount": 126,
+    "straddleCount": 0
+  },
+  "taxes": [
+    {
+      "id": "YMJKIFWDYDWLX6ZPSUCQIEAG",
+      "name": "Local Sales Tax",
+      "percentage": "8.25",
+      "enabled": true
+    }
+  ],
+  "items": [
+    {
+      "id": "PYEUF43BBZXAMOD6YWSXCA4L",
+      "name": "Beach Getaway Charmed Pencil Pouch ",
+      "category": "Studio Oh!",
+      "price": "$27",
+      "priceCents": 2700,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "5LXHCXEDPSKEN65ZAVMB3WOA",
+      "name": "boldness of her faith journal",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KRJICGJZPYKIJZIIQYP27YHJ",
+      "name": "Comes from the Lord journal",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "GEUSX3QYTF5Y2I6AE2YKCPMW",
+      "name": "Cozy Read Charmed Pencil Pouch ",
+      "category": "Studio Oh!",
+      "price": "$27",
+      "priceCents": 2700,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "BIBRJUUDIHSVGKOFAM3AIC3O",
+      "name": "Hello Kitty And Friends Varsity Desk Pad",
+      "category": "Studio Oh!",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "desk-pad",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KAE55SLZM76M2QKWS2SPH2CW",
+      "name": "Hello Kitty College Letters Desk Pad (Pink)",
+      "category": "Studio Oh!",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "desk-pad",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "BPZVHH6EH7DAZL2LXRIFKGIJ",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Black",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "TY2O73AP2XTH7UK3WYSJS3YI",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Blue",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "LTX436LONM2PSP7F5XNYGHIK",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Blue Gray",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "LT6R55YIUALDXCJZQKD2PHTP",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Gray",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KCM36YZ6LKZZTTAT5IYBQ42I",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Green",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "GF6FN472P47I53QWXGR422OI",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Greige",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KNF2L67XLTJ77OWQ2ZXG2XVX",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Khaki",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "7BBNE5VGK4GFVOCROAAGMUXA",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Natural",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "NGI26R5JDU7RD7H64636GBUM",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Red",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "RI7XRS7RFS37UHLF3WEBEZQP",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Smokey Pink",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "IBQWPOTIPCWJGX5HZAXQRCGP",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Turquoise",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "ER7ICR4DSAUKE6KUAT3SXEKS",
+      "name": "LUDDITE Kurashiki Canvas Pen Case - Yellow",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "5NNOI4VFZR5FEFMUGKKKI3LR",
+      "name": "LUDDITE Okayama Den. Resonate Pencase - Denim",
+      "category": null,
+      "price": "$44",
+      "priceCents": 4400,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "EXTAD7KPQ76M2KR4VP3PF6AS",
+      "name": "LUDDITE Okayama Den. Resonate Pencase - Patchwork",
+      "category": null,
+      "price": "$44",
+      "priceCents": 4400,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "ITYZNXYIVJRTFMQ3DTCURBHT",
+      "name": "LUDDITE Okayama Den. Resonate Pencase - Random Patchwork",
+      "category": null,
+      "price": "$44",
+      "priceCents": 4400,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "6LT5YQCISATXS7SL4S2M727V",
+      "name": "LUDDITE Pen Case - Okayama Denim",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "PYFHXAPYVTMFHDTW7ZCFIFVY",
+      "name": "LUDDITE Pen Case - Okayama Denim - Okayama Patchwork",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "YQV2FU6WQKUKWAP6NPK2M3BJ",
+      "name": "LUDDITE Pen Case Mikawa Sashiko Cotton",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "HYLJJHFZK6EIAQ7J7PJX356B",
+      "name": "Olive Green Fabric Daily Planner (A5) (12776)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "7LXW3QF3ONZHRMAFW3MBOOGI",
+      "name": "Orange Fabric Daily Planner (A5) (12750)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "3H77GG346LTGWDPBBEUDGUMA",
+      "name": "Pink Fabric Daily Planner (A5) (12752)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "ZTKRJLUSQD3EVYSCFXQCILGW",
+      "name": "Prayer Journal Blue",
+      "category": "mary square",
+      "price": "$19",
+      "priceCents": 1900,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "LV4G53P5DOKV522NWBOGO2TW",
+      "name": "Prayer Journal Pink ",
+      "category": "mary square",
+      "price": "$19",
+      "priceCents": 1900,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "FZJXIGXRRSXWQFOOQ4J3UN2H",
+      "name": "Sage Fabric Daily Planner (A5) (12756)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "6F52NIVG2S3TEY47XQJIMJ22",
+      "name": "Sanrio Sweet Dasies Cinnamonroll Charmed Pencil Pouch",
+      "category": "Studio Oh!",
+      "price": "$30",
+      "priceCents": 3000,
+      "verdict": "ambiguous",
+      "rule": "pencil-pouch",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "NGDQRENLZL2SBWUIB4Q6YUEK",
+      "name": "Ultramarine Fabric Daily Planner (A5) (12754)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "Y5YMBORI73544L3JDWT5G4KW",
+      "name": "white cotton canvas journal 5.5*6",
+      "category": null,
+      "price": "$10",
+      "priceCents": 1000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "75AZRNSE3W2WK5TEHO6XKDYY",
+      "name": "white cotton canvas journal 5.5*7.5",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "UE3OGRKDRUPATD3MN3BTUMIZ",
+      "name": "white cotton canvas journal 6.5*9",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "3DWPR5HXFLDPIHDKSOW6BRTK",
+      "name": "white cotton canvas journal 6*8.75",
+      "category": null,
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "SNS6K3XEHDC5LZXP6CQ3NEXE",
+      "name": "white cotton canvas journal 7.25*10",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "YGYJN6LIDMNF2NLNEAW3GZDX",
+      "name": "white cotton canvas journal 9*12",
+      "category": null,
+      "price": "$24",
+      "priceCents": 2400,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "72BUGEUCPG3VSBPJ4JVSHQQA",
+      "name": "with me always journal",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "HDH5WKZWWP23L5C6Q6DDSX4D",
+      "name": "Yellow Fabric Daily Planner (A5) (12749)",
+      "category": "Ohh Deer",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "ambiguous",
+      "rule": "journal",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "LWAUHBGGCMXTM3HWNB3IMXZP",
+      "name": "Body Mist & Rollerball by Sweet Mia's Boutique",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "EIDKAPVS7QNWVVAS5FQWEQJ3",
+      "name": "COWBOY BOOT TRINKET DISH",
+      "category": "Tag",
+      "price": "$7",
+      "priceCents": 700,
+      "verdict": "denied",
+      "rule": "category:Tag",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "ZP5FW3V3IRBCOIJ622NGCYW4",
+      "name": "Cowboy Boots",
+      "category": "Quilling Card",
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "denied",
+      "rule": "category:Quilling Card",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "WISPUSOZAN6JAJIJOOU4ML3P",
+      "name": "EMMIE - chick w hat reg",
+      "category": "Ty",
+      "price": "$6.99",
+      "priceCents": 699,
+      "verdict": "denied",
+      "rule": "category:Ty",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "X3Y5GTCWRYXHB5AL3PQZWFDA",
+      "name": "English Garden Party Hats (x 8)",
+      "category": null,
+      "price": "$30",
+      "priceCents": 3000,
+      "verdict": "denied",
+      "rule": "party-supply",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "TSTKRILLAFDNFPGS5FZGVRNS",
+      "name": "FLORAL COWGIRL BOOTS ENAMEL EARRINGS IN PINK",
+      "category": null,
+      "price": "$22",
+      "priceCents": 2200,
+      "verdict": "denied",
+      "rule": "jewelry",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "TFKJ3COMSCNREFNCT7RQGLC6",
+      "name": "FLORAL COWGIRL BOOTS ENAMEL EARRINGS IN WHITE & PINK",
+      "category": null,
+      "price": "$22",
+      "priceCents": 2200,
+      "verdict": "denied",
+      "rule": "jewelry",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "UQFIWMOPMQI2TZYWVKZWF6PO",
+      "name": "Freshcut Paper Pop Up Cards, Garden Lilacs",
+      "category": null,
+      "price": "$10.95",
+      "priceCents": 1095,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "FW43E6NUBHP6E453VQU57DFC",
+      "name": "Freshcut Paper Pop Up Cards, Mini Butterflies and Buttercups",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "JAVWQPE6IKUMOL6DP4WHGRQS",
+      "name": "Freshcut Paper Pop Up Cards, Mini Cherry Blossom Heart",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KYEV3AJYDS7TI43TPYL3YDMX",
+      "name": "Freshcut Paper Pop Up Cards, Mini Dear Dahlia",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "PVSDFLP3XY4LBDUEQPLX7SCJ",
+      "name": "Freshcut Paper Pop Up Cards, Mini English Daffodil",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "CYTJ3APHA324MK2OQRFJBIZD",
+      "name": "Freshcut Paper Pop Up Cards, Mini French Poppies",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "B2NCCN2IFT3LDIAHGGRHI6YT",
+      "name": "Freshcut Paper Pop Up Cards, Mini Lilies & Lupines",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "ZGTHJD4W3P4GTVQRK7XMKW4T",
+      "name": "Freshcut Paper Pop Up Cards, Mini Monstera",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "MCX2XTILGZ4OFGHCS6JHJIK3",
+      "name": "Freshcut Paper Pop Up Cards, Mini Nantucket Hydrangeas",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "UE2QDQVSTHHGKEEGDPEBQOHY",
+      "name": "Freshcut Paper Pop Up Cards, Mini Orchid Oasis",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "UVEZOBUWORQYLVHCJVTRILWC",
+      "name": "Freshcut Paper Pop Up Cards, Mini Peony Paradise",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "TQ3CKKHHMMOTRA65OEP464BW",
+      "name": "Freshcut Paper Pop Up Cards, Mini Serenity Orchid",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "BZNWVWC2EERXQYKPPRXIXLPC",
+      "name": "Freshcut Paper Pop Up Cards, Peony Paradise",
+      "category": null,
+      "price": "$10.95",
+      "priceCents": 1095,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "2GVJHOYGWNGBUFSKHQ4LJXZ4",
+      "name": "Freshcut Paper Pop Up Cards, Serenity Orchid",
+      "category": null,
+      "price": "$10.95",
+      "priceCents": 1095,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "6QSCYQODHQHXEHCEW66TCTM3",
+      "name": "Freshcut Paper Pop Up Cards,Mini Festive Tulips",
+      "category": null,
+      "price": "$8.95",
+      "priceCents": 895,
+      "verdict": "denied",
+      "rule": "greeting-card",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "7K2SLY22PF474YZWF5IBGPKI",
+      "name": "Fruity Animal Makeup Pencil Case",
+      "category": "Faire",
+      "price": "$1.85",
+      "priceCents": 185,
+      "verdict": "denied",
+      "rule": "cosmetic",
+      "overruled": "pencil-pouch",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "AFL255DRMC6XABLHGRDWWQZG",
+      "name": "G Red Cap Mini Mushroom ER",
+      "category": "Rain Jewelry",
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "denied",
+      "rule": "category:Rain Jewelry",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "4EXKT33TP4BBGK4YEMXUIOPP",
+      "name": "G Star Sunnies Flip Flop Flag 3 ER Set",
+      "category": "Rain Jewelry",
+      "price": "$23",
+      "priceCents": 2300,
+      "verdict": "denied",
+      "rule": "category:Rain Jewelry",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "YBTWIQPOJIAQN7RIFEQ4PQ3F",
+      "name": "Gold Red Cap Mini Mushroom Earring",
+      "category": "Rain Jewelry",
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "denied",
+      "rule": "category:Rain Jewelry",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "YIYQNQOWOZR6MVK2P3LE4YK3",
+      "name": "Greeting Card- Handpainted Kick Up Your Heels It's Your Birthday Colorful Cowboy Boots",
+      "category": "Roseanne Beck Collection",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "denied",
+      "rule": "category:Roseanne Beck Collection",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "46DSU46OX7ANPUKAKWLKT7MD",
+      "name": "Greeting Card-Handpainted Congrat Grad Graduation Cap",
+      "category": "Roseanne Beck Collection",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "denied",
+      "rule": "category:Roseanne Beck Collection",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "B7FMVXRRYUMLRRRD2JVIPPP6",
+      "name": "HB Ballon Paper Rose",
+      "category": "Notes & Queries",
+      "price": "$4.95",
+      "priceCents": 495,
+      "verdict": "denied",
+      "rule": "category:Notes & Queries",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "Z7BG6JWBD755VQYSGFZ2ATPQ",
+      "name": "HB Multi Stars Paper Ros",
+      "category": "Notes & Queries",
+      "price": "$4.95",
+      "priceCents": 495,
+      "verdict": "denied",
+      "rule": "category:Notes & Queries",
+      "overruled": "bare-paper",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "WBMUMJ3L5B362S3YSX4NG6M6",
+      "name": "Keychain Pencil Rhinestone",
+      "category": "Kaleidoscope",
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "denied",
+      "rule": "category:Kaleidoscope",
+      "overruled": "pencils",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "OQEARO3532SKSPKS2YRZCOAN",
+      "name": "Mixologie Adrift (Sun & Sea) Perfume Rollerball Alcohol-Free Roll-On Perfume Oil",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "KBU6KM3E3GKUAWMBSIVNR3BD",
+      "name": "Mixologie Assured Natural Rollerball",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "4WJEAO5YFG7D54HHMLWZ23ZM",
+      "name": "Mixologie Bare (Seductive Saffron) Perfume Rollerball Alcohol-Free Roll-On Perfume Oil",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "HT3HB6EIM2N4PA2I7KNNZVAV",
+      "name": "Mixologie Electric Citrus Twist Rollerball",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "6VIBUD7KR25JTNBUF7R66MBQ",
+      "name": "Mixologie Free Ocean Mist Rollerball",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "JAGCLGJLYSYHPWFCI33YUMAI",
+      "name": "Mixologie Risque' (Exotic Woods) Perfume Rollerball 5 ml",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "6LUZ3JOPVCXAGHF4KHERQBS2",
+      "name": "Mixologie Sensual (Sugared Sandalwood) Perfume Rollerball Alcohol-Free Roll-On Perfume",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "I6X7T7DPF25XVMFYOW2TY66Y",
+      "name": "Mixologie Sultry Wild Musk Rollerball",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "FVEINSH6CBRW6L4UUNO4TRSV",
+      "name": "Mixologie Tempted (Coconut Kiss) Perfume Rollerball Perfume for Women",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "YYDDLV5RPIY76YVGRNV2T5O3",
+      "name": "Mixologie Tender Fruity Rollerball",
+      "category": "Mixology",
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "denied",
+      "rule": "category:Mixology",
+      "overruled": "pens",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "5ZQCO7NZJQOAE72K6Y22IY5J",
+      "name": "Multicolor Party Hats (set of 8)",
+      "category": null,
+      "price": "$30",
+      "priceCents": 3000,
+      "verdict": "denied",
+      "rule": "party-supply",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "QFJE76WBURQB2JKHXUQVG5LR",
+      "name": "OSCOLABO Ruler stamp",
+      "category": null,
+      "price": "$19",
+      "priceCents": 1900,
+      "verdict": "denied",
+      "rule": "stamp",
+      "overruled": "measuring",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "FJH2WLAONH6GISYVI4IHJJ7K",
+      "name": "RODEO STAR COWBOY HAT ENAMEL EARRINGS IN PINK",
+      "category": null,
+      "price": "$22",
+      "priceCents": 2200,
+      "verdict": "denied",
+      "rule": "jewelry",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "JYUCR2JRWXCJC5LEBEAR4FRJ",
+      "name": "RODEO STAR COWBOY HAT ENAMEL EARRINGS IN WHITE",
+      "category": null,
+      "price": "$22",
+      "priceCents": 2200,
+      "verdict": "denied",
+      "rule": "jewelry",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "LA5H56FPZY5XCNLRLYPX6V6B",
+      "name": "Silver Abalone Shell Flip Flop Earring",
+      "category": "Rain Jewelry",
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "denied",
+      "rule": "category:Rain Jewelry",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "L2752OFINE6QZZBMNSAF5VCS",
+      "name": "Silver Western Boot Earring",
+      "category": "Rain Jewelry",
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "denied",
+      "rule": "category:Rain Jewelry",
+      "overruled": "footwear",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "BVQZ2MO6253KEB7DT7AZT46A",
+      "name": "Western Mini Party Hats (x 8)",
+      "category": null,
+      "price": "$30",
+      "priceCents": 3000,
+      "verdict": "denied",
+      "rule": "party-supply",
+      "overruled": "clothing",
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "7OVOGCI5LASAAXTUXMZP66SB",
+      "name": "KAWECO AL Stonewash Sport Rollerball - Blue",
+      "category": null,
+      "price": "$100",
+      "priceCents": 10000,
+      "verdict": "over-threshold",
+      "rule": "pens",
+      "overruled": null,
+      "reason": "$100.00 is not under $100",
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": false
+    },
+    {
+      "id": "JKPWA3VSISY5GQ5USQ6H24SN",
+      "name": " Sanrio Cinnamoroll Mini On The Go Notebook",
+      "category": "Studio Oh!",
+      "price": "$10",
+      "priceCents": 1000,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "4PCE6VHOZTBCAPDVU4DS6I5X",
+      "name": "Bamboo Kerchief Bib Bumblebee",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "K46DVHJBJJTIRFJ5CBQK2BOO",
+      "name": "Bamboo Kerchief Bib Butterfly",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YRMP5SRXP7Q3CA4EZXQIBP6H",
+      "name": "Bamboo Kerchief Bib Highland Cow",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "L6IIDADOKM4XHNKKFIK4JIR6",
+      "name": "Bamboo NB Gown & Hat Set Bumblebee",
+      "category": null,
+      "price": "$30.40",
+      "priceCents": 3040,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BT44LEH6U2SJQKXSS6ZMT6JR",
+      "name": "Bamboo NB Gown & Hat Set Orange Giraffe",
+      "category": null,
+      "price": "$30.40",
+      "priceCents": 3040,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BEX4OQSEXVC7AMJOFHSK3E4T",
+      "name": "Bamboo NB Gown & Hat Set Tutu Elephant",
+      "category": null,
+      "price": "$30.40",
+      "priceCents": 3040,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "SRRESCK2QLCAEIZCYAA5COCD",
+      "name": "Blue Floral & Check 3 Stitched Notebook Set",
+      "category": "Ohh Deer",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "CNRXLXINXO2X6KWXEDPADJLM",
+      "name": "BP2502 Frances Nylon Backpack in Black",
+      "category": null,
+      "price": "$54",
+      "priceCents": 5400,
+      "verdict": "qualify",
+      "rule": "backpack",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "CUZJXKV4QDQXOW76H7XTTLNM",
+      "name": "BP2502 Frances Nylon Backpack in Tan",
+      "category": null,
+      "price": "$54",
+      "priceCents": 5400,
+      "verdict": "qualify",
+      "rule": "backpack",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5MCHXZTK54DER6UGTHGBHKJM",
+      "name": "BP2633 Laura Nylon Backpack in Black",
+      "category": null,
+      "price": "$57",
+      "priceCents": 5700,
+      "verdict": "qualify",
+      "rule": "backpack",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ZHFFN3I2Q25KQZRP52CIGSFP",
+      "name": "Capybara Resin Carm Pen",
+      "category": "Faire",
+      "price": "$1.70",
+      "priceCents": 170,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "JV3R4BZCNIPNZY23QSN2TKSK",
+      "name": "cinnamonroll gel Pens",
+      "category": "Studio Oh!",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "VZPMN6KGPE7SYXDW4KZGLU3A",
+      "name": "Coffee 3D socks",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "K3KBCD2L6OSV2AUKAQLXXJFH",
+      "name": "Colorblock Pen Blush",
+      "category": "mary square",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "PAPOGRL2FXO7MAVWYTMR3CKW",
+      "name": "Colorblock Pen Cornflower",
+      "category": "mary square",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "6AZH5EVM6SCULND5HIHKQRXJ",
+      "name": "Colorblock Pen Mint",
+      "category": "mary square",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "75GA4HRBVRJYNAIAFN65XLOZ",
+      "name": "Colorblock Pen Raspberry",
+      "category": "mary square",
+      "price": "$5.50",
+      "priceCents": 550,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "WUECTSQPNA2U4PWQPFZKTCTC",
+      "name": "Cotton Candy Boxxi Lunch Bag",
+      "category": null,
+      "price": "$27.20",
+      "priceCents": 2720,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "O7NBFDNQAYQQ2SI3HQIBGF2M",
+      "name": "Cowboy Coloring Socks",
+      "category": null,
+      "price": "$9.99",
+      "priceCents": 999,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5CBGK2KCMNKJVEVUUZF64KSK",
+      "name": "Cute Safari Animal Pen",
+      "category": "Faire",
+      "price": "$1.85",
+      "priceCents": 185,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "O6OVJBELKHEA3V4PX67HAPJW",
+      "name": "Cute Sea Animals Charm Pen",
+      "category": null,
+      "price": "$1.85",
+      "priceCents": 185,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BK6FBT7PM3HPJF5EWJRGXP6G",
+      "name": "Eastern Elegance | 3x Stitched Notebook Set (B6) (13615)",
+      "category": "Ohh Deer",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "SCSC6JN2L3PQ6QTJ3OKAZXP2",
+      "name": "Evergreen | 3x Stitched Notebook Set (B6) (13247)",
+      "category": "Ohh Deer",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "EPURVOVEFAIFLIB44KF4BYPY",
+      "name": "Golf 3D socks",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "CTWYIYZSV5GC7RAEXYJ27JAD",
+      "name": "HAT2709 Toryn Straw Hat in Black",
+      "category": null,
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "OQ2KEU4JEK46ZU3B27PGCWYI",
+      "name": "HAT2709 Toryn Straw Hat in Natural",
+      "category": null,
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "CA2EI7YPGOYH7JPVLSPGBM2U",
+      "name": "HAT2710 Viola Straw Hat in Natural",
+      "category": null,
+      "price": "$21",
+      "priceCents": 2100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "2XDAYR4FLEOQYRDI6JABHU34",
+      "name": "HAT2711 Nila Straw Hat in White",
+      "category": null,
+      "price": "$21",
+      "priceCents": 2100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ABQ3F22UU7NWFSJ47PPPX5XC",
+      "name": "Hello Kitty and Friends X Studio Oh! College Letters Gel Pens",
+      "category": "Studio Oh!",
+      "price": "$10",
+      "priceCents": 1000,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "JXSMAXS5HPU4HVHEVGQK6XPX",
+      "name": "Ice cream 3D kids socks",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "55EHBYGISSMP6ZXUGN3XSEQH",
+      "name": "Kawaii Jumbo Animal Donut Eraser",
+      "category": "Faire",
+      "price": "$4.35",
+      "priceCents": 435,
+      "verdict": "qualify",
+      "rule": "erasers",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "JSE5BRR5ZWEFM3NUA65LEFN3",
+      "name": "KAWECO Classic Sport Rollerball - Black",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "S37LDIHGHFTPRHJ53AW4G5BO",
+      "name": "KAWECO Classic Sport Rollerball - Bordeaux",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "NRCFEAYGSLAQDFZWVOW7FOQF",
+      "name": "KAWECO Classic Sport Rollerball - Green",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "7BWKWNGTWY5574EWU47ANX5J",
+      "name": "KAWECO Classic Sport Rollerball - Navy",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "4FZQWRRYEM75LERAGJYOFBGO",
+      "name": "KAWECO Classic Sport Rollerball - Red",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "4KE77X72YHK6NZVCPPQP4ZSN",
+      "name": "KAWECO Frosted Sport Rollerball - Banana",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "GEOXDK45ZYUVPHF4ZMROZ2SI",
+      "name": "KAWECO Frosted Sport Rollerball - Blueberry",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "MX32K7TZAOUHSE3P3TJE6TBL",
+      "name": "KAWECO Frosted Sport Rollerball - Coconut",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "MLKE72A7ZOIXYGGMHUC5ISJC",
+      "name": "KAWECO Frosted Sport Rollerball - Lime",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "SOBXNF44E4ULQNPJJ22L7BVD",
+      "name": "KAWECO Frosted Sport Rollerball - Mandarin",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "PFYUKDMQLPZURFPKV2S4UREI",
+      "name": "KAWECO Frosted Sport Rollerball - Pitaya",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "6V7VG2WKN3LKCH4LMK5FMWSA",
+      "name": "KAWECO Lunar Sport Ballpen - Light Green",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "Y2C4ULO5SU7Z4A7ANALQYGJW",
+      "name": "KAWECO Lunar Sport Ballpen - Shadow Green",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "IOUK3RL4CSZHJKRMDTGDU53Z",
+      "name": "KAWECO Lunar Sport Rollerball - Light Green",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "CRXSST2C34AQCTWG5MURQSZG",
+      "name": "KAWECO Lunar Sport Rollerball - Shadow Green",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5XDBGW7BJSUTVI5NNPPBPHSE",
+      "name": "KAWECO Skyline Sport Rollerball - Black",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BHULGZ4FRG2P7NTWTPWEY4DW",
+      "name": "KAWECO Skyline Sport Rollerball - Fox",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YISCA4H2R4QXKJ5UPWWM5KGT",
+      "name": "KAWECO Skyline Sport Rollerball - Grey",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "RPP7SOLAGN4HVRKY2QELPDYG",
+      "name": "KAWECO Skyline Sport Rollerball - Macchiato",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "AFEFGW4A6QGZOB4NADDERQVR",
+      "name": "KAWECO Skyline Sport Rollerball - Mint",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "VCT6CTUU7ZVX4NXCCRKMJSX3",
+      "name": "KAWECO Skyline Sport Rollerball - Pink",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "W2HTCVYNJS5IR2WR2V55IYWZ",
+      "name": "KAWECO Skyline Sport Rollerball - White",
+      "category": null,
+      "price": "$28",
+      "priceCents": 2800,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "65WZ4IE2B6NB3VBZPG4HBCMU",
+      "name": "KAWECO Student Rollerball - 70's Soul",
+      "category": null,
+      "price": "$62",
+      "priceCents": 6200,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YOCJCAQBT4GAPNDEVIF4PJNX",
+      "name": "kids 3D socks-gamer",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "2A7EHJIRAS3HZFXXMRX23C5B",
+      "name": "LACONIC A4 Creative Pad - Navy",
+      "category": null,
+      "price": "$26",
+      "priceCents": 2600,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "IA674FX2A6D2YBUKU6TKEY32",
+      "name": "LACONIC A4 Creative Pad - Red",
+      "category": null,
+      "price": "$26",
+      "priceCents": 2600,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "WZLFXLVSKV45BVLYP42SQ6E7",
+      "name": "LACONIC A4 Creative Pad - Yellow",
+      "category": null,
+      "price": "$26",
+      "priceCents": 2600,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "T6TCTBWW7DSZZDXDABSPE6LA",
+      "name": "LACONIC A5 Creative Pad - Navy",
+      "category": null,
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "TQFETTZS76BV6RIZBCR2UAXS",
+      "name": "LACONIC A5 Creative Pad - Red",
+      "category": null,
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "GOJKNCJCVMDCFFM3MPQGDXSE",
+      "name": "LACONIC A5 Creative Pad - Yellow",
+      "category": null,
+      "price": "$20",
+      "priceCents": 2000,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "QBJP45KAIJQQJLZATUV2HQS6",
+      "name": "LACONIC A5 Field Pad - Blue",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "SYFFNXNDHTHG6AY46J4JOKVT",
+      "name": "LACONIC A5 Field Pad - Gray",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "PDMDCLE2LU5BI66BRFVG5Z34",
+      "name": "LACONIC A5 Field Pad - Olive",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "writing-pads",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "HCCR44AKJ6HKYIF5JFYMSM7Q",
+      "name": "LACONIC A5 Notebook - 100 Day",
+      "category": null,
+      "price": "$5",
+      "priceCents": 500,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "TLIU2PEUQDI4ZS7SRO4UKJQU",
+      "name": "LACONIC A5 Notebook - Daily",
+      "category": null,
+      "price": "$5",
+      "priceCents": 500,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "7VGOJSYZIBMLOY4MUYQKDFTB",
+      "name": "LACONIC A5 Notebook - Monthly",
+      "category": null,
+      "price": "$5",
+      "priceCents": 500,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "T6XQTNXYEK5U2YGNKQ3LAHD3",
+      "name": "LACONIC A5 Notebook - Weekly",
+      "category": null,
+      "price": "$5",
+      "priceCents": 500,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ZYH6VSQ2HVCNLZ7P335UX6B4",
+      "name": "LACONIC B6 Notebook - Café",
+      "category": null,
+      "price": "$4",
+      "priceCents": 400,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "V4UUNC7ARRT26QO523ZMNEV3",
+      "name": "LACONIC B6 Notebook - Clothing",
+      "category": null,
+      "price": "$4",
+      "priceCents": 400,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "G2GYT7SHQ3TC3UHBX4AIIKZP",
+      "name": "LACONIC B6 Notebook - Green",
+      "category": null,
+      "price": "$4",
+      "priceCents": 400,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "DGFOURAMF2S2CTOQFDWGN74B",
+      "name": "LAZY STAR ERASABLE MULTI GEL PEN",
+      "category": "Faire",
+      "price": "$6.60",
+      "priceCents": 660,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "VCL6RKPCJCM54EII677YKIS5",
+      "name": "Living Royal Adult 3D basketball socks",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YJMKNC4KO7JX6XE42VNHLEMV",
+      "name": "Living Royal Adult 3D Crew Socks -cowboy boots",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "4KYFIN5B4IEHYVIWSLPPI7CX",
+      "name": "Living Royal Birthday 3D Socks",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "HCN5LJSQEVP564TL6RA73KCZ",
+      "name": "Living Royal Compression Socks",
+      "category": null,
+      "price": "$15",
+      "priceCents": 1500,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "75F66XRD6E4IFLH4FAJDHZI3",
+      "name": "Living Royal Compression Socks (Floral Compression Sock)",
+      "category": null,
+      "price": "$15",
+      "priceCents": 1500,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "46DKOORI3ZFK4NYIZZNV34K5",
+      "name": "Living Royal Daisy Slippers M/L",
+      "category": null,
+      "price": "$24.99",
+      "priceCents": 2499,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "GIEQMZJPOZ77WMTFSQC6GFYD",
+      "name": "Living Royal Daisy Slippers S/M",
+      "category": null,
+      "price": "$24.99",
+      "priceCents": 2499,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "7Q7II6EWNTT7R4KJILV6VDYQ",
+      "name": "Living Royal Farm Kids Coloring Socks Set",
+      "category": null,
+      "price": "$9.99",
+      "priceCents": 999,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "Z7ZKC6RPN6SV5R6T3D7XJ2YE",
+      "name": "Living Royal Kids 3D Crew Socks - Novelty Funny Character, Colorful Unisex Crew Socks - Fits Sizes Ages 4+ Old Kids",
+      "category": null,
+      "price": "$11",
+      "priceCents": 1100,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "NEKIGWOZCAGLAK6QNDIOTDPH",
+      "name": "Living Royal Rodeo Girl Slippers M/L",
+      "category": null,
+      "price": "$24.99",
+      "priceCents": 2499,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "RWOUNHD3LFQ4PV2SKX6SNZS7",
+      "name": "Living Royal Rodeo Girl Slippers S/M",
+      "category": null,
+      "price": "$24.99",
+      "priceCents": 2499,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BPEAKBWFP4V37RS4YTYLXI2O",
+      "name": "lollipop pen",
+      "category": "Faire",
+      "price": "$2.15",
+      "priceCents": 215,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "K5KTEB4RVHPFRVUGEEXMMHRP",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - Daily Planner",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "LIJYCBOOEF4SDLBMZAEYNBL4",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - Meeting Notebook",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "W6FYLSDRY4HNYEJUU4JGKGUY",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - Monthly Planner",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "SLNIBFC5KZ7EXG5R2HJQNC3H",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - To Do and Memo",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "QHTP7G7NL7EZ7WPS3KZLMGI5",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - To Do List",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5PKTUZY4SAYNLJDRMIMJYVJ2",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - Weekly Plan Vert",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ZL3L3AW3V5M5SOEGJJVPVG7I",
+      "name": "LUDDITE FUNCTION NOTE B5  Size - Wkly Plan Separate",
+      "category": null,
+      "price": "$8",
+      "priceCents": 800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "PQKXAEEIYCU3SUXH6R4SZMJB",
+      "name": "Lunch Bag Blue",
+      "category": "swig",
+      "price": "$35",
+      "priceCents": 3500,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ZORBVB2MC3CGJJS7K62A3GV3",
+      "name": "Lunch Bag Pink",
+      "category": "swig",
+      "price": "$35",
+      "priceCents": 3500,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YJYKJ2CSYGBRAOF5XTL4OVE3",
+      "name": "Lunch Bag Pink And Blue",
+      "category": "swig",
+      "price": "$35",
+      "priceCents": 3500,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5X4ZRNWW2ZL5KQVBSTYTR3VE",
+      "name": "Lunch Bags Teal",
+      "category": "swig",
+      "price": "$35",
+      "priceCents": 3500,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "WQAO5ELG5XJ6HKKNYFSGZFAM",
+      "name": "MIFFY SLIME ERASER",
+      "category": "Faire",
+      "price": "$2.15",
+      "priceCents": 215,
+      "verdict": "qualify",
+      "rule": "erasers",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "2CFGS755AXT3HNFPVQAYEPHH",
+      "name": "Milkbarn Organic Zipper Pajama Chicken 12-18M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "BPMFF5TDMVMKNO4ECGDC74IP",
+      "name": "Milkbarn Organic Zipper Pajama Chicken 6-9M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "EUV65IFUZWIHX6UKOQ7ILDME",
+      "name": "Milkbarn Organic Zipper Pajama Chicken 9-12M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "3UHV2BCPTK7RRX3WAQIACPNO",
+      "name": "Milkbarn Organic Zipper Pajama Duck 6-9M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "JXIZNGWX4XUNGKDUUVMG35LP",
+      "name": "Milkbarn Organic Zipper Pajama Duck 9-12M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "T5IJGC5RPMDMAX7IUW2GTWGY",
+      "name": "Milkbarn Organic Zipper Pajama Gold Floral 12-18M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "6KWKRFA2E6RVX7TMIYP5RVN5",
+      "name": "Milkbarn Organic Zipper Pajama Gold Floral 6-9M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "IOBA2F7KCS4UCJS52DQ7EQNQ",
+      "name": "Milkbarn Organic Zipper Pajama Gold Floral 9-12M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "7OTJSMKIP2AKPJEX4CIGO4ZO",
+      "name": "Milkbarn Organic Zipper Pajama Lemon 12-18M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5ZYWRFJ3WFNGGHQ443EFVMK3",
+      "name": "Milkbarn Organic Zipper Pajama Lemon 6-9M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "UU6RZIKC7Z3JXTD2OMYE2NHP",
+      "name": "Milkbarn Organic Zipper Pajama Lemon 9-12M",
+      "category": null,
+      "price": "$32",
+      "priceCents": 3200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "RMKFYTFTPLBZSTII3BXJDGAP",
+      "name": "Natural World | 3x Stitched Notebook Set (B6) (12901)",
+      "category": "Ohh Deer",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "R66RFLV4BKUXVU4FWRKFSPRW",
+      "name": "Notebook Set-colorful bows",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "HFGYBPAQ2ZTBMAXCDJQXZSAG",
+      "name": "Notebook- Do Your Best",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "R2OIQPR2OATWEV4XXZWJCGCX",
+      "name": "Notebook-More teacher like you",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "LIHELOVC32HDIAMUKQYM3Z3R",
+      "name": "Notebook-You Got This",
+      "category": null,
+      "price": "$18",
+      "priceCents": 1800,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "Y27LCSVODRGIA7GSGO7OVUBH",
+      "name": "Notebooks-butterflies",
+      "category": null,
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "O5PGFBRYMODOFRW2CJSWQ4IL",
+      "name": "Oh Happy Day Boxxi Lunch Bag",
+      "category": null,
+      "price": "$34",
+      "priceCents": 3400,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "RL636UXCS5DK4PLSDZXT7CRK",
+      "name": "Organic Kerchief Bib Chicken",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "POOJWNQP4O32THDLEIIE3AJP",
+      "name": "Organic NB Gown & Hat Set Homestead",
+      "category": null,
+      "price": "$30.40",
+      "priceCents": 3040,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "D76FWTXYYPQEOZWJWFCRVPFL",
+      "name": "Pink Camo Compression Socks",
+      "category": null,
+      "price": "$15",
+      "priceCents": 1500,
+      "verdict": "qualify",
+      "rule": "clothing",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "6RNLNLZWKIB4YNOOTMLOJUMW",
+      "name": "Playful Geometrics | 3x Stitched Notebook Set (B6) (12532)",
+      "category": "Ohh Deer",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "YGAQCEMHDTCQHKKVK4QIENN2",
+      "name": "Pusheen Cat 3 Deluxe Gel Pens ",
+      "category": "Studio Oh!",
+      "price": "$13",
+      "priceCents": 1300,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "5BL5UY3VS5L4A3ZPTQ4EC6ZM",
+      "name": "Rodeo Slippers Medium/ Large",
+      "category": null,
+      "price": "$19.99",
+      "priceCents": 1999,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "I6DTFXQA2H4FKAUE7ORKLIEU",
+      "name": "Rodeo Slippers Small/ Medium Cozy Slippers",
+      "category": null,
+      "price": "$19.99",
+      "priceCents": 1999,
+      "verdict": "qualify",
+      "rule": "footwear",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "JPHVV3OOBXED5WZKGX7LXGK7",
+      "name": "Spiral Top Notebooks colorful bows",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "E4YE5AD4SCESRTMZ7CYZ6QKR",
+      "name": "Studio Oh!  Hello Kitty And Friends Varsity Gel Pen Set ",
+      "category": "Studio Oh!",
+      "price": "$16",
+      "priceCents": 1600,
+      "verdict": "qualify",
+      "rule": "pens",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "ZANT4VFLOLFBJXZUR6YLG6GO",
+      "name": "Swig Life Blue Tide BOXXI Lunch Box",
+      "category": null,
+      "price": "$27.20",
+      "priceCents": 2720,
+      "verdict": "qualify",
+      "rule": "lunch-box",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    },
+    {
+      "id": "OM6U4TKD63WA7PQGUF7MC2XY",
+      "name": "Taylor Elliott Designs God and Dreams Notebook",
+      "category": null,
+      "price": "$12",
+      "priceCents": 1200,
+      "verdict": "qualify",
+      "rule": "notebooks",
+      "overruled": null,
+      "reason": null,
+      "taxIds": [
+        "YMJKIFWDYDWLX6ZPSUCQIEAG"
+      ],
+      "include": true
+    }
+  ]
+}

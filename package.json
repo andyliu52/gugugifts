@@ -22,7 +22,11 @@
     "social:schedule": "node scripts/schedule-ghl-posts.mjs",
     "ghl:accounts": "node scripts/ghl-accounts.mjs",
     "social:group": "node scripts/group-catalog.mjs",
-    "social:brands": "node scripts/group-catalog.mjs --suggest-brands"
+    "social:brands": "node scripts/group-catalog.mjs --suggest-brands",
+    "tax:plan": "node scripts/tax-holiday.mjs --plan",
+    "tax:status": "node scripts/tax-holiday.mjs --status",
+    "tax:apply": "node scripts/tax-holiday.mjs --apply",
+    "tax:restore": "node scripts/tax-holiday.mjs --restore"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",

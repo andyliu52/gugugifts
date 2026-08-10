@@ -166,6 +166,9 @@ export function shapeItem(obj, related, locationId) {
     name: d.name || '(unnamed)',
     description: (d.description_plaintext || d.description || '').trim() || null,
     categories,
+    // Which CatalogTax objects apply. Needed by tax-holiday.mjs, which has to
+    // record each item's own set before stripping it — they are not uniform.
+    taxIds: d.tax_ids || [],
     price: priceRange(variations),
     priceCents: lowestPriceCents(variations),
     variations: variations.map(v => ({
@@ -173,6 +176,10 @@ export function shapeItem(obj, related, locationId) {
       name: v.item_variation_data?.name || null,
       sku: v.item_variation_data?.sku || null,
       price: formatMoney(v.item_variation_data?.price_money),
+      // Raw cents as well as the formatted string: the tax-holiday $100
+      // threshold is a per-variation numeric test, and re-parsing "$8.95"
+      // back out of the display string is how rounding bugs get in.
+      priceCents: v.item_variation_data?.price_money?.amount ?? null,
       trackInventory: v.item_variation_data?.track_inventory ?? null,
     })),
     images,
