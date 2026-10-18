@@ -190,6 +190,15 @@ export async function createPost(creds, dto) {
   });
 }
 
+// PUT /social-media-posting/{locationId}/posts/{id} — replaces the post's
+// editable fields. Not idempotent-retried: treat it like a create.
+export async function editPost(creds, postId, dto) {
+  return ghlFetch(creds, `/social-media-posting/${creds.locationId}/posts/${postId}`, {
+    method: 'PUT',
+    body: dto,
+  });
+}
+
 export async function deletePost(creds, postId) {
   return ghlFetch(creds, `/social-media-posting/${creds.locationId}/posts/${postId}`, {
     method: 'DELETE',
@@ -267,7 +276,8 @@ export async function uploadFile(creds, filePath, basename) {
   form.append('name', basename);
   form.append('hosted', 'false');
   if (creds.mediaFolderId) form.append('parentId', creds.mediaFolderId);
-  form.append('file', new Blob([buf], { type: 'image/jpeg' }), basename);
+  const type = { '.mp4': 'video/mp4', '.png': 'image/png' }[path.extname(basename).toLowerCase()] || 'image/jpeg';
+  form.append('file', new Blob([buf], { type }), basename);
 
   const json = await ghlFetch(creds, '/medias/upload-file', {
     method: 'POST', version: VERSION_MEDIA, raw: form,

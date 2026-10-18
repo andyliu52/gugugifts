@@ -496,6 +496,233 @@
         "google"
       ],
       "at": "2026-10-18T17:38:47.584Z"
+    },
+    "2026-11-05-self-care-gift-boxes::facebook+instagram": {
+      "ghlPostId": "6ad50732ab9b62ebb6279291",
+      "scheduleDate": "2026-11-05T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "at": "2026-10-18T17:51:46.821Z"
+    },
+    "2026-11-05-self-care-gift-boxes::google": {
+      "ghlPostId": "6ad50733cb4303bae14885ad",
+      "scheduleDate": "2026-11-05T23:00:00.000Z",
+      "platforms": [
+        "google"
+      ],
+      "at": "2026-10-18T17:51:47.214Z"
+    },
+    "2026-11-12-kids-gift-boxes::facebook+instagram": {
+      "ghlPostId": "6ad5073309c2edbdd1ec9814",
+      "scheduleDate": "2026-11-12T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "at": "2026-10-18T17:51:48.108Z"
+    },
+    "2026-11-12-kids-gift-boxes::google": {
+      "ghlPostId": "6ad5073480aa609892670c8f",
+      "scheduleDate": "2026-11-12T23:00:00.000Z",
+      "platforms": [
+        "google"
+      ],
+      "at": "2026-10-18T17:51:48.424Z"
+    },
+    "2026-11-14-gift-boxes-for-her::facebook+instagram": {
+      "ghlPostId": "6ad5073412457bc0d10d607e",
+      "scheduleDate": "2026-11-14T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "at": "2026-10-18T17:51:49.016Z"
+    },
+    "2026-11-14-gift-boxes-for-her::google": {
+      "ghlPostId": "6ad50735750d52e837f9274c",
+      "scheduleDate": "2026-11-14T23:00:00.000Z",
+      "platforms": [
+        "google"
+      ],
+      "at": "2026-10-18T17:51:49.358Z"
+    },
+    "2026-10-22-gift-boxes::tiktok": {
+      "ghlPostId": "6ad50808bc60237ae7405d78",
+      "scheduleDate": "2026-10-22T22:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:20.974Z"
+    },
+    "2026-10-24-voluspa-ornaments::tiktok": {
+      "ghlPostId": "6ad5080fd404213caf7ea341",
+      "scheduleDate": "2026-10-24T22:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:27.670Z"
+    },
+    "2026-10-29-rain-christmas-earrings::tiktok": {
+      "ghlPostId": "6ad5080f750d52e837f9e314",
+      "scheduleDate": "2026-10-29T22:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:27.858Z"
+    },
+    "2026-10-31-halloween-to-christmas::tiktok": {
+      "ghlPostId": "6ad5080fab9b62ebb6286b4e",
+      "scheduleDate": "2026-10-31T22:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.036Z"
+    },
+    "2026-11-05-self-care-gift-boxes::tiktok": {
+      "ghlPostId": "6ad50810e422a0c51196e000",
+      "scheduleDate": "2026-11-05T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.231Z"
+    },
+    "2026-11-07-mixologie::tiktok": {
+      "ghlPostId": "6ad5081080aa60989267eae2",
+      "scheduleDate": "2026-11-07T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.397Z"
+    },
+    "2026-11-12-kids-gift-boxes::tiktok": {
+      "ghlPostId": "6ad50810284c3b76e7ca9f65",
+      "scheduleDate": "2026-11-12T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.594Z"
+    },
+    "2026-11-13-studio-oh-teens::tiktok": {
+      "ghlPostId": "6ad5081080aa60989267eb0a",
+      "scheduleDate": "2026-11-13T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.765Z"
+    },
+    "2026-11-14-gift-boxes-for-her::tiktok": {
+      "ghlPostId": "6ad5081012457bc0d10e35ec",
+      "scheduleDate": "2026-11-14T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:28.993Z"
+    },
+    "2026-11-19-gorky-longhorn::tiktok": {
+      "ghlPostId": "6ad50811cb4303bae1493fd1",
+      "scheduleDate": "2026-11-19T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:29.165Z"
+    },
+    "2026-11-21-mary-square-towels::tiktok": {
+      "ghlPostId": "6ad5081112457bc0d10e3634",
+      "scheduleDate": "2026-11-21T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:29.362Z"
+    },
+    "2026-11-24-gorky-shakers::tiktok": {
+      "ghlPostId": "6ad50811bc60237ae740640f",
+      "scheduleDate": "2026-11-24T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:29.536Z"
+    },
+    "2026-11-25-prayer-journals::tiktok": {
+      "ghlPostId": "6ad5081109c2edbdd1ed6dd9",
+      "scheduleDate": "2026-11-25T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:29.793Z"
+    },
+    "2026-11-28-small-business-saturday::tiktok": {
+      "ghlPostId": "6ad50811284c3b76e7caa245",
+      "scheduleDate": "2026-11-28T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:29.960Z"
+    },
+    "2026-12-03-pacha-12-days::tiktok": {
+      "ghlPostId": "6ad5081192d0ca0bcbd76c58",
+      "scheduleDate": "2026-12-03T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:30.125Z"
+    },
+    "2026-12-04-ty-stocking-stuffers::tiktok": {
+      "ghlPostId": "6ad5081280aa60989267ec9e",
+      "scheduleDate": "2026-12-04T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:30.297Z"
+    },
+    "2026-12-05-christmas-squishies::tiktok": {
+      "ghlPostId": "6ad5081212457bc0d10e3794",
+      "scheduleDate": "2026-12-05T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:30.480Z"
+    },
+    "2026-12-10-rain-christmas-pins::tiktok": {
+      "ghlPostId": "6ad5081209c2edbdd1ed6e81",
+      "scheduleDate": "2026-12-10T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:30.688Z"
+    },
+    "2026-12-12-swig-mega-mug::tiktok": {
+      "ghlPostId": "6ad50812ab9b62ebb6286df2",
+      "scheduleDate": "2026-12-12T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:30.872Z"
+    },
+    "2026-12-17-free-gift-wrap::tiktok": {
+      "ghlPostId": "6ad5081256a601d469f3d22f",
+      "scheduleDate": "2026-12-17T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:31.038Z"
+    },
+    "2026-12-19-voluspa-travel-trio::tiktok": {
+      "ghlPostId": "6ad5081392d0ca0bcbd76ccc",
+      "scheduleDate": "2026-12-19T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:31.185Z"
+    },
+    "2026-12-22-last-days::tiktok": {
+      "ghlPostId": "6ad5081312457bc0d10e38bc",
+      "scheduleDate": "2026-12-22T23:00:00.000Z",
+      "platforms": [
+        "tiktok"
+      ],
+      "at": "2026-10-18T17:55:31.379Z"
     }
   }
 }

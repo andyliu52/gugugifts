@@ -118,16 +118,15 @@ This happened on a real run. Retry policy must distinguish:
 retryable. After any run that reported a timeout, scan for duplicate schedule
 slots before assuming the state file is accurate.
 
-### Several images in `media[]` are silently cut to one
+### Carousels work — but reads show only `media[0]` until publish
 
-Found 2026-10-18. A `status: 'scheduled'` post with five `image/jpeg` URLs
-returns 201, and `GET /posts/{id}` shows only `media[0]` stored. No error, no
-warning. So a carousel scheduled through the API goes out as a single photo.
-Read the post back with `getPost` before you assume a carousel worked. The
-GHL UI does build carousels, so there is some path for them, but it has not
-been found yet. Next guesses to probe: media first uploaded to the GHL media
-library (`uploadFile`), or `instagramPostDetails`, which comes back on every
-post but is typed `any`.
+Pass several `{url, type: 'image/jpeg'}` items in `media[]`; site-hosted URLs
+are fine. The create response echoes all of them and the Social Planner UI
+shows the full carousel, but `GET /posts/{id}` and `posts/list` return only
+the first item for a *scheduled* post (published posts show all of them).
+Confirmed 2026-10-18 against a 5-image post checked in the planner. Do not
+"fix" a carousel because a read-back shows one image — that cost an hour of
+probing. Verify carousels in the planner, or trust the create response.
 
 ### TikTok through GHL needs a video
 
@@ -135,7 +134,17 @@ post but is typed `any`.
 `422 "TikTok needs a video to create a post, it doesn't support multi media
 formats"`. Photo-mode posts are not available through this API. The
 scheduler sends TikTok as a batch of its own so that this failure leaves
-FB/IG/GBP alone. To post to TikTok, render an MP4 first.
+FB/IG/GBP alone.
+
+What works (2026-10-18, 22 posts): `scripts/build-tiktok-videos.mjs` renders a
+1080x1920 H.264/AAC slideshow per post, uploads it to the GHL media library
+(`uploadFile` with a `video/mp4` Blob type, since a JPEG type mislabels it), and the
+TikTok batch sends `media: [{ url, type: 'video/mp4' }]` with
+`tiktokPostDetails.privacyLevel: 'PUBLIC_TO_EVERYONE'` and
+`promoteYourBrand: true` (commercial disclosure). Music must be licensed for
+business use and baked into the file — TikTok's sound library is app-only.
+Cover-cropping 3:4 photos to 9:16 cuts gift boxes off at the sides; use the
+whole photo on a blurred copy of itself.
 
 ### One post, many channels — put every accountId in one call
 

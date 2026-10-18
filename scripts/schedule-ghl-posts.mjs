@@ -103,6 +103,9 @@ function validate(doc, snapshot, accounts) {
     const imgs = imagesOf(p);
     if (!imgs.length || imgs.some(i => !i?.url)) errs.push(`${at}: no image url`);
     if (imgs.length > 10) errs.push(`${at}: ${imgs.length} images; Instagram carousels cap at 10`);
+    if (platforms.includes('tiktok') && !p.video?.url) {
+      errs.push(`${at}: TikTok needs a video; run scripts/build-tiktok-videos.mjs --upload`);
+    }
 
     const cta = p.cta || doc.defaults?.cta;
     if (cta) {
@@ -149,6 +152,11 @@ function buildDto(p, doc, creds, platforms) {
   // Google gets one image even from a carousel: whether GBP accepts several
   // through GHL is unverified, and run() gives it its own batch.
   const imgs = platforms.length === 1 && platforms[0] === 'google' ? imagesOf(p).slice(0, 1) : imagesOf(p);
+  // TikTok rejects images through GHL ("TikTok needs a video to create a
+  // post"); it gets the slideshow MP4 from scripts/build-tiktok-videos.mjs.
+  const media = platforms.length === 1 && platforms[0] === 'tiktok'
+    ? [{ url: p.video.url, type: 'video/mp4' }]
+    : imgs.map(i => ({ url: i.url, type: 'image/jpeg' }));
 
   const dto = {
     accountIds,
@@ -157,7 +165,7 @@ function buildDto(p, doc, creds, platforms) {
     // with "Invalid media format type"; only image/jpeg and image/jpg pass.
     // Note draft posts accept anything here — the validation only runs for
     // status: 'scheduled', so a draft round-trip does NOT prove the shape.
-    media: imgs.map(i => ({ url: i.url, type: 'image/jpeg' })),
+    media,
     status: 'scheduled',
     type: 'post',
     scheduleDate,
