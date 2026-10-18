@@ -15,6 +15,8 @@ Esto es lo que tenemos en **Gugu Gifts**.
 
 ## Los Vasos y Mega Tarros
 
+![Mega Tarros Swig en estampado de azulejo, hortensia y cerezas, Gugu Gifts, Terrell TX](/images/products/swig/mega-mugs.jpg)
+
 Los vasos térmicos grandes y los mega tarros son el corazón de la línea — acero inoxidable de triple aislamiento que mantiene las bebidas frías por horas, en patrones que van de tiernos (el de caritas felices) a neutros para adultos. Es el vaso que vive en el portavasos del coche y va a todos lados.
 
 ## Las Botellas de Agua
@@ -22,6 +24,8 @@ Los vasos térmicos grandes y los mega tarros son el corazón de la línea — a
 Las botellas de agua térmicas son el caballo de batalla diario — gym, escritorio, banca, salida de la escuela. Tenemos estampados camo y arcoíris para niños junto a colores más limpios para adultos, así que puedes regalar a lo largo de todas las edades desde el mismo estante.
 
 ## Las Loncheras y Hieleras
+
+![Lonchera Swig con estampado de enfermería, Gugu Gifts, Terrell TX](/images/products/swig/lunch-bags.jpg)
 
 Las loncheras y bolsas térmicas lo completan — los estampados de enfermería y salud son favoritos particulares de la gente médica en Kaufman County, y son un "pensando en ti" fácil para cualquiera que lleve lonche o botella para el día.
 

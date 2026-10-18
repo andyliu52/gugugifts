@@ -15,6 +15,8 @@ This is what we tell people when they walk up.
 
 ## How They Actually Work
 
+![Greenleaf Shimmering Snowberry flower diffuser, Gugu Gifts, Terrell TX](/images/products/greenleaf/snowberry-flower-diffuser.jpg)
+
 Inside the bottle: scented oil. Sticking out the top: a porcelain "flower" with a stem that wicks the oil up into the bloom. The flower acts as the diffusion surface — fragrance evaporates off the bloom into the air, slowly and continuously, no flame, no electricity, no apps, no daily attention.
 
 It's the lowest-effort home fragrance method on the market. Set it once, smell it for two to three months.
@@ -53,7 +55,7 @@ A practical layout:
 | Master bath | Shimmering Snowberry or Cashmere Kiss — spa energy |
 | Living room | Cashmere Kiss in winter, Orange & Honey in spring |
 | Office/study | Silver Spruce — focused, clean |
-| Closet | Smaller Greenleaf sachet ($3) — overkill to put a diffuser there |
+| Closet | Smaller Greenleaf sachet ($1.50) — overkill to put a diffuser there |
 
 If a room has lots of airflow (HVAC vent right above), the diffuser will burn through faster. Move it to a corner shelf away from the vent.
 
@@ -75,9 +77,13 @@ We sell more flower diffusers as gifts than as personal purchases. The reasons:
 - Can wrap in tissue and a ribbon; the bottle and flower do the visual work
 - Recipient-friendly: no wrapping unwrapping a fragile candle
 
-Pair with a $3 Greenleaf sachet for a $37 bundle that reads larger than its price tag.
+Pair with a $1.50 Greenleaf sachet for a $35.50 bundle that reads larger than its price tag.
 
 ## Stock Note
+
+![Greenleaf Gingerbread flower diffuser, Gugu Gifts, Terrell TX](/images/products/greenleaf/gingerbread-flower-diffuser.jpg)
+
+For the holidays: the **Gingerbread** flower diffuser is in at **$40**, with **Shimmering Snowberry** and **Brambleberry** at **$34**.
 
 Greenleaf scents rotate. If a specific scent is on your list (especially Cashmere Kiss or Orange & Honey, our two fastest movers), call ahead and we'll set one aside.
 

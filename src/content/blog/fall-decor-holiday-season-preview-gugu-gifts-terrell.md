@@ -15,6 +15,8 @@ This is the month the shop turns over completely. Here's what's on the shelves, 
 
 ## The Fall Scent Shift
 
+![Pacha Spiced Pumpkin & Amber and Golden Spice & Chai bath bombs, Gugu Gifts, Terrell TX](/images/products/pacha/spiced-pumpkin-golden-chai.jpg)
+
 The single biggest change in the store this month is fragrance. Summer's citrus and coconut are out; warmer, heavier scents are in.
 
 - **Voluspa** — the fall range is where the brand is at its best. Warm, layered, and the jars themselves are decorative enough that people leave them out year-round. If you've only ever bought the bright summer scents, the fall ones are a different experience.
@@ -37,6 +39,8 @@ If you're hosting this year:
 The pattern we see: people come in the second week of November looking for one specific platter, and it went in early October. Come look now, even if you're not buying yet.
 
 ## The Case for Starting Holiday Shopping in October
+
+![Greenleaf Christmas tin candles, Gugu Gifts, Terrell TX](/images/products/greenleaf/christmas-tin-candles.jpg)
 
 We understand this sounds like a shop telling you to shop. Here's the actual reasoning:
 
@@ -62,7 +66,7 @@ It's not just Thanksgiving and Christmas. Between now and the end of November:
 
 - **Homecoming and mum season** — small jewelry gifts get bought here more than you'd think
 - **Fall birthdays** — October and November are dense with them
-- **Teacher conferences** — a $3 sachet and a card at conference time is a small, well-timed gesture
+- **Teacher conferences** — a $1.50 sachet and a card at conference time is a small, well-timed gesture
 - **Friendsgiving** — usually the weekend *before* Thanksgiving, and hosts get overlooked because it's "casual." A **$14 enamelware plate** fixes that.
 - **New neighbors** — fall is a heavy moving season in the Forney and Heartland new builds. Our [housewarming guide](/blog/housewarming-gifts-heartland-forney-new-builds) covers that specifically.
 

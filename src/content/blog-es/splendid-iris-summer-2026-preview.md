@@ -39,6 +39,8 @@ Para los texanos que reciben — y son muchos — piezas que se ven bien en la m
 
 ## Piezas que Estamos Esperando
 
+![Pulseras de bolitas doradas Splendid Iris, Gugu Gifts, Terrell TX](/images/products/splendid-iris/gold-bead-bracelets.jpg)
+
 Sin comprometernos a inventario específico, las categorías que más nos emocionan para SS26:
 
 - **Bowls decorativos más chicos** para estilizar consolas de entrada

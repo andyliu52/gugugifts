@@ -39,6 +39,8 @@ For Texans who entertain — and that's a lot of you — pieces that look good o
 
 ## Pieces We're Watching For
 
+![Splendid Iris gold bead bracelets, Gugu Gifts, Terrell TX](/images/products/splendid-iris/gold-bead-bracelets.jpg)
+
 Without committing to specific stock, the categories we're most excited about for SS26:
 
 - **Smaller decorative bowls** for entryway console styling

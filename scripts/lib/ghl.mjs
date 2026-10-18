@@ -153,6 +153,7 @@ export const PLATFORM = {
   facebook: 'facebook',
   instagram: 'instagram',
   google: 'google',
+  tiktok: 'tiktok',
 };
 
 export function pickAccounts(accounts, platforms) {

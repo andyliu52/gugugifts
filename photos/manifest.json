@@ -1,0 +1,232 @@
+{
+  "_readme": [
+    "Placement spec for the Oct 2026 product photo shoot. Originals live outside the repo in",
+    "~/gugupics/oct-2026/ (1.1 GB; anything in public/ ships with the deploy). Staged 2400px",
+    "JPEGs in ~/gugupics/oct-2026/jpg/ mirror that tree. Paths below are relative to jpg/.",
+    "Run: node scripts/place-shop-photos.mjs --manifest=photos/manifest.json [--dry] [--only=<key>]",
+    "heroes: 1 source = cover crop, 2-3 sources = side-by-side collage. 1280x720.",
+    "inline: public/images/products/<key>.jpg, 1000px long edge, for ![alt](...) in post bodies.",
+    "social: public/images/social/<postId>.jpg, 1080x1350 (4:5) for FB/IG/TikTok/GBP.",
+    "        An array makes a carousel: <postId>-1.jpg, <postId>-2.jpg, ...",
+    "rejected: frames reviewed and deliberately not used, with the reason."
+  ],
+  "src": "~/gugupics/oct-2026/jpg",
+  "heroes": {
+    "holiday-gift-boxes-shops-at-terrell": [
+      "Holiday gift sets/IMG_0115.jpg",
+      "Holiday gift sets/IMG_0188.jpg",
+      "Holiday gift sets/IMG_0416.jpg"
+    ],
+    "christmas-earrings-pins-rockwall-rain-splendid-iris": [
+      "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 2.jpg",
+      "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas pin 3.jpg",
+      "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Christmas earrings.jpg"
+    ],
+    "self-care-gifts-kaufman-beekman-pacha-mixologie": [
+      "pics oct/New arrivals 26/Beekman/IMG_0255.jpg",
+      "pics oct/New arrivals 26/Pacha/IMG_1857.jpg",
+      "pics oct/New arrivals 26/Mixology/IMG_1828.jpg"
+    ],
+    "tween-teen-gifts-forney-studio-oh-pusheen-squishies": [
+      "pics oct/Pic from gugugifts/Studio oh make up bag 2.jpg",
+      "pics oct/New arrivals 26/Pusheen/IMG_1969.jpg",
+      "pics oct/New arrivals 26/Queens Designs/IMG_0528.jpg"
+    ],
+    "hosting-gifts-rockwall-gorky-pottery-mary-square-greenleaf": [
+      "pics oct/New arrivals 26/Gorky Pottery/IMG_9113.jpg",
+      "pics oct/New arrivals 26/Mary Square/Mary Square large kitchen towels.jpg",
+      "pics oct/New arrivals 26/Greenleaf/Greenleaf Christmas candles.jpg"
+    ],
+    "faith-gifts-kaufman-county-prayer-journals-bible-covers": [
+      "pics oct/Pic from gugugifts/Mary Square bible holder 2.jpg",
+      "pics oct/Pic from gugugifts/Mary Square prayer journal 2.jpg",
+      "pics oct/New arrivals 26/Mary Square/Mary Square sermon notes.jpg"
+    ],
+    "stocking-stuffers-under-20-forney": [
+      "pics oct/New arrivals 26/TY/IMG_1964.jpg",
+      "pics oct/New arrivals 26/Well Kept/well kept christmas wipes.jpg",
+      "pics oct/Queen design squishy 12.jpg"
+    ],
+    "last-minute-christmas-gifts-terrell-free-gift-wrap": [
+      "pics oct/New arrivals 26/Voluspa/IMG_1841.jpg",
+      "pics oct/New arrivals 26/Gift bags/IMG_1873.jpg",
+      "Holiday gift sets/IMG_0097.jpg"
+    ],
+
+    "voluspa-scent-guide-choosing-the-right-candle": [
+      "pics oct/New arrivals 26/Voluspa/Voluspa Christmas candles.jpg",
+      "pics oct/New arrivals 26/Voluspa/IMG_1839.jpg",
+      "pics oct/New arrivals 26/Voluspa/IMG_1838.jpg"
+    ],
+    "why-voluspa-candles-make-the-perfect-gift": [
+      "pics oct/New arrivals 26/Voluspa/IMG_9319.jpg",
+      "pics oct/New arrivals 26/Voluspa/IMG_1840.jpg"
+    ],
+    "everyday-jewelry-under-35-terrell-rain-splendid-iris": [
+      "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Beads Bracelets 4.jpg",
+      "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 3.jpg",
+      "pics oct/New arrivals 26/Splendid Iris/Splendid Earrings Multi Set.jpg"
+    ],
+    "splendid-iris-summer-2026-preview": [
+      "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Bead bracelets 2.jpg",
+      "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Beads Bracelets 4.jpg"
+    ],
+    "swig-drinkware-gugu-gifts-terrell": [
+      "pics oct/New arrivals 26/Swig/IMG_0303.jpg",
+      "pics oct/New arrivals 26/Swig/IMG_0494.jpg",
+      "pics oct/New arrivals 26/Swig/Swig Lunch Bags 2.jpg"
+    ],
+    "ty-plush-terrell-small-gifts-under-16": [
+      "pics oct/New arrivals 26/TY/IMG_1964.jpg",
+      "pics oct/New arrivals 26/TY/IMG_1962.jpg"
+    ],
+    "greenleaf-flower-diffusers-terrell-buyers-guide": [
+      "pics oct/New arrivals 26/Greenleaf/IMG_8919.jpg",
+      "pics oct/New arrivals 26/Greenleaf/IMG_8920.jpg",
+      "pics oct/New arrivals 26/Greenleaf/IMG_8921.jpg"
+    ],
+    "fall-decor-holiday-season-preview-gugu-gifts-terrell": [
+      "pics oct/New arrivals 26/Voluspa/IMG_9343.jpg",
+      "pics oct/New arrivals 26/Pacha/IMG_9300.jpg",
+      "pics oct/New arrivals 26/Greenleaf/IMG_9333.jpg"
+    ],
+    "under-15-gifts-terrell-cards-sachets-small-things": [
+      "pics oct/New arrivals 26/Pusheen/IMG_1974.jpg",
+      "pics oct/New arrivals 26/Greenleaf/IMG_8906.jpg",
+      "pics oct/New arrivals 26/Studio Oh!/Studio oh air freshener 2.jpg"
+    ],
+    "stationery-corner-gugu-gifts-terrell": [
+      "pics oct/New arrivals 26/Pusheen/IMG_1968.jpg",
+      "pics oct/New arrivals 26/Mary Square/Mary Square prayer journal 1.jpg",
+      "pics oct/Pic from gugugifts/Studio oh pencil pouch 2.jpg"
+    ]
+  },
+  "inline": {
+    "gift-boxes/mary-square-greenleaf-desk-box": "Holiday gift sets/IMG_0072.jpg",
+    "gift-boxes/gorky-voluspa-box": "Holiday gift sets/IMG_0108.jpg",
+    "gift-boxes/pusheen-box": "Holiday gift sets/IMG_0142.jpg",
+    "gift-boxes/rudy-red-reindeer-box": "Holiday gift sets/IMG_0133.jpg",
+    "gift-boxes/western-howdy-box": "Holiday gift sets/IMG_0358.jpg",
+    "gift-boxes/swig-voluspa-box": "Holiday gift sets/IMG_0416.jpg",
+    "gift-boxes/beekman-kindness-cafe-box": "Holiday gift sets/IMG_9771.jpg",
+    "gift-boxes/wrapped-box-velvet-ribbon": "Holiday gift sets/IMG_0097.jpg",
+
+    "rain/christmas-earrings-santa-snowflake-candy-cane": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 2.jpg",
+    "rain/christmas-earrings-sweater-holly": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 3.jpg",
+    "rain/christmas-earrings-jingle-bell-peppermint-snowman": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 4.jpg",
+    "rain/christmas-pins-tree-cardinal": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas pin 3.jpg",
+    "rain/christmas-pins-stocking-pearl-tree": "pics oct/New arrivals 26/Rain Jewelry/Rain christmas pin 1.jpg",
+    "rain/boxed-snowflake-necklace-set": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas set.jpg",
+    "splendid-iris/christmas-studs-velvet-tags": "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Christmas earrings.jpg",
+    "splendid-iris/gold-bead-bracelets": "pics oct/New arrivals 26/Splendid Iris/Splendid Iris Beads Bracelets 4.jpg",
+
+    "beekman/white-chocolate-strawberry-set": "pics oct/New arrivals 26/Beekman/IMG_0255.jpg",
+    "beekman/kindness-cafe-sets": "pics oct/New arrivals 26/Beekman/IMG_0295.jpg",
+    "pacha/heritage-holiday-bath-bombs": "pics oct/New arrivals 26/Pacha/Pacha Christmas Bath bomb_.jpg",
+    "pacha/gingerbread-snowflake-bath-bombs": "pics oct/New arrivals 26/Pacha/Pacha Christmas Bath bomb_(1).jpg",
+    "pacha/12-days-of-bath-bombs": "pics oct/New arrivals 26/Pacha/Pacha 12 Day Bath Bomb.jpg",
+    "pacha/rudy-red-bath-bomb": "pics oct/New arrivals 26/Pacha/Pacha ruby bath bomb.jpg",
+    "pacha/spiced-pumpkin-golden-chai": "pics oct/New arrivals 26/Pacha/IMG_9300.jpg",
+    "mixologie/rollerball-display": "pics oct/New arrivals 26/Mixology/IMG_1832.jpg",
+    "mixologie/tiny-try-me-kit": "pics oct/New arrivals 26/Mixology/IMG_1828.jpg",
+    "voluspa/travel-trio": "pics oct/New arrivals 26/Voluspa/Voluspa set 1.jpg",
+    "voluspa/christmas-large-jars": "pics oct/New arrivals 26/Voluspa/Voluspa Christmas candles.jpg",
+    "voluspa/ornament-candles": "pics oct/New arrivals 26/Voluspa/IMG_1841.jpg",
+    "voluspa/noble-fir-ornament-candles": "pics oct/New arrivals 26/Voluspa/IMG_1842.jpg",
+    "voluspa/baltic-amber-classic": "pics oct/New arrivals 26/Voluspa/IMG_9319.jpg",
+    "voluspa/candle-wall": "pics oct/New arrivals 26/Voluspa/IMG_1837.jpg",
+
+    "studio-oh/fully-booked-makeup-bag": "pics oct/Pic from gugugifts/Studio oh make up bag 2.jpg",
+    "studio-oh/keychain-pouches": "pics oct/New arrivals 26/Studio Oh!/IMG_9061.jpg",
+    "studio-oh/car-air-fresheners": "pics oct/New arrivals 26/Studio Oh!/IMG_9081.jpg",
+    "studio-oh/nail-stickers": "pics oct/New arrivals 26/Studio Oh!/Studio oh nail stickers.jpg",
+    "pusheen/lip-balm-lotion-set": "pics oct/New arrivals 26/Pusheen/IMG_1969.jpg",
+    "pusheen/gel-pens": "pics oct/New arrivals 26/Pusheen/IMG_1968.jpg",
+    "pusheen/cards": "pics oct/New arrivals 26/Pusheen/IMG_1974.jpg",
+    "cinnamoroll/stationery": "pics oct/New arrivals 26/Cinnamon roll/IMG_1967.jpg",
+    "squishies/display": "pics oct/New arrivals 26/Queens Designs/IMG_0528.jpg",
+    "squishies/christmas-squishies": "pics oct/Queen design squishy 12.jpg",
+    "swig/mega-mugs": "pics oct/New arrivals 26/Swig/IMG_0494.jpg",
+    "swig/lunch-bags": "pics oct/New arrivals 26/Swig/Swig Lunch Bags 2.jpg",
+
+    "gorky/longhorn-platter": "pics oct/New arrivals 26/Gorky Pottery/IMG_9113.jpg",
+    "gorky/display-table": "pics oct/New arrivals 26/Gorky Pottery/IMG_9112.jpg",
+    "gorky/salt-pepper-shakers": "pics oct/New arrivals 26/Gorky Pottery/IMG_9117.jpg",
+    "gorky/donkey-salt-pepper": "pics oct/New arrivals 26/Gorky Pottery/IMG_9205.jpg",
+    "mary-square/christmas-kitchen-towels": "pics oct/New arrivals 26/Mary Square/Mary Square large kitchen towels.jpg",
+    "mary-square/christmas-dish-towels": "pics oct/New arrivals 26/Mary Square/Mary Square small kitchen towels.jpg",
+    "mary-square/prayer-journal-blue": "pics oct/New arrivals 26/Mary Square/Mary Square prayer journal 1.jpg",
+    "mary-square/prayer-journal-pink": "pics oct/Pic from gugugifts/Mary Square prayer journal 2.jpg",
+    "mary-square/sermon-notes": "pics oct/New arrivals 26/Mary Square/Mary Square sermon notes.jpg",
+    "mary-square/bible-cover-blue": "pics oct/Pic from gugugifts/Mary Square bible holder 2.jpg",
+    "mary-square/bible-cover-pink": "pics oct/Pic from gugugifts/Mary Square bible holder1.jpg",
+    "mary-square/daily-growth-journal-box": "Holiday gift sets/IMG_0159.jpg",
+    "greenleaf/christmas-tin-candles": "pics oct/New arrivals 26/Greenleaf/Greenleaf Christmas candles.jpg",
+    "greenleaf/christmas-room-sprays": "pics oct/New arrivals 26/Greenleaf/Greenleaf Christmas Room spray.jpg",
+    "greenleaf/holiday-sachets": "pics oct/New arrivals 26/Greenleaf/IMG_8906.jpg",
+    "greenleaf/gingerbread-flower-diffuser": "pics oct/New arrivals 26/Greenleaf/IMG_8919.jpg",
+    "greenleaf/snowberry-flower-diffuser": "pics oct/New arrivals 26/Greenleaf/IMG_8920.jpg",
+    "fletchers-mill/pepper-mills": "pics oct/New arrivals 26/Fletchers Mill/IMG_8858.jpg",
+
+    "ty/christmas-trio": "pics oct/New arrivals 26/TY/IMG_1964.jpg",
+    "ty/christmas-blind-ball": "pics oct/New arrivals 26/TY/IMG_1962.jpg",
+    "well-kept/christmas-screen-wipes": "pics oct/New arrivals 26/Well Kept/well kept christmas wipes.jpg",
+    "demdaco/tape-measures": "pics oct/New arrivals 26/Demdaco/IMG_9234.jpg",
+    "gift-bags/christmas-gift-bags": "pics oct/New arrivals 26/Gift bags/IMG_1873.jpg"
+  },
+  "social": {
+    "2026-10-22-gift-boxes": [
+      "Holiday gift sets/IMG_0115.jpg",
+      "Holiday gift sets/IMG_0072.jpg",
+      "Holiday gift sets/IMG_0358.jpg",
+      "Holiday gift sets/IMG_0402.jpg",
+      "Holiday gift sets/IMG_0097.jpg"
+    ],
+    "2026-10-24-voluspa-ornaments": "pics oct/New arrivals 26/Voluspa/IMG_1841.jpg",
+    "2026-10-29-rain-christmas-earrings": "pics oct/New arrivals 26/Rain Jewelry/Rain Christmas earrings 2.jpg",
+    "2026-10-31-halloween-to-christmas": "pics oct/New arrivals 26/Rain Jewelry/Rain Halloween earrings.jpg",
+    "2026-11-05-self-care-gift-boxes": [
+      "Holiday gift sets/IMG_9746.jpg",
+      "Holiday gift sets/IMG_9771.jpg",
+      "Holiday gift sets/IMG_9760.jpg",
+      "Holiday gift sets/IMG_9750.jpg"
+    ],
+    "2026-11-07-mixologie": "pics oct/New arrivals 26/Mixology/IMG_1832.jpg",
+    "2026-11-12-kids-gift-boxes": [
+      "Holiday gift sets/IMG_0142.jpg",
+      "Holiday gift sets/IMG_0133.jpg",
+      "Holiday gift sets/IMG_0138.jpg",
+      "Holiday gift sets/IMG_9773.jpg"
+    ],
+    "2026-11-13-studio-oh-teens": "pics oct/Pic from gugugifts/Studio oh make up bag 2.jpg",
+    "2026-11-14-gift-boxes-for-her": [
+      "Holiday gift sets/IMG_0416.jpg",
+      "Holiday gift sets/IMG_0188.jpg",
+      "Holiday gift sets/IMG_0447.jpg",
+      "Holiday gift sets/IMG_0376.jpg"
+    ],
+    "2026-11-19-gorky-longhorn": "pics oct/New arrivals 26/Gorky Pottery/IMG_9113.jpg",
+    "2026-11-21-mary-square-towels": "pics oct/New arrivals 26/Mary Square/Mary Square large kitchen towels.jpg",
+    "2026-11-24-gorky-shakers": "pics oct/New arrivals 26/Gorky Pottery/IMG_9205.jpg",
+    "2026-11-25-prayer-journals": "pics oct/Pic from gugugifts/Mary Square prayer journal 2.jpg",
+    "2026-11-28-small-business-saturday": "pics oct/New arrivals 26/Gorky Pottery/IMG_9112.jpg",
+    "2026-12-03-pacha-12-days": "pics oct/New arrivals 26/Pacha/Pacha 12 Day Bath Bomb.jpg",
+    "2026-12-04-ty-stocking-stuffers": "pics oct/New arrivals 26/TY/IMG_1964.jpg",
+    "2026-12-05-christmas-squishies": "pics oct/Queen design squishy 12.jpg",
+    "2026-12-10-rain-christmas-pins": "pics oct/New arrivals 26/Rain Jewelry/Rain christmas pin 1.jpg",
+    "2026-12-12-swig-mega-mug": "pics oct/New arrivals 26/Swig/IMG_0494.jpg",
+    "2026-12-17-free-gift-wrap": "pics oct/New arrivals 26/Gift bags/IMG_1873.jpg",
+    "2026-12-19-voluspa-travel-trio": "pics oct/New arrivals 26/Voluspa/Voluspa set 1.jpg",
+    "2026-12-22-last-days": "pics oct/New arrivals 26/Well Kept/well kept christmas wipes.jpg"
+  },
+  "rejected": {
+    "pics oct/Rain christmas earrings 6-18.jpg, Rain earrings 2-4(1).jpg, Rain christmas pin 7-8.jpg": "display shots out of focus; the Rain Jewelry/ flat-lays show the same pieces sharply",
+    "pics oct/ty *.jpg, tyh *.jpg": "motion/focus blur; TY/IMG_1964 and IMG_1962 cover the same plush",
+    "pics oct/New arrivals 26/Rain Jewelry/IMG_8813-8844.jpg": "staff mirror selfies; IMG_8825 shows a face unobscured. Not used without consent",
+    "pics oct/New arrivals 26/Pretty Simple/IMG_8864-8972.jpg": "staff mirror selfies modelling bags; product shots used instead where needed",
+    "pics oct/New arrivals 26/Beekman/IMG_1984-1988.jpg, Beekman Hand Cream.jpg, Beekman lip chap.jpg": "soft focus",
+    "pics oct/New arrivals 26/Gorky Pottery/IMG_9120, IMG_9124, IMG_9160.jpg": "motion blur",
+    "pics oct/New arrivals 26/Swig/IMG_1859, IMG_1861.jpg": "out of focus",
+    "Holiday gift sets/IMG_0094(1), IMG_0097(1), IMG_0098(1).jpg; Cinnamon roll/IMG_1970(1).jpg": "byte-identical duplicates"
+  }
+}

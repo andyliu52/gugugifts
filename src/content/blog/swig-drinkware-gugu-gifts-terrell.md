@@ -15,6 +15,8 @@ Here's what we keep in stock at **Gugu Gifts**.
 
 ## The Tumblers & Mega Mugs
 
+![Swig Mega Mugs in tile, hydrangea and cherry prints, Gugu Gifts, Terrell TX](/images/products/swig/mega-mugs.jpg)
+
 The big insulated tumblers and mega mugs are the heart of the line — triple-insulated stainless steel that keeps cold drinks cold for hours, in patterns that range from sweet (the smiley-face print) to grown-up neutrals. These are the cup that lives in the car cupholder and goes everywhere.
 
 ## The Water Bottles
@@ -22,6 +24,8 @@ The big insulated tumblers and mega mugs are the heart of the line — triple-in
 The insulated water bottles are the everyday workhorse — gym, desk, sideline, school pickup. We stock kid-friendly camo and rainbow prints alongside cleaner adult colors, so you can gift up and down an age range from the same shelf.
 
 ## The Lunch Bags & Coolers
+
+![Swig nurse-print lunch bag, Gugu Gifts, Terrell TX](/images/products/swig/lunch-bags.jpg)
 
 The insulated lunch bags and totes round it out — the nurse-print and healthcare patterns are a particular favorite for the medical folks in Kaufman County, and they make an easy "thinking of you" for anyone who packs a lunch or a bottle for the day.
 

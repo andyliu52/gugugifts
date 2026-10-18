@@ -58,3 +58,10 @@ social/*
 # knowledge and should survive a fresh clone
 .claude/*
 !.claude/skills/
+
+# python venv for scripts/render_card.py
+.venv/
+
+# raw phone photos belong in ~/gugupics, never in public/ (they ship with the deploy)
+public/images/pics oct/
+public/images/Holiday gift sets/

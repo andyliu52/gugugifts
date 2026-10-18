@@ -34,7 +34,15 @@ const STATE = path.join(ROOT, 'social', '.ghl-posted.json');
 // Platform caption ceilings. The reference implementation enforced none, and
 // post-to-google-business.mjs silently truncates at 1500 — mid-sentence
 // truncation in marketing copy is worse than a build failure.
-const LIMITS = { facebook: 63206, instagram: 2200, google: 1500 };
+const LIMITS = { facebook: 63206, instagram: 2200, google: 1500, tiktok: 2200 };
+
+// A post's images: `images` (a carousel) or the single `image`.
+const imagesOf = p => p.images || (p.image ? [p.image] : []);
+
+// TikTok gets the hashtags; the other channels get the plain caption.
+const captionFor = (p, pl) => pl === 'google' ? (p.gbpCaption || p.caption)
+  : pl === 'tiktok' && p.hashtags?.length ? `${p.caption}\n\n${p.hashtags.map(h => `#${h}`).join(' ')}`
+  : p.caption;
 
 const VALID_ACTION_TYPES = new Set([
   'none', 'order', 'book', 'shop', 'learn_more', 'call', 'sign_up',
@@ -85,14 +93,16 @@ function validate(doc, snapshot, accounts) {
     if (!platforms.length) errs.push(`${at}: no platforms`);
     for (const pl of platforms) {
       if (!accounts[pl]) errs.push(`${at}: no connected account for platform "${pl}"`);
-      const cap = pl === 'google' ? (p.gbpCaption || p.caption) : p.caption;
+      const cap = captionFor(p, pl);
       const limit = LIMITS[pl];
       if (limit && cap && cap.length > limit) {
         errs.push(`${at}: ${pl} caption is ${cap.length} chars, limit ${limit}`);
       }
     }
 
-    if (!p.image?.url) errs.push(`${at}: no image url`);
+    const imgs = imagesOf(p);
+    if (!imgs.length || imgs.some(i => !i?.url)) errs.push(`${at}: no image url`);
+    if (imgs.length > 10) errs.push(`${at}: ${imgs.length} images; Instagram carousels cap at 10`);
 
     const cta = p.cta || doc.defaults?.cta;
     if (cta) {
@@ -132,9 +142,13 @@ function buildDto(p, doc, creds, platforms) {
   const accountIds = platforms.map(pl => creds.accounts[pl]);
   const time = p.time || doc.defaults?.time || '17:00:00';
   const scheduleDate = scheduleIso(p.date, time, creds.timezone);
-  const summary = platforms.length === 1 && platforms[0] === 'google'
-    ? (p.gbpCaption || p.caption)
-    : p.caption;
+  // Batches are either one channel or the combined FB/IG/GBP set, so the
+  // caption of the first platform is the caption of the batch.
+  const summary = captionFor(p, platforms[0]);
+
+  // Google gets one image even from a carousel: whether GBP accepts several
+  // through GHL is unverified, and run() gives it its own batch.
+  const imgs = platforms.length === 1 && platforms[0] === 'google' ? imagesOf(p).slice(0, 1) : imagesOf(p);
 
   const dto = {
     accountIds,
@@ -143,13 +157,29 @@ function buildDto(p, doc, creds, platforms) {
     // with "Invalid media format type"; only image/jpeg and image/jpg pass.
     // Note draft posts accept anything here — the validation only runs for
     // status: 'scheduled', so a draft round-trip does NOT prove the shape.
-    media: [{ url: p.image.url, type: 'image/jpeg' }],
+    media: imgs.map(i => ({ url: i.url, type: 'image/jpeg' })),
     status: 'scheduled',
     type: 'post',
     scheduleDate,
     userId: creds.userId,
   };
   if (p.tags?.length) dto.tags = p.tags;
+
+  // UNVERIFIED until the first --only probe: the SDK types tiktokPostDetails
+  // as `any`. privacyLevel follows TikTok's own Content Posting API values.
+  // promoteYourBrand is TikTok's commercial-content disclosure, which applies
+  // to a shop posting its own products.
+  if (platforms.includes('tiktok')) {
+    dto.tiktokPostDetails = {
+      privacyLevel: 'PUBLIC_TO_EVERYONE',
+      enableComment: true,
+      enableDuet: false,
+      enableStitch: false,
+      promoteYourBrand: true,
+      promoteOtherBrand: false,
+      ...doc.defaults?.tiktok,
+    };
+  }
 
   // Google Business Profile carries the CTA / offer. Facebook and Instagram
   // have no equivalent field and ignore it, so it is safe to send on a
@@ -219,21 +249,36 @@ async function main() {
       .filter(pl => !opts.platforms || opts.platforms.includes(pl));
     if (!platforms.length) continue;
 
-    // A distinct Google caption forces a split; otherwise one combined post.
-    const batches = p.gbpCaption && platforms.includes('google')
-      ? [platforms.filter(pl => pl !== 'google'), ['google']].filter(b => b.length)
-      : [platforms];
+    // One combined post unless a channel needs different content:
+    //  - TikTok always goes alone. Its payload is unverified, and one bad
+    //    account in accountIds must not take FB/IG/GBP down with it.
+    //  - Google goes alone with a distinct gbpCaption, or for a carousel
+    //    (it is sent the first image only).
+    // Keys of already-posted batches never change, since a post that doesn't
+    // use these fields batches exactly as before.
+    const alone = new Set(platforms.filter(pl => pl === 'tiktok'
+      || (pl === 'google' && (p.gbpCaption || imagesOf(p).length > 1))));
+    const batches = [platforms.filter(pl => !alone.has(pl)), ...[...alone].map(pl => [pl])]
+      .filter(b => b.length);
 
     for (const batch of batches) {
       const key = `${p.id}::${batch.join('+')}`;
       if (state.posted[key]) { skipped++; continue; }
 
       const dto = buildDto(p, doc, creds, batch);
+      // A past scheduleDate would publish immediately (or fail), and adding a
+      // channel to an old post must not back-post it.
+      if (Date.parse(dto.scheduleDate) < Date.now()) {
+        console.log(`PAST ${p.id.padEnd(30)} ${batch.join('+').padEnd(28)} ${dto.scheduleDate}, not scheduling`);
+        skipped++;
+        continue;
+      }
       const when = describeSchedule(p.date, p.time || doc.defaults?.time || '17:00:00', creds.timezone);
 
       if (!opts.commit) {
         console.log(`DRY  ${p.id.padEnd(30)} ${batch.join('+').padEnd(28)} ${when}`);
         console.log(`     ${dto.summary.split('\n')[0].slice(0, 90)}`);
+        if (dto.media.length > 1) console.log(`     carousel, ${dto.media.length} images`);
         if (dto.gmbPostDetails) console.log(`     CTA ${dto.gmbPostDetails.actionType} -> ${dto.gmbPostDetails.url || ''}`);
         scheduled++;
         continue;

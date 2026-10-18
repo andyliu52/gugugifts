@@ -17,6 +17,8 @@ This is the price band where jewelry stops being an occasion and starts being so
 
 ## Rain Jewelry — from $13
 
+![Rain Jewelry holiday earrings, Gugu Gifts, Terrell TX](/images/products/rain/christmas-earrings-sweater-holly.jpg)
+
 Sixty-four pairs of earrings in stock, plus necklaces and bracelets. Rain leans **silver and oxidized finishes with Southwestern and nature motifs** — the kind of thing that reads as Texas without being a longhorn.
 
 What's in right now:
@@ -32,6 +34,8 @@ Necklaces run **$20–$33**, bracelets **$19** and up.
 **Who it's for:** someone who wears the same two pairs constantly and needs a third. Under $20 means you can buy it without a reason.
 
 ## Splendid Iris — from $18
+
+![Splendid Iris studs on red velvet gift tags, Gugu Gifts, Terrell TX](/images/products/splendid-iris/christmas-studs-velvet-tags.jpg)
 
 Seventy-eight pairs of earrings, plus necklaces, rings, bracelets and bangles. Splendid Iris skews **gold, cleaner, more classic** — huggies, thin hoops, studs. Less pattern, more shape.
 

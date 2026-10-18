@@ -385,6 +385,69 @@
       }
     },
     {
+      "id": "2026-10-22-gift-boxes",
+      "groupId": null,
+      "date": "2026-10-22",
+      "itemIds": [
+        "SVXF6J6XF7WXQMOUAJIZCG3R",
+        "AUO6ZGDHDBZEGKVHIEYJP7ZA",
+        "EY7GKE42YHUCVSU2KBYXVN6O",
+        "6AZH5EVM6SCULND5HIHKQRXJ",
+        "75GA4HRBVRJYNAIAFN65XLOZ",
+        "K3KBCD2L6OSV2AUKAQLXXJFH",
+        "PAPOGRL2FXO7MAVWYTMR3CKW",
+        "NBY72GR2LLS5PUFAB5XA5PTV",
+        "PKHFFJYAMVJMS7YRPV6IG3WQ",
+        "BUCHQSYOALN5QOD7BTOX2F6R",
+        "KPSKTSPZQWGHNYMGMQUFLEC5",
+        "EIDKAPVS7QNWVVAS5FQWEQJ3"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "We've been building gift boxes out of what's on our shelves.\n\nA Mary Square notepad, a pen and a Gingerbread sachet — about $20.\nGorky González turtle shakers, a bird plate and a Voluspa tin — about $65.\nA Western one with our Howdy and cowboy boot dishes.\n\nBring a budget and a name. We'll help you put one together and wrap it free. The pieces that make these work come in small numbers, so earlier is better.\n\nThe Shops at Terrell, I-20 Exit 501.",
+      "hashtags": [
+        "GiftBox",
+        "ChristmasGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "images": [
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-10-22-gift-boxes-1.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-10-22-gift-boxes-2.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-10-22-gift-boxes-3.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-10-22-gift-boxes-4.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-10-22-gift-boxes-5.jpg"
+        }
+      ],
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/holiday-gift-boxes-shops-at-terrell"
+      }
+    },
+    {
       "id": "2026-10-23-faire",
       "groupId": "faire",
       "date": "2026-10-23",
@@ -405,6 +468,42 @@
       }
     },
     {
+      "id": "2026-10-24-voluspa-ornaments",
+      "groupId": null,
+      "date": "2026-10-24",
+      "itemIds": [
+        "QOSIXWZC2JEMWRWC6OTDSONX",
+        "P5XYQOJWWAYQOYP3JLBSN2KK",
+        "V4ZFMOBT4RXPGDSZHHU2SFQD"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Voluspa's ornament candles are in. Noble Fir Garland, Crushed Candy Cane and Gingerbread Chalet, $18 each.\n\nThey come boxed, with a ribbon loop so they hang on the tree. The coworker gift, sorted.",
+      "hashtags": [
+        "Voluspa",
+        "ChristmasGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-10-24-voluspa-ornaments.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/voluspa-scent-guide-choosing-the-right-candle"
+      }
+    },
+    {
       "id": "2026-10-27-cardthartic",
       "groupId": "cardthartic",
       "date": "2026-10-27",
@@ -417,6 +516,79 @@
       "cta": {
         "actionType": "learn_more",
         "actionUrl": "https://www.gugugifts.com/blog/under-15-gifts-terrell-cards-sachets-small-things"
+      }
+    },
+    {
+      "id": "2026-10-29-rain-christmas-earrings",
+      "groupId": null,
+      "date": "2026-10-29",
+      "itemIds": [
+        "GGML2THJOODROHOY3OFII3OE",
+        "C5OXMWCLFSTEG7ZHFZSACEPU",
+        "6PHCS5WSQCWDM5TT2Q73QXCY",
+        "YAK7ZTZG7AVLWIBDE3ENRU3I"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "The Christmas earrings are out.\n\nRain Jewelry Santas, snowflakes, candy canes and ugly sweaters, $15 to $20. Most designs are one or two deep, so if you see the pair, that may be the pair.\n\nAbout 25 minutes from Rockwall.",
+      "hashtags": [
+        "ChristmasEarrings",
+        "RainJewelry",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-10-29-rain-christmas-earrings.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/christmas-earrings-pins-rockwall-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-10-31-halloween-to-christmas",
+      "groupId": null,
+      "date": "2026-10-31",
+      "itemIds": [
+        "RL6LBYPQJO6VAHEG655MD5Q7",
+        "V3LA2KJSVM66ZV22CE7CDKXV",
+        "GXQC4VPOFWBAZQ2TAZJTT5DF"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Last day for the Halloween earrings. Pumpkins, skeletons and Boo, $15 to $23.\n\nTomorrow the case turns over to Christmas. Open today until 7.",
+      "hashtags": [
+        "Halloween",
+        "RainJewelry",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-10-31-halloween-to-christmas.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/christmas-earrings-pins-rockwall-rain-splendid-iris"
       }
     },
     {
@@ -444,6 +616,59 @@
       }
     },
     {
+      "id": "2026-11-05-self-care-gift-boxes",
+      "groupId": null,
+      "date": "2026-11-05",
+      "itemIds": [
+        "OHIJCQALJRDJBOFEO57F6WW5",
+        "VIOL2DNKIPSPKP5WX5I4LFUA",
+        "MGWU74JTYA6YRF4UNQJAZZQW",
+        "WNJTGG6Y43BI2RTAJADP5IML",
+        "TWNKZVJH76NMPHOARNMG7XJS"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Gift boxes for anyone who needs a long bath.\n\nBeekman 1802's White Chocolate Strawberry set ($36), a Pacha bath bomb ($9), a Greenleaf candle, and a Ty plush sitting on top. Most of these land between $50 and $80.\n\nWe'll build one with you and wrap it free.",
+      "hashtags": [
+        "GiftBox",
+        "SelfCare",
+        "Beekman1802",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "images": [
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-05-self-care-gift-boxes-1.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-05-self-care-gift-boxes-2.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-05-self-care-gift-boxes-3.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-05-self-care-gift-boxes-4.jpg"
+        }
+      ],
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/self-care-gifts-kaufman-beekman-pacha-mixologie"
+      }
+    },
+    {
       "id": "2026-11-06-rain-jewelry-bracelet",
       "groupId": "rain-jewelry-bracelet",
       "date": "2026-11-06",
@@ -461,6 +686,43 @@
         "imageId": "OC663CVCQXKYVPV6KXQZDKXW",
         "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/519dc9f01c3a180e3c1dbbd614124e7272602e16/original.jpeg",
         "itemName": "Silver Design 6 Pack Metal Stretch Bracelets"
+      }
+    },
+    {
+      "id": "2026-11-07-mixologie",
+      "groupId": null,
+      "date": "2026-11-07",
+      "itemIds": [
+        "BQERQDP32Z7MTCCAP7FUEPOZ",
+        "LWAUHBGGCMXTM3HWNB3IMXZP",
+        "FVEINSH6CBRW6L4UUNO4TRSV",
+        "RVM6ZHMETINJNNK7EYJCZG7Z"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Twelve rollerball perfumes from Mixologie, $20 each, no alcohol. Glow, Tempted, Tenacious, Sensual, Adrift and the rest.\n\nCan't pick one for her? The Tiny Try Me Kit is also $20, and she can find her own.",
+      "hashtags": [
+        "Mixologie",
+        "PerfumeGift",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-07-mixologie.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/self-care-gifts-kaufman-beekman-pacha-mixologie"
       }
     },
     {
@@ -488,6 +750,154 @@
       }
     },
     {
+      "id": "2026-11-12-kids-gift-boxes",
+      "groupId": null,
+      "date": "2026-11-12",
+      "itemIds": [
+        "YGAQCEMHDTCQHKKVK4QIENN2",
+        "PG7RDKICPZXDERNQMBLYXZWK",
+        "JFZPUAUCQA7GC7Z2LHEQ4RJG",
+        "ODITUWU6EAKWWNAB6UTVSQDZ",
+        "YYZQDB2KUOOAOYOIEFFC6RGY",
+        "MFZC6OIYGHN6YWYXLQZB6FYF",
+        "C5E5OOOF76XBDDJRBMTXMJPT",
+        "WYFQCBV2XDZWHXENKPSOSQQ6"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Kid-size gift boxes, about $25 to $40.\n\nPusheen gel pens, lip balm and nail stickers. Rudy Red the reindeer bath bomb with a Splendid Iris reindeer necklace. Frothy the Snowman with a Christmas tree necklace.\n\nBuilt from our shelves, wrapped free.",
+      "hashtags": [
+        "GiftBox",
+        "KidsGifts",
+        "Pusheen",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "images": [
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-12-kids-gift-boxes-1.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-12-kids-gift-boxes-2.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-12-kids-gift-boxes-3.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-12-kids-gift-boxes-4.jpg"
+        }
+      ],
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/holiday-gift-boxes-shops-at-terrell"
+      }
+    },
+    {
+      "id": "2026-11-13-studio-oh-teens",
+      "groupId": null,
+      "date": "2026-11-13",
+      "itemIds": [
+        "26A4W3US3ITXUASXGUUUVF4X",
+        "JYN5AXDH7EJN27SB4KJ5CU2O",
+        "EMBZTVIZWVQLUS6HPGRUPYDH"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "For the reader: Studio Oh!'s Cozy Reads cosmetics bag, $22. Jane Eyre, Pride and Prejudice, Heidi.\n\nThe keychain pouches are $9 and clip to a backpack. The whole teen wall is about 15 minutes from Forney.",
+      "hashtags": [
+        "StudioOh",
+        "TeenGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-13-studio-oh-teens.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/tween-teen-gifts-forney-studio-oh-pusheen-squishies"
+      }
+    },
+    {
+      "id": "2026-11-14-gift-boxes-for-her",
+      "groupId": null,
+      "date": "2026-11-14",
+      "itemIds": [
+        "6X6HH2BE6VY7WCQHDS5YBSUV",
+        "64RKILG73OAHY3JDROZL4NN7",
+        "LDLDIZI2ABMRGV3MSNNRQMFD",
+        "NAYLFMKEQRAG4A4MAKOQXFYS",
+        "6NFY6B7O754GFTYLKQ7G2KME",
+        "SRXMPLYHEULO3RA4SL2QOIQQ",
+        "4TKF7J4ISEN3FU7L2HBFRWSE",
+        "TXLRL2HJA5QIGIIZEKA2IXT4"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Gift boxes for her.\n\nA Swig hydrangea Mega Mug with a manicure set and a Voluspa tin, around $90, or about $60 without the manicure set.\nA lavender wristlet with Beekman lavender soap and hand cream.\nA Demdaco travel jewelry case with a necklace.\nCow print and Howdy, for the Western one.\n\nThese pieces are only a few deep. Come in and we'll build it with you.",
+      "hashtags": [
+        "GiftBox",
+        "GiftsForHer",
+        "Swig",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "images": [
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-14-gift-boxes-for-her-1.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-14-gift-boxes-for-her-2.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-14-gift-boxes-for-her-3.jpg"
+        },
+        {
+          "source": "site",
+          "url": "https://www.gugugifts.com/images/social/2026-11-14-gift-boxes-for-her-4.jpg"
+        }
+      ],
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/holiday-gift-boxes-shops-at-terrell"
+      }
+    },
+    {
       "id": "2026-11-17-voluspa",
       "groupId": "voluspa",
       "date": "2026-11-17",
@@ -508,6 +918,193 @@
       }
     },
     {
+      "id": "2026-11-19-gorky-longhorn",
+      "groupId": null,
+      "date": "2026-11-19",
+      "itemIds": [
+        "YSJIFVBYDDLE4WP42A67HXP2",
+        "PKHFFJYAMVJMS7YRPV6IG3WQ",
+        "ZIAS4NLLJTKIC3E6FQ2Z2TO5",
+        "NBY72GR2LLS5PUFAB5XA5PTV"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Gorky González, hand-painted in Guanajuato. The Longhorn platter is $132, and there's one.\n\nThe mini animal plates are $16, the salt and pepper sets $28 to $32. Thanksgiving is a week out.",
+      "hashtags": [
+        "GorkyGonzalez",
+        "HostessGift",
+        "Thanksgiving",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-19-gorky-longhorn.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/hosting-gifts-rockwall-gorky-pottery-mary-square-greenleaf"
+      }
+    },
+    {
+      "id": "2026-11-21-mary-square-towels",
+      "groupId": null,
+      "date": "2026-11-21",
+      "itemIds": [
+        "7NJJODX3G64CL6GON4F4CGXE",
+        "XLMKESN346G4Y2A6GJW2TZUR",
+        "J2FXGMQOCLOY2AWQLQPULPZW",
+        "HHT6XIVY4KS67R72HIE5G2VB",
+        "WNJTGG6Y43BI2RTAJADP5IML",
+        "YRGUR27U7YG5RAXYC5VWB7L3",
+        "W6JIUCG76OKXEGVJL2ODTIQH",
+        "NL2Q3XG7CAR62455XXMMM3AD"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Friendsgiving weekend. The hostess gift that gets used on the day: Mary Square quick-dry Christmas kitchen towels, $14, or the dish towel bundles at $11.\n\nAdd a $15 Greenleaf candle and you're done.",
+      "hashtags": [
+        "HostessGift",
+        "Friendsgiving",
+        "MarySquare",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-21-mary-square-towels.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/hosting-gifts-rockwall-gorky-pottery-mary-square-greenleaf"
+      }
+    },
+    {
+      "id": "2026-11-24-gorky-shakers",
+      "groupId": null,
+      "date": "2026-11-24",
+      "itemIds": [
+        "NBY72GR2LLS5PUFAB5XA5PTV",
+        "VFT46DZV35AUZL3RANPOT5G3",
+        "ZIAS4NLLJTKIC3E6FQ2Z2TO5"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Two days to Thanksgiving. Hand-painted Gorky González salt and pepper sets: turtles, donkeys, sheep. $28 to $32, wrapped free.\n\nOpen today and tomorrow, 10 to 7.",
+      "hashtags": [
+        "GorkyGonzalez",
+        "Thanksgiving",
+        "HostessGift",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-24-gorky-shakers.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/hosting-gifts-rockwall-gorky-pottery-mary-square-greenleaf"
+      }
+    },
+    {
+      "id": "2026-11-25-prayer-journals",
+      "groupId": null,
+      "date": "2026-11-25",
+      "itemIds": [
+        "ZTKRJLUSQD3EVYSCFXQCILGW",
+        "LV4G53P5DOKV522NWBOGO2TW",
+        "QEWZD7MB5N6RSKW5THMYKAUI",
+        "WKTDWYD3LHU2BWMHVNRCGHGF"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Mary Square's prayer journal has daily pages for your worries, praises, prayers and God's promises. $19, in pink or blue.\n\nSermon Notes is $18. For the Sunday school teacher, the small group, and Grandma.",
+      "hashtags": [
+        "FaithGifts",
+        "PrayerJournal",
+        "MarySquare",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-25-prayer-journals.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/faith-gifts-kaufman-county-prayer-journals-bible-covers"
+      }
+    },
+    {
+      "id": "2026-11-28-small-business-saturday",
+      "groupId": null,
+      "date": "2026-11-28",
+      "itemIds": [],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Small Business Saturday at The Shops at Terrell.\n\nGugu Gifts is in Suite 112: Gorky González pottery, Voluspa, Beekman 1802, Rain and Splendid Iris jewelry, Swig, and a lot of Ty. Everything is wrapped free.\n\nOpen today 10 to 7. I-20 Exit 501.",
+      "hashtags": [
+        "SmallBusinessSaturday",
+        "ShopLocal",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-11-28-small-business-saturday.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/visiting-the-shops-at-terrell-gift-shop-guide"
+      }
+    },
+    {
       "id": "2026-12-01-cardthartic",
       "groupId": "cardthartic",
       "date": "2026-12-01",
@@ -520,6 +1117,111 @@
       "cta": {
         "actionType": "learn_more",
         "actionUrl": "https://www.gugugifts.com/blog/under-15-gifts-terrell-cards-sachets-small-things"
+      }
+    },
+    {
+      "id": "2026-12-03-pacha-12-days",
+      "groupId": null,
+      "date": "2026-12-03",
+      "itemIds": [
+        "ZZBGY566ACJLTGHDGVNF4VSR"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Pacha's 12 Days of Bath Bombs, $33. An advent calendar for someone who'd rather have a bath than a chocolate.\n\nStart it on the 25th and it runs into January.",
+      "hashtags": [
+        "PachaSoap",
+        "BathBombs",
+        "ChristmasGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-03-pacha-12-days.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/self-care-gifts-kaufman-beekman-pacha-mixologie"
+      }
+    },
+    {
+      "id": "2026-12-04-ty-stocking-stuffers",
+      "groupId": null,
+      "date": "2026-12-04",
+      "itemIds": [
+        "TWNKZVJH76NMPHOARNMG7XJS",
+        "M5ZOA7BW2263QQ5GPRQIYWEU",
+        "4KD3Z5YITDCGNLM4J5GEY3N5"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Gingerbread Holly, Snowman Jake and Gouda Mouse. Ty, $6.99 each.\n\nOur stocking stuffer guide is up: everything under $20, most of it under $10. 15 minutes east of Forney on I-20.",
+      "hashtags": [
+        "StockingStuffers",
+        "Ty",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-04-ty-stocking-stuffers.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/stocking-stuffers-under-20-forney"
+      }
+    },
+    {
+      "id": "2026-12-05-christmas-squishies",
+      "groupId": null,
+      "date": "2026-12-05",
+      "itemIds": [
+        "XIZXXQL4V47UZX23GFV5BZNB"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Christmas squishies, $10. Santa, a reindeer, a snowman and a tree.\n\nLabeled 3+. Bought mostly by 12-year-olds and adults with stressful jobs.",
+      "hashtags": [
+        "StockingStuffers",
+        "Squishies",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-05-christmas-squishies.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/stocking-stuffers-under-20-forney"
       }
     },
     {
@@ -547,6 +1249,77 @@
       }
     },
     {
+      "id": "2026-12-10-rain-christmas-pins",
+      "groupId": null,
+      "date": "2026-12-10",
+      "itemIds": [
+        "2BEXOCSL2UXQDR4ACQCSWB4A",
+        "C2DZCLKHNGS74NLG4FJLK6W7",
+        "SU7B6YRFTMDKJI5IIZVJH4HH"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Christmas pins are back. The pearl tree is $23, the stocking $20, the cardinal birdhouse $25.\n\nThe gift for Grandma that she'll wear to church this Sunday.",
+      "hashtags": [
+        "ChristmasJewelry",
+        "RainJewelry",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-10-rain-christmas-pins.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/christmas-earrings-pins-rockwall-rain-splendid-iris"
+      }
+    },
+    {
+      "id": "2026-12-12-swig-mega-mug",
+      "groupId": null,
+      "date": "2026-12-12",
+      "itemIds": [
+        "6X6HH2BE6VY7WCQHDS5YBSUV",
+        "64RKILG73OAHY3JDROZL4NN7"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Swig's 30 oz Mega Mug, $44. Tile, hydrangea, cherry.\n\nThe gift for anyone who already carries a tumbler everywhere, which is most of Kaufman County. Wrapped free.",
+      "hashtags": [
+        "Swig",
+        "ChristmasGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-12-swig-mega-mug.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/swig-drinkware-gugu-gifts-terrell"
+      }
+    },
+    {
       "id": "2026-12-15-julie-vos",
       "groupId": "julie-vos",
       "date": "2026-12-15",
@@ -561,6 +1334,107 @@
       "image": {
         "source": "site",
         "url": "https://www.gugugifts.com/images/blog/inside-gugu-gifts-terrell-photo-tour.jpg"
+      }
+    },
+    {
+      "id": "2026-12-17-free-gift-wrap",
+      "groupId": null,
+      "date": "2026-12-17",
+      "itemIds": [],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Eight days. Everything we sell gets wrapped free at the counter. Walk in, pick, walk out with it done.\n\nOpen Tuesday to Saturday 10 to 7, Sunday 11 to 6. Closed Monday the 21st.",
+      "hashtags": [
+        "LastMinuteGifts",
+        "GiftWrap",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-17-free-gift-wrap.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/last-minute-christmas-gifts-terrell-free-gift-wrap"
+      }
+    },
+    {
+      "id": "2026-12-19-voluspa-travel-trio",
+      "groupId": null,
+      "date": "2026-12-19",
+      "itemIds": [
+        "D5RYEIODOVJZSGYGC4JWS5Y7"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Last Saturday before Christmas.\n\nVoluspa's Fruit & Floral Travel Trio, three eau de parfums in a holiday box, $42. Already boxed, and we'll wrap it anyway. Open until 7.",
+      "hashtags": [
+        "Voluspa",
+        "LastMinuteGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-19-voluspa-travel-trio.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/last-minute-christmas-gifts-terrell-free-gift-wrap"
+      }
+    },
+    {
+      "id": "2026-12-22-last-days",
+      "groupId": null,
+      "date": "2026-12-22",
+      "itemIds": [
+        "6VVJRKKZGV64UE3VAFJYWOQH",
+        "BJY6PPN5QFKPKEKJGWLDGPH4"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google",
+        "tiktok"
+      ],
+      "caption": "Open today and tomorrow, 10 to 7.\n\nWell Kept screen wipes in Ho Ho Cocoa and plaid, $7. The stocking stuffer for everyone who owns a phone.\n\nEverything wrapped free.",
+      "hashtags": [
+        "StockingStuffers",
+        "LastMinuteGifts",
+        "TerrellTX",
+        "ShopsAtTerrell",
+        "ForneyTX",
+        "RockwallTX",
+        "KaufmanTX",
+        "ShopSmall",
+        "GiftShop"
+      ],
+      "image": {
+        "source": "site",
+        "url": "https://www.gugugifts.com/images/social/2026-12-22-last-days.jpg"
+      },
+      "cta": {
+        "actionType": "learn_more",
+        "actionUrl": "https://www.gugugifts.com/blog/last-minute-christmas-gifts-terrell-free-gift-wrap"
       }
     }
   ]

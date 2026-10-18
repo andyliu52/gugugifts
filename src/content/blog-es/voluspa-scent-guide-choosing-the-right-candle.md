@@ -19,6 +19,8 @@ El tamaño más común de regalo es la vela clásica de **5.5 oz** alrededor de 
 
 ## Escoge Por Personalidad
 
+![Pared de velas Voluspa, Gugu Gifts, Terrell TX](/images/products/voluspa/candle-wall.jpg)
+
 ### "Tiene un gusto impecable, casi me intimida"
 **Lychee** (actualmente en estante a $22). Brillante, ligeramente floral, ligeramente afrutada, completamente sofisticada. Upgrade universal sobre cualquier vela del súper.
 
@@ -55,11 +57,13 @@ Si estás comprando para alguien que prende velas todos los días, Greenleaf y B
 
 Una vela Voluspa sola es un regalo completo. Si quieres subir el nivel:
 
-- **Agrega un sobrecito Greenleaf ($3)** — extiende el aroma del cajón, casi no cuesta, se ve generoso
+- **Agrega un sobrecito Greenleaf ($1.50)** — extiende el aroma del cajón, casi no cuesta, se ve generoso
 - **Agrega una tarjeta de letterpress** (las tenemos en la caja)
 - **Salta la caja**, usa listón — el frasco de Voluspa es el visual
 
 ## Cuándo Comprar
+
+![Velas ornamento Voluspa en caja, Gugu Gifts, Terrell TX](/images/products/voluspa/ornament-candles.jpg)
 
 No esperes. Las rotaciones de aromas de Voluspa se mueven; el que recuerdas de la primavera pasada puede ya no estar para cuando llegues. Si tiene un aroma que le encanta, agárralo ahora y dinos; te lo apartamos si nuestro inventario lo permite.
 

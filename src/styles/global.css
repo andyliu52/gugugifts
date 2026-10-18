@@ -139,6 +139,18 @@ body {
   color: var(--color-warmgray);
 }
 
+/* Inline product photos are phone portraits; cap the height so one photo
+   doesn't fill the whole screen. */
+.prose img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 560px;
+  margin: 1.75rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgb(84 80 74 / 0.12);
+}
+
 .prose hr {
   border: none;
   height: 1px;

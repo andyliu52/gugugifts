@@ -18,6 +18,8 @@ Mantenemos cerca de **60 peluches Ty** en existencia, de **$6.99 a $15.99**. Es,
 
 ## Qué Hay
 
+![Ty Gingerbread Holly, Snowman Jake y Gouda Mouse, Gugu Gifts, Terrell TX](/images/products/ty/christmas-trio.jpg)
+
 La mayor parte de la pared está en **$6.99** — los animales tamaño regular y Beanie Bounce:
 
 - **MUDDLES** — perro café con blanco
@@ -57,6 +59,8 @@ Ty no es lo único que resuelve esto. Ya que andas por acá:
 Genuinamente puedes llenar cinco botas aquí por menos de $60 y que nada se vea como relleno.
 
 ## Una Nota Sobre el Momento
+
+![Ty Christmas Blind Ball, peluche sorpresa, Gugu Gifts, Terrell TX](/images/products/ty/christmas-blind-ball.jpg)
 
 La pared de Ty está más llena a **principios de noviembre** y más pelona la semana antes de Navidad. Eso no es argumento de venta — es simplemente cómo funciona el ciclo de resurtido de una tienda chica contra el suministro nacional de peluches en diciembre.
 

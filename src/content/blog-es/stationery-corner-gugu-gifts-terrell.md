@@ -25,9 +25,13 @@ Una tarjeta convierte cualquier regalito en "pensaron en esto". Nunca te saltes 
 
 ## Las Plumas
 
+![Plumas de gel Pusheen, Gugu Gifts, Terrell TX](/images/products/pusheen/gel-pens.jpg)
+
 Las plumas son donde el rincón se pone peligroso (en el buen sentido). Tenemos plumas fuente coloridas en tonos caramelo y los limpios instrumentos **Kaweco** de fabricación alemana que los fans buscan específicamente. Una buena pluma es de los grandes regalos por menos de $40 — se siente personal, dura, y no requiere saber la talla ni el gusto de nadie.
 
 ## Las Libretas y Agendas
+
+![Diario de oración Mary Square, Gugu Gifts, Terrell TX](/images/products/mary-square/prayer-journal-blue.jpg)
 
 Para los que hacen listas y los que llevan diario:
 

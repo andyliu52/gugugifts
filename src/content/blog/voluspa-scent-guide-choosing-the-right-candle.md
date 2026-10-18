@@ -19,6 +19,8 @@ The most common gift size is the **5.5 oz** classic candle around **$22**. There
 
 ## Pick By Personality
 
+![Voluspa candle wall, Gugu Gifts, Terrell TX](/images/products/voluspa/candle-wall.jpg)
+
 ### "She has impeccable taste, kind of intimidates me"
 **Lychee** (currently on our shelves at $22). Bright, slightly floral, slightly fruity, completely sophisticated. Universal upgrade from any grocery-store candle.
 
@@ -55,11 +57,13 @@ If you're shopping for someone who lights candles every day, Greenleaf and Birch
 
 A Voluspa candle on its own is a complete gift. If you want to elevate it:
 
-- **Add a Greenleaf Sachet ($3)** — drawer scent extender, costs almost nothing, looks generous
+- **Add a Greenleaf Sachet ($1.50)** — drawer scent extender, costs almost nothing, looks generous
 - **Add a hand-letterpress card** (we keep them at the register)
 - **Skip the box**, use ribbon — Voluspa's jar is the visual
 
 ## When to Buy
+
+![Voluspa boxed ornament candles, Gugu Gifts, Terrell TX](/images/products/voluspa/ornament-candles.jpg)
 
 Don't wait. Voluspa scent rotations move; the one you remember from last spring may be gone by the time you walk in. If she has a scent she loves, grab it now and tell us; we'll set it aside if our stock allows.
 

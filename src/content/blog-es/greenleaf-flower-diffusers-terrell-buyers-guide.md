@@ -15,6 +15,8 @@ Esto es lo que le decimos a la gente que se acerca a preguntar.
 
 ## Cómo Funcionan en Realidad
 
+![Difusor de flor Greenleaf Shimmering Snowberry, Gugu Gifts, Terrell TX](/images/products/greenleaf/snowberry-flower-diffuser.jpg)
+
 Dentro de la botella: aceite aromático. Saliendo de arriba: una "flor" de porcelana con un tallo que jala el aceite hacia el pétalo. La flor actúa como superficie de difusión — la fragancia se evapora del pétalo al aire, lenta y continuamente, sin llama, sin electricidad, sin aplicaciones, sin atención diaria.
 
 Es el método de fragancia para el hogar de menor esfuerzo del mercado. Lo pones una vez, lo hueles por dos o tres meses.
@@ -53,7 +55,7 @@ Layout práctico:
 | Baño principal | Shimmering Snowberry o Cashmere Kiss — energía spa |
 | Sala | Cashmere Kiss en invierno, Orange & Honey en primavera |
 | Oficina/estudio | Silver Spruce — enfocado, limpio |
-| Clóset | Sobrecito Greenleaf más chico ($3) — exagerado un difusor ahí |
+| Clóset | Sobrecito Greenleaf más chico ($1.50) — exagerado un difusor ahí |
 
 Si un cuarto tiene mucho flujo de aire (rejilla de aire justo arriba), el difusor se va a consumir más rápido. Muévelo a una repisa de esquina lejos de la rejilla.
 
@@ -75,9 +77,13 @@ Vendemos más difusores de flores como regalo que como compra personal. Las razo
 - Se puede envolver en papel china y listón; la botella y la flor hacen el visual
 - Amigable para el receptor: no hay que desenvolver una vela frágil
 
-Combina con un sobrecito Greenleaf de $3 para un combo de $37 que se lee más grande que su precio.
+Combina con un sobrecito Greenleaf de $1.50 para un combo de $35.50 que se lee más grande que su precio.
 
 ## Nota de Inventario
+
+![Difusor de flor Greenleaf Gingerbread, Gugu Gifts, Terrell TX](/images/products/greenleaf/gingerbread-flower-diffuser.jpg)
+
+Para las fiestas: llegó el difusor de flor **Gingerbread** a **$40**, y **Shimmering Snowberry** y **Brambleberry** a **$34**.
 
 Los aromas Greenleaf rotan. Si un aroma específico está en tu lista (especialmente Cashmere Kiss u Orange & Honey, nuestros dos más rápidos), llama antes y te apartamos uno.
 

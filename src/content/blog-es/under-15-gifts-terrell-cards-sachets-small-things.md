@@ -17,6 +17,8 @@ Esto es lo que te daríamos en su lugar.
 
 ## Tarjetas Cardthartic — $2 a $14
 
+![Tarjetas Pusheen de cumpleaños y Navidad, Gugu Gifts, Terrell TX](/images/products/pusheen/cards.jpg)
+
 Cuarenta y cuatro en existencia. Cardthartic es una línea de tarjetas ilustradas que no hace lo cursi — el arte la sostiene.
 
 - **Mini tarjetas — $2.** Flor, girasol, flor roja. Chicas como para pegarle a cualquier cosa.
@@ -26,6 +28,10 @@ Cuarenta y cuatro en existencia. Cardthartic es una línea de tarjetas ilustrada
 Una mini tarjeta de $2 pegada a un artículo de $6 convierte dos cosas baratas en una cosa pensada. De eso trata casi todo este post.
 
 ## Sobrecitos Aromáticos Greenleaf — $1.50
+
+![Sobrecitos Greenleaf Merry Memories y Gingerbread, Gugu Gifts, Terrell TX](/images/products/greenleaf/holiday-sachets.jpg)
+
+Los aromas navideños — **Gingerbread, Merry Memories, Silver Spruce y Shimmering Snowberry** — son los sobrecitos grandes de **$3.70**.
 
 El objeto más útil de la tienda a ese precio. Un sobrecito de papel que va en un cajón, un clóset, un carro o una maleta y lo perfuma por meses.
 
@@ -49,6 +55,8 @@ Sellos de goma individuales a **$10**. Para quien manda correo de verdad, este e
 Los **aretes de Mariposa Azul en plata a $13** son lo más barato de la tienda que se lee como joyería de verdad. Para una adolescente o un compañero de trabajo que te cae bien, esto pasa la prueba que un regalo de $13 normalmente no pasa.
 
 ## Debajo de $16, Apenas Pasando la Línea
+
+![Aromatizantes de carro Studio Oh!, Gugu Gifts, Terrell TX](/images/products/studio-oh/car-air-fresheners.jpg)
 
 Vale el dólar extra:
 

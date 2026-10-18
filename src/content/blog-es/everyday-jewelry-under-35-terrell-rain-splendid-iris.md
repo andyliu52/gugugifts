@@ -17,6 +17,8 @@ Este es el rango de precio donde la joyería deja de ser una ocasión y se vuelv
 
 ## Rain Jewelry — desde $13
 
+![Aretes navideños Rain Jewelry, Gugu Gifts, Terrell TX](/images/products/rain/christmas-earrings-sweater-holly.jpg)
+
 Sesenta y cuatro pares de aretes en existencia, más collares y pulseras. Rain se inclina a **plata y acabados oxidados con motivos del suroeste y de la naturaleza** — de esas cosas que se leen a Texas sin ser un longhorn.
 
 Lo que hay ahorita:
@@ -32,6 +34,8 @@ Los collares van de **$20 a $33**, las pulseras desde **$19**.
 **Para quién es:** alguien que se pone los mismos dos pares siempre y necesita un tercero. Debajo de $20 quiere decir que lo puedes comprar sin razón.
 
 ## Splendid Iris — desde $18
+
+![Aretes Splendid Iris en etiquetas de terciopelo rojo, Gugu Gifts, Terrell TX](/images/products/splendid-iris/christmas-studs-velvet-tags.jpg)
 
 Setenta y ocho pares de aretes, más collares, anillos, pulseras y brazaletes. Splendid Iris se inclina a **oro, más limpio, más clásico** — huggies, arracadas delgadas, broqueles. Menos patrón, más forma.
 

@@ -25,9 +25,13 @@ A card turns any small gift into "they thought about this." Never skip the card.
 
 ## The Pens
 
+![Pusheen deluxe gel pens, Gugu Gifts, Terrell TX](/images/products/pusheen/gel-pens.jpg)
+
 The pens are where the corner gets dangerous (in a good way). We stock colorful fountain pens in candy shades and the clean, German-made **Kaweco** writing tools that fans seek out specifically. A nice pen is one of the great under-$40 gifts — it feels personal, it lasts, and it doesn't require knowing someone's size or taste in anything.
 
 ## The Notebooks & Planners
+
+![Mary Square prayer journal, Gugu Gifts, Terrell TX](/images/products/mary-square/prayer-journal-blue.jpg)
 
 For the list-makers and the journal-keepers:
 

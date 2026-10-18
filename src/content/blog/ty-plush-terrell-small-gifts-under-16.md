@@ -18,6 +18,8 @@ We keep close to **60 Ty plush** in stock, from **$6.99 to $15.99**. It is, reli
 
 ## What's In Stock
 
+![Ty Gingerbread Holly, Snowman Jake and Gouda Mouse, Gugu Gifts, Terrell TX](/images/products/ty/christmas-trio.jpg)
+
 Most of the wall sits at **$6.99** — the regular-size and Beanie Bounce animals:
 
 - **MUDDLES** — brown and white dog
@@ -57,6 +59,8 @@ Ty isn't the only thing that solves this. While you're in:
 You can genuinely fill five stockings here for under $60 and have none of it look like filler.
 
 ## A Note on Timing
+
+![Ty Christmas Blind Ball mystery bouncers, Gugu Gifts, Terrell TX](/images/products/ty/christmas-blind-ball.jpg)
 
 The Ty wall is at its fullest in **early November** and at its thinnest the week before Christmas. That isn't a sales pitch — it's just how a small shop's reorder cycle works against a national supply of plush animals in December.
 

@@ -19,9 +19,13 @@ Unlike many mass-produced candles, Voluspa uses a proprietary coconut wax blend 
 
 ## The Jar Is the Gift
 
+![Voluspa Baltic Amber candle, Gugu Gifts, Terrell TX](/images/products/voluspa/baltic-amber-classic.jpg)
+
 One of the things that sets Voluspa apart is their packaging. The decorative tins and hand-painted glass vessels are genuinely beautiful objects. Many people repurpose them as jewelry holders, makeup brush cups, or small planters long after the candle is gone. When you give a Voluspa candle, you're giving something that lasts beyond the last flicker.
 
 ## A Fragrance for Every Personality
+
+![Voluspa White Cypress, Tomato Trellis and Sparkling Cuvée large jars, Gugu Gifts, Terrell TX](/images/products/voluspa/christmas-large-jars.jpg)
 
 From the warm, woodsy notes of **Baltic Amber** to the bright citrus of **Goji Tarocco Orange** to the romantic **Champagne Rose**, Voluspa's range is wide enough that you can match a scent to anyone's taste. Not sure what they'd like? The Japonica collection is universally loved and always a safe bet.
 

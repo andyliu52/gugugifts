@@ -62,6 +62,9 @@ npm run tax:status             # read-only: is the exemption on right now?
 npm run tax:apply              # dry run; needs --commit
 npm run tax:restore            # dry run; needs --commit
 npm run blog:heroes            # blog heroes from real Square photos
+node scripts/place-shop-photos.mjs --manifest=photos/manifest.json
+                               # Oct 2026 shoot (~/gugupics/oct-2026) -> heroes,
+                               # inline product photos, 4:5 social/carousel images
 npm run generate-images        # ComfyUI heroes (needs 127.0.0.1:8188 up)
 ```
 

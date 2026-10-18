@@ -17,6 +17,8 @@ Here's what we'd hand you instead.
 
 ## Cardthartic Cards — $2 to $14
 
+![Pusheen birthday and Christmas cards, Gugu Gifts, Terrell TX](/images/products/pusheen/cards.jpg)
+
 Forty-four in stock. Cardthartic is an illustrated card line that doesn't do the sentimental thing — the art carries it.
 
 - **Mini cards — $2.** Flower, Sunflower, Red Flower. Small enough to attach to anything.
@@ -26,6 +28,10 @@ Forty-four in stock. Cardthartic is an illustrated card line that doesn't do the
 A $2 mini card attached to a $6 item turns two cheap things into one considered thing. That's most of what this post is about.
 
 ## Greenleaf Scented Sachets — $1.50
+
+![Greenleaf Merry Memories and Gingerbread sachets, Gugu Gifts, Terrell TX](/images/products/greenleaf/holiday-sachets.jpg)
+
+The holiday scents — **Gingerbread, Merry Memories, Silver Spruce and Shimmering Snowberry** — are the larger **$3.70** sachets.
 
 The most useful object in the store at the price. A paper sachet that goes in a drawer, a closet, a car, or a suitcase and scents it for months.
 
@@ -49,6 +55,8 @@ Individual rubber stamps at **$10**. For someone who sends real mail, this is a 
 **Silver Blue Butterfly Earrings at $13** are the cheapest thing in the store that reads as actual jewelry. For a teenager or a coworker you like, this clears the bar that a $13 gift usually doesn't.
 
 ## Under $16, Just Over the Line
+
+![Studio Oh! car air fresheners, Gugu Gifts, Terrell TX](/images/products/studio-oh/car-air-fresheners.jpg)
 
 Worth the extra dollar:
 

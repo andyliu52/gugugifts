@@ -15,6 +15,8 @@ Este es el mes en que la tienda cambia por completo. Esto es lo que hay en los e
 
 ## El Cambio de Aromas de Otoño
 
+![Bombas de baño Pacha Spiced Pumpkin & Amber y Golden Spice & Chai, Gugu Gifts, Terrell TX](/images/products/pacha/spiced-pumpkin-golden-chai.jpg)
+
 El cambio más grande en la tienda este mes es la fragancia. Salen los cítricos y el coco del verano; entran aromas más cálidos y más densos.
 
 - **Voluspa** — la línea de otoño es donde la marca da lo mejor de sí. Cálidos, con capas, y los frascos son lo bastante decorativos como para que la gente los deje afuera todo el año. Si solo has comprado los aromas brillantes de verano, los de otoño son otra experiencia.
@@ -37,6 +39,8 @@ Si tú organizas este año:
 El patrón que vemos: la gente llega la segunda semana de noviembre buscando un platón específico, y se fue a principios de octubre. Ven a ver ahora, aunque todavía no vayas a comprar.
 
 ## El Argumento para Empezar las Compras Navideñas en Octubre
+
+![Velas de lata navideñas Greenleaf, Gugu Gifts, Terrell TX](/images/products/greenleaf/christmas-tin-candles.jpg)
 
 Entendemos que suena a tienda diciéndote que compres. Este es el razonamiento real:
 
@@ -62,7 +66,7 @@ No es solo Thanksgiving y Navidad. De aquí a fin de noviembre:
 
 - **Homecoming y temporada de mums** — se compran más regalitos de joyería aquí de lo que te imaginas
 - **Cumpleaños de otoño** — octubre y noviembre están llenos de ellos
-- **Juntas de padres y maestros** — un sobrecito de $3 y una tarjeta en esa semana es un gesto chico y bien puesto
+- **Juntas de padres y maestros** — un sobrecito de $1.50 y una tarjeta en esa semana es un gesto chico y bien puesto
 - **Friendsgiving** — normalmente el fin *antes* de Thanksgiving, y a los anfitriones se les pasa por alto porque es "casual". Un **plato de peltre de $14** lo arregla.
 - **Vecinos nuevos** — el otoño es temporada pesada de mudanzas en las casas nuevas de Forney y Heartland. Nuestra [guía de regalos de casa nueva](/es/blog/housewarming-gifts-heartland-forney-new-builds) cubre eso específicamente.
 

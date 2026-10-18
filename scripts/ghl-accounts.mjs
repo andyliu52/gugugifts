@@ -76,7 +76,7 @@ async function main() {
     console.log('');
   }
 
-  const want = ['facebook', 'instagram', 'google'];
+  const want = ['facebook', 'instagram', 'google', 'tiktok'];
   const missing = want.filter(p => !byPlatform.has(p));
   if (missing.length) {
     console.log(`! Not connected: ${missing.join(', ')}`);
@@ -90,7 +90,7 @@ async function main() {
   }
   console.log('');
   console.log('Copy the account ids above into scripts/.ghl-credentials.json as');
-  console.log('  "accounts": { "facebook": "...", "instagram": "...", "google": "..." }');
+  console.log('  "accounts": { "facebook": "...", "instagram": "...", "google": "...", "tiktok": "..." }');
 }
 
 main().catch(err => {
