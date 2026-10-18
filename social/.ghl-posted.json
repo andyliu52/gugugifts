@@ -299,6 +299,203 @@
         "google"
       ],
       "at": "2026-08-07T02:11:23.632Z"
+    },
+    "2026-10-22-gift-boxes::facebook+instagram": {
+      "ghlPostId": "6ad503d4d404213caf79de04",
+      "scheduleDate": "2026-10-22T22:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "at": "2026-10-18T17:37:24.889Z"
+    },
+    "2026-10-22-gift-boxes::google": {
+      "ghlPostId": "6ad503d5284c3b76e7c66976",
+      "scheduleDate": "2026-10-22T22:00:00.000Z",
+      "platforms": [
+        "google"
+      ],
+      "at": "2026-10-18T17:37:25.222Z"
+    },
+    "2026-10-24-voluspa-ornaments::facebook+instagram+google": {
+      "ghlPostId": "6ad5041fbc60237ae73d4866",
+      "scheduleDate": "2026-10-24T22:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:39.779Z"
+    },
+    "2026-10-29-rain-christmas-earrings::facebook+instagram+google": {
+      "ghlPostId": "6ad50420731eae50a58688d7",
+      "scheduleDate": "2026-10-29T22:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:40.326Z"
+    },
+    "2026-10-31-halloween-to-christmas::facebook+instagram+google": {
+      "ghlPostId": "6ad50420da607835beb04144",
+      "scheduleDate": "2026-10-31T22:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:40.849Z"
+    },
+    "2026-11-07-mixologie::facebook+instagram+google": {
+      "ghlPostId": "6ad5042109c2edbdd1e8f7a0",
+      "scheduleDate": "2026-11-07T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:41.406Z"
+    },
+    "2026-11-13-studio-oh-teens::facebook+instagram+google": {
+      "ghlPostId": "6ad50421e422a0c51192e65c",
+      "scheduleDate": "2026-11-13T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:41.901Z"
+    },
+    "2026-11-19-gorky-longhorn::facebook+instagram+google": {
+      "ghlPostId": "6ad5042280aa609892645e2d",
+      "scheduleDate": "2026-11-19T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:42.440Z"
+    },
+    "2026-11-21-mary-square-towels::facebook+instagram+google": {
+      "ghlPostId": "6ad50422bc60237ae73d4a56",
+      "scheduleDate": "2026-11-21T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:42.816Z"
+    },
+    "2026-11-24-gorky-shakers::facebook+instagram+google": {
+      "ghlPostId": "6ad50423e422a0c51192e888",
+      "scheduleDate": "2026-11-24T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:43.187Z"
+    },
+    "2026-11-25-prayer-journals::facebook+instagram+google": {
+      "ghlPostId": "6ad50423da607835beb04374",
+      "scheduleDate": "2026-11-25T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:43.600Z"
+    },
+    "2026-11-28-small-business-saturday::facebook+instagram+google": {
+      "ghlPostId": "6ad50423d404213caf7a29ab",
+      "scheduleDate": "2026-11-28T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:44.086Z"
+    },
+    "2026-12-03-pacha-12-days::facebook+instagram+google": {
+      "ghlPostId": "6ad50424da607835beb043f0",
+      "scheduleDate": "2026-12-03T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:44.520Z"
+    },
+    "2026-12-04-ty-stocking-stuffers::facebook+instagram+google": {
+      "ghlPostId": "6ad50424cb4303bae145a008",
+      "scheduleDate": "2026-12-04T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:45.008Z"
+    },
+    "2026-12-05-christmas-squishies::facebook+instagram+google": {
+      "ghlPostId": "6ad50425cb4303bae145a0bb",
+      "scheduleDate": "2026-12-05T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:45.370Z"
+    },
+    "2026-12-10-rain-christmas-pins::facebook+instagram+google": {
+      "ghlPostId": "6ad5042509c2edbdd1e8fc85",
+      "scheduleDate": "2026-12-10T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:45.787Z"
+    },
+    "2026-12-12-swig-mega-mug::facebook+instagram+google": {
+      "ghlPostId": "6ad5042580aa6098926460a8",
+      "scheduleDate": "2026-12-12T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:46.175Z"
+    },
+    "2026-12-17-free-gift-wrap::facebook+instagram+google": {
+      "ghlPostId": "6ad50426da607835beb04590",
+      "scheduleDate": "2026-12-17T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:46.642Z"
+    },
+    "2026-12-19-voluspa-travel-trio::facebook+instagram+google": {
+      "ghlPostId": "6ad50426ab9b62ebb62504ab",
+      "scheduleDate": "2026-12-19T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:47.141Z"
+    },
+    "2026-12-22-last-days::facebook+instagram+google": {
+      "ghlPostId": "6ad50427d404213caf7a2b7f",
+      "scheduleDate": "2026-12-22T23:00:00.000Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "google"
+      ],
+      "at": "2026-10-18T17:38:47.584Z"
     }
   }
 }

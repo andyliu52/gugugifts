@@ -197,6 +197,11 @@ export async function deletePost(creds, postId) {
 }
 
 // POST /social-media-posting/{locationId}/posts/list — search existing posts.
+// GET /social-media-posting/{locationId}/posts/{id} — the full stored post.
+export async function getPost(creds, postId) {
+  return ghlFetch(creds, `/social-media-posting/${creds.locationId}/posts/${postId}`);
+}
+
 // Used to detect posts we already created, as a backstop to the local state
 // file (a state file lost to a fresh clone must not cause double-posting).
 export async function listPosts(creds, { fromDate, toDate, limit = 100, skip = 0 } = {}) {
