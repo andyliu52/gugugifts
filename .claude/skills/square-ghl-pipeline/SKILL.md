@@ -118,6 +118,25 @@ This happened on a real run. Retry policy must distinguish:
 retryable. After any run that reported a timeout, scan for duplicate schedule
 slots before assuming the state file is accurate.
 
+### Several images in `media[]` are silently cut to one
+
+Found 2026-10-18. A `status: 'scheduled'` post with five `image/jpeg` URLs
+returns 201, and `GET /posts/{id}` shows only `media[0]` stored. No error, no
+warning. So a carousel scheduled through the API goes out as a single photo.
+Read the post back with `getPost` before you assume a carousel worked. The
+GHL UI does build carousels, so there is some path for them, but it has not
+been found yet. Next guesses to probe: media first uploaded to the GHL media
+library (`uploadFile`), or `instagramPostDetails`, which comes back on every
+post but is typed `any`.
+
+### TikTok through GHL needs a video
+
+`POST /posts` with a TikTok accountId and image media returns
+`422 "TikTok needs a video to create a post, it doesn't support multi media
+formats"`. Photo-mode posts are not available through this API. The
+scheduler sends TikTok as a batch of its own so that this failure leaves
+FB/IG/GBP alone. To post to TikTok, render an MP4 first.
+
 ### One post, many channels — put every accountId in one call
 
 `accountIds` is an array and the default usage is **one call listing every
